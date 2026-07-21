@@ -166,7 +166,7 @@ function renderLadder(){var h='';S.forEach(function(x,i){
  document.getElementById('ladder').innerHTML=h;}
 function render(){var x=S[cur];
  var g=document.getElementById('gal');
- g.innerHTML = x.img?('<div class="big"><img src="'+x.img+'" alt="'+x.nm+'" loading="lazy"></div>'+
+ g.innerHTML = x.img?('<div class="big"><img src="'+x.img+'" alt="'+x.nm+'"></div>'+
    (x.img2?('<div class="thumbs"><img src="'+x.img+'" class="on" alt=""><img src="'+x.img2+'" alt=""></div>'):''))
    :'<div class="noimg">제품 사진 준비중</div>';
  sNm.textContent=x.nm; sTier.textContent=x.tier; sDesc.textContent=x.desc;

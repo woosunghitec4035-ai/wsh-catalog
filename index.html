@@ -57,7 +57,7 @@ function renderCats(){
  back.style.display='none';ttl.textContent='전체 제품 보기';stl.textContent='카테고리를 선택하세요';
  var h='<div class="cgrid">';
  CATS.forEach(function(c,i){var n=c.groups.reduce(function(a,g){return a+g.items.length},0);
-  h+='<div class="ctile" data-c="'+i+'"><img src="'+c.img+'" alt="'+esc(c.name)+'" loading="lazy"><div class="t">'+
+  h+='<div class="ctile" data-c="'+i+'"><img src="'+c.img+'" alt="'+esc(c.name)+'"><div class="t">'+
      esc(c.name)+'</div><div class="n">'+(n?n+'개 제품':'상세 준비중')+'</div></div>';});
  body.innerHTML=h+'</div>';location.hash='';
 }
@@ -80,7 +80,7 @@ function renderCat(i){
   c.groups.forEach(function(g,gi){
    h+='<div class="grp"><div class="grphead"><h3>'+esc(g.title)+'</h3><span class="cap">'+esc(g.cap)+'</span></div><div class="prow">';
    g.items.forEach(function(p,pi){
-    var im=p.imgs.length?('<img src="'+p.imgs[0]+'" alt="'+esc(p.nm)+'" loading="lazy">'):'<div class="noimg">사진 준비중</div>';
+    var im=p.imgs.length?('<img src="'+p.imgs[0]+'" alt="'+esc(p.nm)+'">'):'<div class="noimg">사진 준비중</div>';
     h+='<div class="pcard" data-c="'+i+'" data-g="'+gi+'" data-p="'+pi+'">'+im+'<div class="nm">'+esc(p.nm)+
        '</div><div class="sp">'+esc(p.sp)+'</div></div>';});
    h+='</div></div>';});
