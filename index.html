@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>전체 제품 보기 — 우성하이텍</title>
+<meta name="description" content="우성하이텍 시설원예 자동화 제품 카탈로그 — 자연환기창·보온재개폐·커튼제어 등">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/app.css">
+<script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script></head><body>
+
+<div id="gate">
+  <div class="gbox">
+    <div class="glogo">◤ (주)우성하이텍</div>
+    <div class="gtitle">전체 제품 카탈로그</div>
+    <div class="gdesc">열람하려면 비밀번호를 입력하세요.
+      <span>Enter password to view</span></div>
+    <input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호">
+    <button id="gbtn" type="button">확인</button>
+    <div id="gerr" class="gerr"></div>
+  </div>
+</div>
+<div id="notice">
+  <div class="nbox">
+    <div class="nic">⚠️</div>
+    <div class="ntitle">배포 금지 안내</div>
+    <div class="ntext">본 자료는 <b>(주)우성하이텍</b>의 자산입니다.<br>
+      무단 <b>복제·배포·전송·게시</b>를 금지하며, 허가 없이 외부로 공유할 수 없습니다.<br>
+      승인된 사용자 열람용으로만 제공됩니다.
+      <span class="nsub">This catalog is proprietary to Woosung Hitec (WSH).<br>
+      Unauthorized copying, distribution or posting is prohibited.</span></div>
+    <button id="nbtn" type="button">확인했습니다</button>
+  </div>
+</div>
+<div class="nav"><div class="navin">
+ <a href="index.html"><img src="assets/img/logo.png" alt="우성하이텍"></a>
+ <div class="menu"><a href="index.html" class="on">제품정보</a></div>
+</div></div>
+<div class="bc"><div class="bcin">홈 › <b>제품정보</b></div></div>
+<div class="wrap">
+ <div class="head"><h1 id="ttl">전체 제품 보기</h1><p id="stl">카테고리를 선택하세요</p></div>
+ <div class="top"><button id="back">← 전체 카테고리</button></div>
+ <div id="body"></div>
+<p class="foot">(주)우성하이텍 · 경남 양산시 동면 양산대로 446 · TEL 055-365-8801 · <a href="https://www.wsh.co.kr" style="color:#8d939a">www.wsh.co.kr</a><br>
+제원은 제조사 사용설명서를 기준으로 작성되었습니다. 사양은 사전 예고 없이 변경될 수 있습니다.</p></div>
+<div id="ov"><div id="mo">
+ <button id="close" aria-label="닫기">✕</button>
+ <div class="mohead"><h3 id="moNm"></h3><div class="msp" id="moSp"></div></div>
+ <div class="mobody">
+  <div class="moleft"><div class="mimg" id="moImg"></div><div class="mthumbs" id="moTh"></div></div>
+  <div class="moright"><table id="moTb"></table><div class="note" id="moNote" style="display:none"></div><div id="moCta"></div></div>
+  <div class="mofeat" id="moFeat"></div>
+ </div></div></div>
+<script src="assets/js/data.js"></script>
+<script>
+var CC=['#185fa5','#0f6e56','#a5641a','#7a4a99','#a33d3d','#2a7a86'];
+var body=document.getElementById('body'),ttl=document.getElementById('ttl'),stl=document.getElementById('stl'),
+    back=document.getElementById('back'),ov=document.getElementById('ov');
+function esc(s){return String(s==null?'':s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function renderCats(){
+ back.style.display='none';ttl.textContent='전체 제품 보기';stl.textContent='카테고리를 선택하세요';
+ var h='<div class="cgrid">';
+ CATS.forEach(function(c,i){var n=c.groups.reduce(function(a,g){return a+g.items.length},0);
+  h+='<div class="ctile" data-c="'+i+'"><img src="'+c.img+'" alt="'+esc(c.name)+'" loading="lazy"><div class="t">'+
+     esc(c.name)+'</div><div class="n">'+(n?n+'개 제품':'상세 준비중')+'</div></div>';});
+ body.innerHTML=h+'</div>';location.hash='';
+}
+function renderCat(i){
+ var c=CATS[i];back.style.display='inline-block';ttl.textContent=c.name;
+ var _n=0,_l=0;c.groups.forEach(function(g){g.items.forEach(function(x){_n++;if(x.link)_l++})});
+ stl.textContent = _n===0 ? '' : (_l===_n ? '제품군을 선택하면 상세 카탈로그로 이동합니다'
+   : (_l>0 ? '제품을 클릭하면 상세를 볼 수 있습니다' : '제품을 클릭하면 상세 정보가 열립니다'));
+ var h='<div class="cdesc">'+esc(c.desc)+'</div>';
+ if(!c.groups.length)h+='<div class="empty">이 카테고리의 제품 상세 데이터는 준비 중입니다.</div>';
+ var _big=c.groups.filter(function(g){return g.link});
+ if(_big.length===c.groups.length&&_big.length){
+  h+='<div class="gwrap">';
+  c.groups.forEach(function(g,gi){
+   h+='<div class="gcard" data-go="'+g.link+'"><img src="'+g.hero+'" alt="'+esc(g.title)+'">'+
+      '<h3>'+esc(g.title)+'</h3><div class="gd">'+esc(g.hdesc||g.cap)+'</div>'+
+      '<span class="gn">'+g.count+'개 모델 보기 →</span></div>';});
+  h+='</div>';
+ } else {
+  c.groups.forEach(function(g,gi){
+   h+='<div class="grp"><div class="grphead"><h3>'+esc(g.title)+'</h3><span class="cap">'+esc(g.cap)+'</span></div><div class="prow">';
+   g.items.forEach(function(p,pi){
+    var im=p.imgs.length?('<img src="'+p.imgs[0]+'" alt="'+esc(p.nm)+'" loading="lazy">'):'<div class="noimg">사진 준비중</div>';
+    h+='<div class="pcard" data-c="'+i+'" data-g="'+gi+'" data-p="'+pi+'">'+im+'<div class="nm">'+esc(p.nm)+
+       '</div><div class="sp">'+esc(p.sp)+'</div></div>';});
+   h+='</div></div>';});
+ }
+ body.innerHTML=h;
+}
+function openModal(c,g,p){
+ var it=CATS[c].groups[g].items[p];
+ document.getElementById('moImg').innerHTML=it.imgs.length?('<img id="mainImg" src="'+it.imgs[0]+'" alt="">'):'<div class="noimg">사진 준비중</div>';
+ document.getElementById('moTh').innerHTML=it.imgs.length>1?it.imgs.map(function(u,k){
+   return '<img src="'+u+'" data-i="'+k+'" class="'+(k===0?'on':'')+'" alt="">'}).join(''):'';
+ document.getElementById('moNm').textContent=it.nm;
+ document.getElementById('moSp').textContent=it.sp;
+ var t='';it.rows.forEach(function(r){t+='<tr><td class="k">'+esc(r[0])+'</td><td class="v">'+esc(r[1])+'</td></tr>'});
+ document.getElementById('moTb').innerHTML=t;
+ var nt=document.getElementById('moNote');
+ if(it.note){nt.style.display='block';nt.textContent='※ '+it.note}else{nt.style.display='none'}
+ document.getElementById('moCta').innerHTML=it.link?('<a class="cta" href="'+it.link+'">'+esc(it.linkLabel||'자세히 보기')+' →</a>'):'';
+ var f=document.getElementById('moFeat');
+ if(it.feat){f.style.display='block';f.innerHTML='<h4>주요 기능</h4><img src="'+it.feat+'" alt="">';}
+ else if(it.chips&&it.chips.length){f.style.display='block';
+  f.innerHTML='<h4>주요 기능</h4><div class="chips">'+it.chips.map(function(x,k){
+   return '<span class="chip" style="background:'+CC[k%CC.length]+'">'+esc(x)+'</span>'}).join('')+'</div>';}
+ else f.style.display='none';
+ ov.classList.add('on');
+}
+document.addEventListener('click',function(e){
+ var t=e.target.closest('.ctile');if(t){renderCat(+t.dataset.c);location.hash='c'+t.dataset.c;window.scrollTo(0,0);return}
+ var gc=e.target.closest('.gcard'); if(gc){location.href=gc.dataset.go;return}
+ var p=e.target.closest('.pcard');
+ if(p){var it2=CATS[+p.dataset.c].groups[+p.dataset.g].items[+p.dataset.p];
+  if(it2.link){location.href=it2.link;return}
+  openModal(+p.dataset.c,+p.dataset.g,+p.dataset.p);return}
+ var th=e.target.closest('#moTh img');
+ if(th){document.getElementById('mainImg').src=th.src;
+  document.querySelectorAll('#moTh img').forEach(function(x){x.classList.remove('on')});th.classList.add('on');}
+});
+back.addEventListener('click',renderCats);
+document.getElementById('close').addEventListener('click',function(){ov.classList.remove('on')});
+ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')ov.classList.remove('on')});
+var m=(location.hash||'').match(/^#c(\d+)$/);
+if(m&&CATS[+m[1]])renderCat(+m[1]);else renderCats();
+</script><script src="assets/js/gate.js"></script></body></html>

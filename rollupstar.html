@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>롤업스타 전동개폐기 — 우성하이텍</title>
+<meta name="description" content="롤업스타 DC24V 전동개폐기 10모델 제원·설치·리미트 설정 카탈로그">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/catalog.css">
+<script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script></head><body>
+
+<div id="gate">
+  <div class="gbox">
+    <div class="glogo">◤ (주)우성하이텍</div>
+    <div class="gtitle">롤업스타 전동개폐기 카탈로그</div>
+    <div class="gdesc">열람하려면 비밀번호를 입력하세요.
+      <span>Enter password to view</span></div>
+    <input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호">
+    <button id="gbtn" type="button">확인</button>
+    <div id="gerr" class="gerr"></div>
+  </div>
+</div>
+<div id="notice">
+  <div class="nbox">
+    <div class="nic">⚠️</div>
+    <div class="ntitle">배포 금지 안내</div>
+    <div class="ntext">본 자료는 <b>(주)우성하이텍</b>의 자산입니다.<br>
+      무단 <b>복제·배포·전송·게시</b>를 금지하며, 허가 없이 외부로 공유할 수 없습니다.<br>
+      승인된 사용자 열람용으로만 제공됩니다.
+      <span class="nsub">This catalog is proprietary to Woosung Hitec (WSH).<br>
+      Unauthorized copying, distribution or posting is prohibited.</span></div>
+    <button id="nbtn" type="button">확인했습니다</button>
+  </div>
+</div>
+<div class="nav"><div class="navin">
+ <a href="index.html"><img src="assets/img/logo.png" alt="우성하이텍"></a>
+ <div class="menu"><a href="index.html" class="on">제품정보</a></div>
+</div></div>
+<div class="bc"><div class="bcin"><a href="index.html">← 전체 제품보기</a> &nbsp;›&nbsp; 자연환기창 제어시스템 › <b>롤업스타 전동개폐기</b></div></div>
+<div class="wrap">
+ <div class="head"><h1>롤업스타™ 전동개폐기</h1>
+  <p>롤·업·다운 방식 DC24V 전동개폐기 · 헤리컬 &amp; 유성기어 2단 감속 · 전 10모델</p></div>
+ <div class="row1">
+  <div class="card gal"><div class="big"><img id="mainImg" src="" alt=""></div>
+   <div class="thumbs" id="thumbs"></div></div>
+  <div class="card sel">
+   <div class="lb">용도로 고르기</div><div class="tg" id="tgG"></div>
+   <div class="lb">모델 선택</div>
+   <table class="mt"><thead><tr><th></th><th>모델</th><th>표준 토크</th><th>최대 토크</th><th>리미트</th><th>무게</th></tr></thead><tbody id="mtb"></tbody></table>
+   <div class="sum"><span class="ck">✓</span><span>선택: <b id="sM"></b></span><span class="dv">/</span>
+    <span>용도: <b id="sU"></b></span><span class="dv">/</span><span>표준 토크: <b id="sT"></b></span>
+    <span class="dv">/</span><span>감속비: <b id="sG"></b></span></div>
+  </div></div>
+
+ <div class="secttl">성능 데이터 <span style="font-size:13.5px;font-weight:400;color:#8d939a">— 3단계 (제조사 설명서 기준)</span></div>
+ <div class="perf">
+  <div class="pc p-nl"><div class="t">무부하</div><div class="big" id="nlT"></div><div class="sub" id="nlS"></div></div>
+  <div class="pc p-std"><div class="t">표준사용 (권장)</div><div class="big" id="stT"></div><div class="sub" id="stS"></div></div>
+  <div class="pc p-max"><div class="t">최대허용 (한계)</div><div class="big" id="mxT"></div><div class="sub" id="mxS"></div></div>
+ </div>
+ <div class="info">⏱ <b>연속작동시간</b> — 표준사용 시 30분 이내 / 최대허용 시 5분 이내. 초과 작동은 과열·화재 위험이 있습니다.</div>
+
+ <div class="secttl">제원</div>
+ <div class="spec">
+  <div><span class="k">정격 전압</span><span class="v">DC24V (±10% 이내)</span></div>
+  <div><span class="k">감속 방식</span><span class="v">1차 헤리컬 + 2차 유성기어</span></div>
+  <div><span class="k">감속비</span><span class="v" id="vGear"></span></div>
+  <div><span class="k">리미트 설정범위</span><span class="v" id="vLim"></span></div>
+  <div><span class="k">리미트 설정방식</span><span class="v" id="vLimSet"></span></div>
+  <div><span class="k">본체 무게</span><span class="v" id="vW"></span></div>
+  <div><span class="k">제동</span><span class="v">셀프 브레이크 (역진 방지)</span></div>
+  <div><span class="k">회전 방향</span><span class="v">양방향 (전기 극성으로 변경)</span></div>
+  <div><span class="k">몸체 / 기어</span><span class="v">알루미늄합금 / SCM415 침탄열처리</span></div>
+  <div><span class="k">외관 도장</span><span class="v">분체도장</span></div>
+  <div><span class="k">전원 표시</span><span class="v">2컬러(적/녹) LED</span></div>
+  <div><span class="k">통기 방식</span><span class="v" id="vVent"></span></div>
+  <div><span class="k">전원공급선</span><span class="v" id="vWire"></span></div>
+  <div><span class="k">감속기어 보증</span><span class="v">10년 무상수리</span></div>
+ </div>
+
+ <div class="tabs" id="tabs"><button class="on" data-t="0">설치 방법</button>
+  <button data-t="1">리미트 설정</button><button data-t="2">안전 주의사항</button></div>
+
+ <div class="card tp on" data-t="0"><div class="g2">
+  <div class="fig"><img src="assets/img/fig-coupling.jpg" alt="커플링 조립도"><div class="cap">개폐축 커플링 · 가이드암 조립</div></div>
+  <div class="c"><h4>롤-업-다운 개폐방식</h4>
+   <p style="font-size:14px">피복재 상단을 구조물에 고정하고 하단을 개폐축에 감아 클립으로 고정합니다. 개폐축을 회전시키면 피복재가 감기며 열리고, 반대로 회전시키면 풀리며 닫힙니다.</p>
+   <div class="st"><span class="n">!</span><span>감긴 반대방향으로 풀리려는 힘이 작용하므로 <b>가이드암</b> 또는 <b>가이드롤러</b>로 반드시 지지해야 합니다.</span></div>
+   <div class="st"><span class="n">1</span><span><b>가이드암</b> — 천장 곡부용. 신축 가능한 곧은 파이프 사용, 최대 길이에서 속대가 빠지지 않게, 전선은 여유 있게.</span></div>
+   <div class="st"><span class="n">2</span><span><b>가이드롤러</b> — 측면용. 궤도는 모서리 기둥과 수직 평행, 개폐축과 직각 유지.</span></div>
+   <div class="st"><span class="n">3</span><span><b>로프예인</b> — 로프가 감기면 닫히고 풀리면 열림(롤업과 반대). 무거운 피복재는 고출력 모델.</span></div>
+   <div class="info">📐 <b>1회전당 감기는 폭</b> = 개폐축 직경 × 3.14 &nbsp;|&nbsp; 예) Ø3.2cm → 10.048cm ≒ 0.1m</div>
+   <div class="warn">⚠ <b>경고</b> — 개폐축이 피복재를 감고 지면 위에 떠 있을 때 절대로 전동개폐기를 분리하지 마십시오. 개폐축이 급격히 굴러 떨어져 부상·구조물 손상이 발생합니다.</div>
+  </div></div></div>
+
+ <div class="card tp" data-t="1"><div class="g2">
+  <div class="fig"><img src="assets/img/fig-dial.jpg" alt="리미트 다이얼"><div class="cap">리미트 설정부 (적색·녹색 다이얼)</div></div>
+  <div class="c"><h4>리미트 = 감을 수 있는 회전수</h4>
+   <p style="font-size:14px">전기가 계속 공급되어도 설정한 회전수에 도달하면 스스로 정지합니다. <b>열림 회전수를 설정하면 닫힘 회전수가 같은 값으로 자동 설정</b>됩니다(열림높이 = 닫힘높이).</p>
+   <div class="st"><span class="n">1</span><span>양쪽 적·녹색 다이얼 화살표를 <b>0</b>에 맞춤 (둘 다 0이면 전기를 넣어도 작동하지 않음)</span></div>
+   <div class="st"><span class="n">2</span><span>설정 노브를 <b>누른 채</b> 돌려 원하는 회전수에 맞춤</span></div>
+   <div class="st"><span class="n">3</span><span>열림 작동 → 다이얼 돌기가 스위치 롤러를 누르면 정지</span></div>
+   <div class="info">💡 <b>LED 색 = 지금 정지를 담당하는 다이얼</b><br>
+    하우스 <b>왼쪽</b>: 청색+ / 갈색− → <b>녹색</b> LED · 녹색 다이얼<br>
+    하우스 <b>오른쪽</b>: 갈색+ / 청색− → <b>적색</b> LED · 적색 다이얼</div>
+   <div class="info">📏 <b>리미트 눈금 1칸 ≈ 0.1m</b> — WSM-4035(35회전) 기준 약 4m</div>
+   <div class="warn">⚠ '시계/반시계'는 <b>보는 방향</b>에 따라 반대로 보입니다(구동축 볼 때 ↔ 리미트 볼 때). 설정 후 <b>안전커버를 반드시 닫으십시오.</b></div>
+  </div></div></div>
+
+ <div class="card tp" data-t="2"><div class="g2">
+  <div class="fig"><img src="assets/img/fig-exploded.jpg" alt="분해도"><div class="cap">전동개폐기 · 커플링 분해도</div></div>
+  <div class="c">
+   <div class="warn"><b>경고 — 지키지 않으면 사망·중상 위험</b>
+    <div class="st"><span class="n">1</span><span>개폐축이 떠 있는 상태에서 개폐기 <b>분리 금지</b></span></div>
+    <div class="st"><span class="n">2</span><span><b>DC24V 전용</b> — 교류(AC220V) 연결 시 화재·감전</span></div>
+    <div class="st"><span class="n">3</span><span>설치·수리 시 <b>전원 차단</b>, 너트는 견고히 조임</span></div>
+    <div class="st"><span class="n">4</span><span>어린이가 작동범위에 접근하지 않도록 관리</span></div></div>
+   <h4>주의</h4>
+   <ul class="li"><li>제품이 지면에 닿거나 물받이 아래에 설치 금지 (완전방수 아님)</li>
+    <li>개폐축(말대)이 휘지 않게 유지 — 휘면 과부하로 손상</li>
+    <li>리미트 설정 후 <b>안전커버 필수</b> — 현장 최다 고장 원인</li>
+    <li><b>연속작동시간·최대허용 성능 초과 금지</b> — 과열·화재</li>
+    <li>낙뢰 우려 시 전원 차단, 이물질이 피복재와 함께 감기지 않게 주의</li></ul>
+  </div></div></div>
+
+ <div class="secttl">기본 제공 부품 / 별매 부품</div>
+ <div class="card" style="padding:18px 20px"><div class="parts">
+  <div class="pg"><span class="ttl">🔧 기본 제공</span>
+   <div class="pgrid">
+    <div class="it"><img src="assets/img/part-install.jpg" alt="" loading="lazy"><div class="l">설치(고정)부품</div></div>
+    <div class="it"><img src="assets/img/part-fuse.jpg" alt="" loading="lazy"><div class="l">예비퓨즈</div></div>
+    <div class="it"><img src="assets/img/part-manual.jpg" alt="" loading="lazy"><div class="l">사용설명서</div></div>
+    <div class="it"><img src="assets/img/part-cord.jpg" alt="" loading="lazy"><div class="l">전원코드</div></div></div>
+   <ul style="list-style:none;font-size:13.5px;margin-top:10px">
+    <li style="padding:5px 0">개폐축 커플링 세트 — 커플링(25Ø) + M8×16 ×3</li>
+    <li style="padding:5px 0">가이드암 커플링 세트 — 커플링(25Ø) + M6×55 + M8×16</li>
+    <li style="padding:5px 0">가이드암 선회축 부품 — 홀더 + 볼트 + 핀(19Ø)</li></ul></div>
+  <div class="pg"><span class="ttl">🛒 별매 (편리부품)</span><ul>
+   <li>가이드롤러 세트<span>본 제품 전용 (궤도 25Ø)</span></li>
+   <li>가이드롤러 세트<span>범용 (궤도 25Ø)</span></li>
+   <li>전선연결부 보호함 &amp; 클립세트<span>배선 보호</span></li>
+   <li>비닐보호튜브<span>내경 25Ø / 22Ø</span></li></ul></div>
+ </div></div>
+
+ <div class="secttl">모델 선정 가이드</div>
+ <div class="guide">
+  <div class="g"><b>① 무엇을 감는가</b>얇은 비닐 → 4035·2475·2475H<br>두꺼운 비닐 → 6035<br>두꺼운 비닐·경량 보온재 → 9055<br>보온용 피복재 → 15033~18066</div>
+  <div class="g"><b>② 얼마나 감는가</b>리미트 회전수가 개폐 길이를 결정.<br>눈금 1칸 ≈ 0.1m<br>예) 75회전 → 약 7.5m급</div>
+  <div class="g"><b>③ 하중은 충분한가</b>실사용 하중은 반드시 <b>표준사용 토크</b> 이내로. 최대허용은 순간 한계치입니다.</div>
+ </div>
+ <div class="formula">들어올릴 수 있는 하중(kg) = 표준 토크(kg·m) × 100 ÷ 구동축 반지름(cm)</div>
+<p class="foot">(주)우성하이텍 · 경남 양산시 동면 양산대로 446 · TEL 055-365-8801 · <a href="https://www.wsh.co.kr" style="color:#8d939a">www.wsh.co.kr</a><br>
+제원은 제조사 사용설명서를 기준으로 작성되었습니다. 사양은 사전 예고 없이 변경될 수 있습니다.</p></div>
+<script src="assets/js/data.js"></script>
+<script>
+var M=OPENERS, FIG_ISO="assets/img/fig-iso.jpg", cur=0, curG=M[0].g;
+function groups(){var s=[],seen={};M.forEach(function(x){if(!seen[x.g]){seen[x.g]=1;s.push(x.g)}});return s}
+function renderG(){var h='';groups().forEach(function(g){h+='<button data-g="'+g+'"'+(g===curG?' class="on"':'')+'>'+g+'</button>'});
+ document.getElementById('tgG').innerHTML=h;}
+function renderT(){var h='';M.forEach(function(x,i){if(x.g!==curG)return;
+ h+='<tr class="r'+(i===cur?' pick':'')+'" data-i="'+i+'"><td><span class="rd"></span></td><td>'+x.m+
+    '</td><td>'+x.std.t+'</td><td>'+x.max.t+'</td><td>'+x.lim+'</td><td>'+x.w+'</td></tr>';});
+ document.getElementById('mtb').innerHTML=h;}
+function renderD(){var x=M[cur];
+ document.getElementById('mainImg').src=x.img||FIG_ISO;
+ document.getElementById('thumbs').innerHTML='<img src="'+(x.img||FIG_ISO)+'" class="on" alt=""><img src="'+FIG_ISO+'" alt="">';
+ sM.textContent=x.m; sU.textContent=x.use; sT.textContent=x.std.t; sG.textContent=x.gear;
+ nlT.textContent=x.nl.t||'0Kg·m'; nlS.textContent=x.nl.a+' · '+x.nl.r;
+ stT.textContent=x.std.t; stS.textContent=x.std.a+' · '+x.std.r;
+ mxT.textContent=x.max.t; mxS.textContent=x.max.a+' · '+x.max.r;
+ vGear.textContent=x.gear; vLim.textContent=x.lim; vLimSet.textContent=x.limset;
+ vW.textContent=x.w; vVent.textContent=x.vent; vWire.textContent=x.wire;}
+document.addEventListener('click',function(e){
+ var g=e.target.closest('#tgG button');
+ if(g){curG=g.dataset.g;var f=M.findIndex(function(x){return x.g===curG});if(f>=0)cur=f;renderG();renderT();renderD();return}
+ var r=e.target.closest('tr.r');if(r){cur=+r.dataset.i;renderT();renderD();location.hash=M[cur].m;return}
+ var t=e.target.closest('#tabs button');
+ if(t){var i=t.dataset.t;document.querySelectorAll('#tabs button').forEach(function(b){b.classList.toggle('on',b.dataset.t===i)});
+  document.querySelectorAll('.tp').forEach(function(p){p.classList.toggle('on',p.dataset.t===i)});return}
+ var th=e.target.closest('#thumbs img');
+ if(th){document.getElementById('mainImg').src=th.src;
+  document.querySelectorAll('#thumbs img').forEach(function(x){x.classList.remove('on')});th.classList.add('on');}});
+function applyHash(){var h=decodeURIComponent((location.hash||'').replace('#','')).trim();if(!h)return;
+ var i=M.findIndex(function(x){return x.m.toUpperCase()===h.toUpperCase()});if(i>=0){cur=i;curG=M[i].g;}}
+applyHash();renderG();renderT();renderD();
+window.addEventListener('hashchange',function(){applyHash();renderG();renderT();renderD();});
+</script><script src="assets/js/gate.js"></script></body></html>

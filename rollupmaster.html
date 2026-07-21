@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>롤업마스터 컨트롤 박스 — 우성하이텍</title>
+<meta name="description" content="롤업마스터 DC24V 전동개폐기용 컨트롤러 10시리즈 — 연결·배선, 제어기능, 설정값, 문제해결">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/catalog.css">
+<script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script></head><body>
+
+<div id="gate">
+  <div class="gbox">
+    <div class="glogo">◤ (주)우성하이텍</div>
+    <div class="gtitle">롤업마스터 컨트롤 박스 카탈로그</div>
+    <div class="gdesc">열람하려면 비밀번호를 입력하세요.
+      <span>Enter password to view</span></div>
+    <input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호">
+    <button id="gbtn" type="button">확인</button>
+    <div id="gerr" class="gerr"></div>
+  </div>
+</div>
+<div id="notice">
+  <div class="nbox">
+    <div class="nic">⚠️</div>
+    <div class="ntitle">배포 금지 안내</div>
+    <div class="ntext">본 자료는 <b>(주)우성하이텍</b>의 자산입니다.<br>
+      무단 <b>복제·배포·전송·게시</b>를 금지하며, 허가 없이 외부로 공유할 수 없습니다.<br>
+      승인된 사용자 열람용으로만 제공됩니다.
+      <span class="nsub">This catalog is proprietary to Woosung Hitec (WSH).<br>
+      Unauthorized copying, distribution or posting is prohibited.</span></div>
+    <button id="nbtn" type="button">확인했습니다</button>
+  </div>
+</div>
+<div class="nav"><div class="navin">
+ <a href="index.html"><img src="assets/img/logo.png" alt="우성하이텍"></a>
+ <div class="menu"><a href="index.html" class="on">제품정보</a></div>
+</div></div>
+<div class="bc"><div class="bcin"><a href="index.html">← 전체 제품보기</a> &nbsp;›&nbsp; 자연환기창 제어시스템 › <b>롤업마스터 컨트롤 박스</b></div></div>
+<div class="wrap">
+ <div class="head"><h1>롤업마스터™ 컨트롤 박스</h1>
+  <p>DC24V 전동개폐기용 컨트롤러 · 입력 AC220V / 출력 DC24V · 수동부터 TFT 풀오토까지 10시리즈</p></div>
+ <div class="ladder" id="ladder"></div>
+ <p class="lcap">← 왼쪽일수록 기본형, 오른쪽일수록 고급형입니다. 시리즈를 선택하면 아래 내용이 모두 바뀝니다.</p>
+ <div class="row1">
+  <div class="card gal" id="gal"></div>
+  <div class="card sel">
+   <h2><span id="sNm"></span><span class="tier" id="sTier"></span></h2>
+   <p class="desc" id="sDesc"></p>
+   <div class="kv">
+    <div><span class="k">화면 표시</span><span class="v" id="sScr"></span></div>
+    <div><span class="k">제어 채널</span><span class="v" id="sCh"></span></div>
+    <div><span class="k">제어 방식</span><span class="v" id="sCtl"></span></div>
+    <div><span class="k">작동 방식</span><span class="v" id="sSp"></span></div>
+    <div><span class="k">입력 / 출력</span><span class="v">AC220V / DC24V</span></div>
+    <div><span class="k">케이스</span><span class="v" id="sCase"></span></div>
+   </div>
+   <h4>생산 모델 — 뒤 숫자 = 연결 가능한 개폐기 대수</h4>
+   <div style="max-height:220px;overflow:auto">
+    <table class="mt"><thead><tr><th>모델</th><th>최대 연결</th><th>출력 라인</th><th>본체 무게</th></tr></thead><tbody id="mtb"></tbody></table></div>
+  </div></div>
+
+ <div class="tabs" id="tabs"><button class="on" data-t="0">① 연결 · 배선</button>
+  <button data-t="1">② 제어 기능</button><button data-t="2">③ 설정값</button><button data-t="3">④ 문제 해결</button></div>
+
+ <div class="card tp on" data-t="0"><div class="g2">
+  <div class="c"><h4>연결할 수 있는 전동개폐기</h4>
+   <ul class="li"><li><b>전압</b> — DC 24V 모터 구동식</li>
+    <li><b>전류</b> — 소비전류 <b>2A(48W) 이하</b></li>
+    <li><b>리미트</b> — 주행거리 제한장치(리미트 스위치) 필수</li>
+    <li><b>1라인 = 1대</b> — 각 출력단자에 개폐기 1대씩</li></ul>
+   <div class="warn">⚠ 2A 초과 개폐기를 연결하거나 한 단자에 2대 이상 연결하면 <b>컨트롤러 내부 회로가 고장</b>납니다.</div>
+   <h4>좌 · 우측 구분 결선</h4>
+   <table class="tbl"><tr><th>구분</th><th>결선</th><th>열림 시 회전</th></tr>
+    <tr><td class="c">좌측용<br><small>정면에서 볼 때 왼쪽 창</small></td><td>청색선 → <b>왼쪽</b> 단자<br>갈색선 → 오른쪽 단자</td><td>구동축 <b>시계방향</b></td></tr>
+    <tr><td class="c">우측용<br><small>정면에서 볼 때 오른쪽 창</small></td><td>갈색선 → <b>왼쪽</b> 단자<br>청색선 → 오른쪽 단자</td><td>구동축 <b>반시계방향</b></td></tr></table>
+   <div class="info">💡 전선 연장 시 <b>같은 색끼리</b> 결선하면 혼동을 피할 수 있습니다. 타사 컨트롤러는 출력극성이 다를 수 있습니다.</div></div>
+  <div class="c"><h4>출력단자 극성표</h4>
+   <p style="font-size:13px;color:var(--mut)">각 라인은 <b>왼쪽 / 오른쪽</b> 단자 2개로 구성. '정지(中)'인 라인은 출력되지 않습니다.</p>
+   <table class="tbl"><tr><th colspan="2">수동운전</th><th>왼쪽</th><th>오른쪽</th></tr>
+    <tr><td rowspan="3">수동스위치<br>상(上)</td><td>상향 — 정상운전</td><td class="c">+</td><td class="c">−</td></tr>
+    <tr><td>중립 — 정지</td><td class="c">x</td><td class="c">−</td></tr>
+    <tr><td>하향 — 역출력운전</td><td class="c">−</td><td class="c">+</td></tr>
+    <tr><td>중(中)</td><td>상·중·하</td><td class="c">x</td><td class="c">−</td></tr>
+    <tr><td rowspan="3">하(下)</td><td>상향 — 정상운전</td><td class="c">−</td><td class="c">+</td></tr>
+    <tr><td>중립 — 정지</td><td class="c">x</td><td class="c">+</td></tr>
+    <tr><td>하향 — 역출력운전</td><td class="c">+</td><td class="c">−</td></tr></table>
+   <table class="tbl" style="margin-top:9px"><tr><th>자동운전 조건</th><th>왼쪽</th><th>오른쪽</th></tr>
+    <tr><td>서모스타트·고온경보 / 열림개시온도</td><td class="c">+</td><td class="c">−</td></tr>
+    <tr><td>빗물감지·풍속경보 / 닫힘개시온도</td><td class="c">−</td><td class="c">+</td></tr>
+    <tr><td>개별스위치 중립 · 대기 · 잠자기</td><td class="c">x</td><td class="c">−</td></tr></table></div>
+  <div class="c"><h4>센서 · 주변기기 연결</h4>
+   <ul class="li"><li><b>서모스타트</b> — '비상고온' 단자(전선색 무관) · 40~60℃<br><small style="color:#9a3535">※ 제어판 고온경보보다 <b>높게</b> 설정</small></li>
+    <li><b>디지털 온도센서</b> — 2P 포트 · 코드 약 30m · 태양광 직사 피할 것</li>
+    <li><b>레인/외부온도센서</b> — 3P 포트 · WRS-485(별매) · 속도스위치 <b>LOW</b></li>
+    <li><b>경음기 · 경광등</b> — '보조기기' 단자 (AC220V 2초 출력/2초 정지)</li>
+    <li><b>증설 신호</b> — D 시리즈 등 하위 컨트롤러 연동</li></ul>
+   <h4>퓨즈</h4>
+   <table class="tbl"><tr><th>구분</th><th>용도</th><th>용량(WFVC 예)</th></tr>
+    <tr><td class="c">F1</td><td>내부 전기회로 보호</td><td>AC250V 3~8A</td></tr>
+    <tr><td class="c">F2</td><td>전자회로(제어판) 보호</td><td>AC250V 1A</td></tr>
+    <tr><td class="c">개별라인</td><td>라인별 회로 보호</td><td>라인당 1개</td></tr></table>
+   <div class="warn">⚠ 퓨즈 교환 시 반드시 <b>전원스위치를 내리고</b> 작업, <b>같은 용량</b>으로 교환.</div></div>
+ </div></div>
+
+ <div class="card tp" data-t="1"><div class="g2">
+  <div class="c"><h4>제어의 기본 공식</h4>
+   <div class="ok"><b>열림개시온도</b> = 목표온도 + (온도폭 ÷ 2)<br><b>닫힘개시온도</b> = 목표온도 − (온도폭 ÷ 2)</div>
+   <h4>작동 방식 3종</h4>
+   <ul class="li"><li><b>퍼지작동 (코드-1) · 고급</b><br>작동 후 대기하며 <b>온도 추세를 스스로 판단</b>해 계속할지 결정</li>
+    <li><b>스텝작동 (코드-2) · 표준</b><br>작동–대기를 정해진 대로 반복 (추세 판단 없음)</li>
+    <li><b>기본작동 (코드-3)</b><br>개시온도 도달 시 <b>연속</b> 작동</li></ul>
+   <div class="warn">⚠ 기본작동은 온도차가 클 때 개폐가 빈번해 <b>작물 스트레스 · 에너지 손실 · 피복재 조기 손상</b>이 생길 수 있습니다. 퍼지/스텝 권장.</div></div>
+  <div class="c"><h4>특별작동 우선순위</h4>
+   <p style="font-size:13px;color:var(--mut)">특별작동 중에는 퍼지·스텝 작동이 적용되지 않습니다.</p>
+   <div class="prio">
+    <div class="p p1"><b>1 · 서모스타트</b>열림<br><small>자동·수동 모두 · 내부 부저</small></div>
+    <div class="p p2"><b>2 · 고온경보</b>열림<br><small>자동운전만 · 램프+경보음</small></div>
+    <div class="p p3"><b>3 · 빗물감지</b>닫힘<br><small>자동운전만</small></div>
+    <div class="p p4"><b>4 · 잠자기</b>대기<br><small>—</small></div></div>
+   <div class="info">💡 <b>왜 이 순서인가</b> — 비를 맞아 생기는 손상보다 <b>고온 피해가 더 크기</b> 때문에, 빗물감지 닫힘보다 고온 열림을 우선하도록 설계되었습니다.</div>
+   <div class="warn">※ 개별라인 스위치를 '정지'로 둔 라인은 특별작동에도 동작하지 않습니다.</div></div>
+  <div class="c"><h4>이 시리즈의 기능</h4><div class="featbox" id="featBox"></div></div>
+ </div></div>
+
+ <div class="card tp" data-t="2">
+  <h4 id="setTitle"></h4><div id="setBody" style="font-size:14px;color:#3f444a"></div>
+  <div class="info">🔧 사용 전 반드시 현재시간을 맞추십시오. 데이터를 <b>확인만</b> 할 때는 올림(△)·내림(▽)을 누르지 마십시오(값이 변경됩니다).</div>
+  <div class="warn">⏱ <b>저장 대기시간이 시리즈마다 다릅니다</b> — WTVC·WTDC 10초 / WSDT 15초 / WFVC·WFTC 30초.</div>
+ </div>
+
+ <div class="card tp" data-t="3"><div class="g2">
+  <div class="c"><h4>자주 나오는 증상</h4>
+   <table class="tbl"><tr><th>증상</th><th>먼저 확인할 것</th></tr>
+    <tr><td>컨트롤러가 켜지지 않는다</td><td>전원 공급 · 차단기/스위치 ON · 플러그 · <b>전원퓨즈 단선</b> · 퓨즈 접촉</td></tr>
+    <tr><td>누전차단기가 내려온다</td><td>전원코드 · 내부 이물질 누전 · 구조물에 닿은 벗겨진 전선</td></tr>
+    <tr><td>전원퓨즈가 연속 끊어진다</td><td>퓨즈 용량 · 개별스위치 전부 중립에도 끊기면 내부 고장</td></tr>
+    <tr><td>개폐기 1대만 작동 안 함</td><td><b>개별퓨즈 단선</b>(모터 소손·합선·과부하·낙뢰) · 연결 전선</td></tr>
+    <tr><td>개폐기가 반대로 회전</td><td><b>극성 반대</b> → 단자의 전선 색을 서로 바꿔 연결</td></tr>
+    <tr><td>온도 표시 안 됨</td><td>'--' 외부센서 / '---' 내부센서 → 센서·코드·커넥터 점검</td></tr></table></div>
+  <div class="c"><h4>자동운전이 이상할 때</h4>
+   <table class="tbl"><tr><th>증상</th><th>원인</th></tr>
+    <tr><td>자동운전이 안 된다</td><td>운전선택 스위치 · <b>대기시간 중</b>에는 작동 안 함</td></tr>
+    <tr><td>열림이 안 된다</td><td>레인센서 빗물 감지 중 · 감지판 오염 · 개별스위치 '정지'</td></tr>
+    <tr><td>닫힘이 안 된다</td><td>★<b>서모스타트·고온경보 설정온도가 닫힘개시온도보다 낮음</b></td></tr>
+    <tr><td>비 안 오는데 레인센서 작동</td><td>감지판 오염 → 청소 후 재시험 · 낙뢰 손상 · 오작동 시 즉시 분리</td></tr>
+    <tr><td>비 오는데 열림된다</td><td>정상 — 고온이면 열림이 우선</td></tr>
+    <tr><td>수동운전이 안 된다</td><td>운전선택 스위치를 <b>하향(수동)</b>으로</td></tr></table>
+   <div class="ok">🔋 <b>정전 시 비상 배터리 운전</b><br>① 플러그를 빼 완전 차단 ② 전선을 배터리 +/−에 연결 ③ 단자대 커버를 열고 작동할 개폐기 단자에 <b>1대씩</b> 접속 ④ 반대로 돌면 극성 교체<br><small>12V 2개(직렬) 또는 24V 1개 · 개별라인 스위치 번호 = 출력단자 번호</small></div></div>
+ </div></div>
+
+ <div class="secttl">어떤 컨트롤러를 고를까</div>
+ <div class="guide">
+  <div class="g"><b>시간만 필요</b>정해진 시각에만 여닫기 → <b>WSDT</b></div>
+  <div class="g"><b>온도 또는 시간</b>둘 중 하나로 자동 → <b>TTC</b></div>
+  <div class="g"><b>시간대별 다른 온도</b>아침·낮·오후 목표가 다름 → <b>WFVC</b></div>
+  <div class="g"><b>온도와 시간 동시에</b>라인을 나눠 각각 → <b>WFTC · WTDC</b></div>
+  <div class="g"><b>강풍 지역</b>풍속경보 필요 → <b>WTVC</b></div>
+  <div class="g"><b>환경 종합 자동</b>강우·풍속·일출일몰까지 → <b>SVC · RVC</b></div>
+  <div class="g"><b>수동으로 충분</b>사람이 직접 조작 → <b>RMP · WRM</b></div>
+  <div class="g"><b>여러 대 묶어 제어</b>상위 신호로 일괄 → <b>D 시리즈</b></div>
+ </div>
+<p class="foot">(주)우성하이텍 · 경남 양산시 동면 양산대로 446 · TEL 055-365-8801 · <a href="https://www.wsh.co.kr" style="color:#8d939a">www.wsh.co.kr</a><br>
+제원은 제조사 사용설명서(2014년판) 및 제품 자료를 기준으로 작성되었습니다. 사양은 사전 예고 없이 변경될 수 있습니다.</p></div>
+<script src="assets/js/data.js"></script>
+<script>
+var S=CTRLS, cur=0;
+function renderLadder(){var h='';S.forEach(function(x,i){
+ h+='<button data-i="'+i+'"'+(i===cur?' class="on"':'')+'>'+x.nm+'<small>'+x.tier+'</small></button>'});
+ document.getElementById('ladder').innerHTML=h;}
+function render(){var x=S[cur];
+ var g=document.getElementById('gal');
+ g.innerHTML = x.img?('<div class="big"><img src="'+x.img+'" alt="'+x.nm+'" loading="lazy"></div>'+
+   (x.img2?('<div class="thumbs"><img src="'+x.img+'" class="on" alt=""><img src="'+x.img2+'" alt=""></div>'):''))
+   :'<div class="noimg">제품 사진 준비중</div>';
+ sNm.textContent=x.nm; sTier.textContent=x.tier; sDesc.textContent=x.desc;
+ sScr.textContent=x.scr; sCh.textContent=x.ch; sCtl.textContent=x.ctl; sSp.textContent=x.sp; sCase.textContent=x.case;
+ var t='';x.models.forEach(function(m){t+='<tr><td><b>'+m.m+'</b></td><td>'+m.cap+'</td><td>'+m.line+'</td><td>'+m.w+'</td></tr>'});
+ document.getElementById('mtb').innerHTML=t;
+ document.getElementById('featBox').innerHTML = x.feat?('<img src="'+x.feat+'" alt="">')
+   :'<p style="color:#a0a4a8;font-size:13.5px">이 시리즈의 기능 그래픽은 준비중입니다.</p>';
+ document.getElementById('setTitle').textContent=x.nm+' 설정값 · 특징';
+ document.getElementById('setBody').innerHTML = x.set || '<span style="color:#8d939a">별도 설정 항목이 없습니다(수동 조작).</span>';
+ renderLadder();}
+document.addEventListener('click',function(e){
+ var b=e.target.closest('#ladder button');
+ if(b){cur=+b.dataset.i;location.hash=S[cur].id;render();window.scrollTo({top:0,behavior:'smooth'});return}
+ var t=e.target.closest('#tabs button');
+ if(t){var i=t.dataset.t;document.querySelectorAll('#tabs button').forEach(function(x){x.classList.toggle('on',x.dataset.t===i)});
+  document.querySelectorAll('.tp').forEach(function(p){p.classList.toggle('on',p.dataset.t===i)});return}
+ var th=e.target.closest('#gal .thumbs img');
+ if(th){document.querySelector('#gal .big img').src=th.src;
+  document.querySelectorAll('#gal .thumbs img').forEach(function(x){x.classList.remove('on')});th.classList.add('on');}});
+function applyHash(){var h=decodeURIComponent((location.hash||'').replace('#','')).trim();if(!h)return;
+ var i=S.findIndex(function(x){return x.id.toUpperCase()===h.toUpperCase()||x.nm.toUpperCase()===h.toUpperCase()
+  ||x.models.some(function(m){return m.m.toUpperCase()===h.toUpperCase()})});if(i>=0)cur=i;}
+applyHash();render();
+window.addEventListener('hashchange',function(){applyHash();render();});
+</script><script src="assets/js/gate.js"></script></body></html>
