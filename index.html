@@ -1,8 +1,8 @@
-<!DOCTYPE html><html lang="ko"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="ko" translate="no"><head>
+<meta charset="UTF-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>전체 제품 보기 — 우성하이텍</title>
 <meta name="description" content="우성하이텍 시설원예 자동화 제품 카탈로그 — 자연환기창·보온재개폐·커튼제어 등">
-<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/common-ui.css"><link rel="stylesheet" href="assets/css/app.css">
 <script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script></head><body>
 
 <div id="gate">
@@ -34,7 +34,7 @@
 </div></div>
 <div class="bc"><div class="bcin">홈 › <b>제품정보</b></div></div>
 <div class="wrap">
- <div class="head"><h1 id="ttl">전체 제품 보기</h1><p id="stl">카테고리를 선택하세요</p></div>
+ <div class="head"><h1 id="ttl" data-i18n="전체 제품 안내">전체 제품 안내</h1><p id="stl" data-i18n="제품을 선택하면 상세 정보를 확인할 수 있습니다.">제품을 선택하면 상세 정보를 확인할 수 있습니다.</p></div>
  <div class="top"><button id="back">← 전체 카테고리</button></div>
  <div id="body"></div>
 <p class="foot">(주)우성하이텍 · 경남 양산시 동면 양산대로 446 · TEL 055-365-8801 · <a href="https://www.wsh.co.kr" style="color:#8d939a">www.wsh.co.kr</a><br>
@@ -50,18 +50,39 @@
 <script src="assets/js/data.js"></script>
 <script>
 var CC=['#185fa5','#0f6e56','#a5641a','#7a4a99','#a33d3d','#2a7a86'];
+var LANDING=[
+ {name:'자연환기창 제어시스템',img:'assets/img/landing-01.jpg',cat:0,href:'vent-system.html'},
+ {name:'보온재개폐 시스템',img:'assets/img/landing-02.jpg',cat:1},
+ {name:'커튼제어 시스템',img:'assets/img/landing-03.jpg',cat:3},
+ {name:'실내공기 순환팬',img:'assets/img/landing-04.jpg',cat:4},
+ {name:'배양액 자동공급기 (양액재배)',img:'assets/img/landing-05.jpg',cat:5},
+ {name:'배양액 자동공급기 (토양재배)',img:'assets/img/landing-06.jpg',cat:6},
+ {name:'스마트팜 환경제어시스템',img:'assets/img/landing-07.jpg',cat:7},
+ {name:'ICT 복합환경 제어시스템',img:'assets/img/landing-08.jpg',cat:8},
+ {name:'수경재배 배액측정시스템',img:'assets/img/landing-09.jpg',cat:9},
+ {name:'데이터 마스터',img:'assets/img/landing-10.jpg',cat:10},
+ {name:'환경관리 모니터',img:'assets/img/landing-11.jpg',cat:11},
+ {name:'편리제품',img:'assets/img/landing-12.jpg',cat:12}
+];
+CATS.push(
+ {name:'데이터 마스터',img:'assets/img/landing-10.jpg',desc:'온실 환경 데이터를 수집·확인하는 통합 데이터 관리 시스템입니다.',groups:[]},
+ {name:'환경관리 모니터',img:'assets/img/landing-11.jpg',desc:'풍향·풍속, CO₂ 등 재배 환경을 실시간으로 확인하는 측정 제품입니다.',groups:[]},
+ {name:'편리제품',img:'assets/img/landing-12.jpg',desc:'센서 케이스와 비상전원 공급장치 등 현장 운용을 돕는 보조 제품입니다.',groups:[]}
+);
 var body=document.getElementById('body'),ttl=document.getElementById('ttl'),stl=document.getElementById('stl'),
     back=document.getElementById('back'),ov=document.getElementById('ov');
 function esc(s){return String(s==null?'':s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function renderCats(){
- back.style.display='none';ttl.textContent='전체 제품 보기';stl.textContent='카테고리를 선택하세요';
+ document.body.classList.add('landing');
+ back.style.display='none';ttl.textContent='전체 제품 안내';stl.textContent='제품을 선택하면 상세 정보를 확인할 수 있습니다.';
  var h='<div class="cgrid">';
- CATS.forEach(function(c,i){var n=c.groups.reduce(function(a,g){return a+g.items.length},0);
-  h+='<div class="ctile" data-c="'+i+'"><img src="'+c.img+'" alt="'+esc(c.name)+'"><div class="t">'+
-     esc(c.name)+'</div><div class="n">'+(n?n+'개 제품':'상세 준비중')+'</div></div>';});
+ LANDING.forEach(function(c){
+  h+='<div class="ctile" data-c="'+c.cat+'" data-href="'+(c.href||'')+'" tabindex="0" role="button"><div class="cthumb"><img src="'+c.img+'" alt="'+esc(c.name)+'"></div><div class="t">'+
+     esc(c.name)+'</div></div>';});
  body.innerHTML=h+'</div>';location.hash='';
 }
 function renderCat(i){
+ document.body.classList.remove('landing');
  var c=CATS[i];back.style.display='inline-block';ttl.textContent=c.name;
  var _n=0,_l=0;c.groups.forEach(function(g){g.items.forEach(function(x){_n++;if(x.link)_l++})});
  stl.textContent = _n===0 ? '' : (_l===_n ? '제품군을 선택하면 상세 카탈로그로 이동합니다'
@@ -108,7 +129,7 @@ function openModal(c,g,p){
  ov.classList.add('on');
 }
 document.addEventListener('click',function(e){
- var t=e.target.closest('.ctile');if(t){renderCat(+t.dataset.c);location.hash='c'+t.dataset.c;window.scrollTo(0,0);return}
+ var t=e.target.closest('.ctile');if(t){if(t.dataset.href){location.href=t.dataset.href;return}renderCat(+t.dataset.c);location.hash='c'+t.dataset.c;window.scrollTo(0,0);return}
  var gc=e.target.closest('.gcard'); if(gc){location.href=gc.dataset.go;return}
  var p=e.target.closest('.pcard');
  if(p){var it2=CATS[+p.dataset.c].groups[+p.dataset.g].items[+p.dataset.p];
@@ -118,10 +139,14 @@ document.addEventListener('click',function(e){
  if(th){document.getElementById('mainImg').src=th.src;
   document.querySelectorAll('#moTh img').forEach(function(x){x.classList.remove('on')});th.classList.add('on');}
 });
+document.addEventListener('keydown',function(e){
+ var t=e.target.closest('.ctile');
+ if(t&&(e.key==='Enter'||e.key===' ')){e.preventDefault();if(t.dataset.href){location.href=t.dataset.href;return}renderCat(+t.dataset.c);location.hash='c'+t.dataset.c;window.scrollTo(0,0);}
+});
 back.addEventListener('click',renderCats);
 document.getElementById('close').addEventListener('click',function(){ov.classList.remove('on')});
 ov.addEventListener('click',function(e){if(e.target===ov)ov.classList.remove('on')});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')ov.classList.remove('on')});
 var m=(location.hash||'').match(/^#c(\d+)$/);
 if(m&&CATS[+m[1]])renderCat(+m[1]);else renderCats();
-</script><script src="assets/js/gate.js"></script></body></html>
+</script><script src="assets/js/gate.js"></script><script src="assets/js/common-ui.js"></script><script src="assets/js/i18n-dict.js"></script><script src="assets/js/site-i18n.js"></script></body></html>

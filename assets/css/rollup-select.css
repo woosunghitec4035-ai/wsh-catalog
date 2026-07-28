@@ -1,0 +1,38 @@
+body{min-height:100vh;background:#f6f9fc;color:#0c2346;font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+body:before{content:"";position:fixed;inset:140px 0 auto;height:330px;background:linear-gradient(rgba(246,249,252,.42),rgba(246,249,252,.95)),url("../img/cat-vent.jpg") center 42%/cover no-repeat;opacity:.38;z-index:-1}
+.select-page{width:min(1460px,calc(100% - 60px));margin:0 auto;padding:28px 0 24px;position:relative}
+.select-top{display:flex;justify-content:space-between;align-items:flex-start}.select-logo{width:min(390px,32vw)}.select-actions{display:flex;gap:9px}
+.nav-pill,.back-pill{display:flex;align-items:center;gap:9px;border:1px solid #d3dce7;border-radius:30px;background:rgba(255,255,255,.9);color:#13284b;text-decoration:none;font-size:18px;font-weight:750;padding:10px 22px;box-shadow:0 2px 7px rgba(19,40,75,.06)}
+.nav-pill span{font-size:26px}.back-pill span{font-size:30px;line-height:.8}
+.select-heading{text-align:center;margin:6px 0 26px}.mode-pill{display:inline-block;color:#fff;background:linear-gradient(110deg,#087cc8,#0755b4);border-radius:30px;padding:5px 30px;font-size:25px;font-weight:800}
+.select-heading h1{font-size:clamp(38px,4vw,58px);line-height:1.25;margin-top:12px;letter-spacing:-2.5px}.select-heading p{font-size:21px;margin-top:5px;color:#273c5a}
+.product-grid{width:min(1260px,100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.product-choice{min-width:0;background:rgba(255,255,255,.93);border:1.5px solid;border-radius:15px;padding:20px 20px 14px;text-align:center;box-shadow:0 8px 24px rgba(26,50,79,.09);transition:transform .2s ease,box-shadow .2s ease}
+.product-choice:hover{transform:translateY(-4px);box-shadow:0 15px 32px rgba(26,50,79,.16)}
+.star-choice{border-color:#0b75c9;--accent:#0873c9}.master-choice{border-color:#4f9b39;--accent:#318a22}
+.product-brand{height:54px;display:flex;align-items:center;justify-content:center}.product-brand img{display:block;max-width:min(310px,75%);max-height:52px;width:auto;height:auto;object-fit:contain}
+.product-tag{display:inline-block;margin:8px auto 13px;background:var(--accent);color:#fff;border-radius:20px;padding:2px 26px;font-size:17px}
+.product-choice p{font-size:19px;line-height:1.55;color:#171d27;min-height:60px}
+.product-photo{height:285px;display:flex;align-items:center;justify-content:center;padding:6px 20px}.product-photo img{max-width:100%;max-height:100%;object-fit:contain}
+.choice-button{height:62px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;position:relative;font-size:24px;font-weight:800;transition:filter .18s ease,transform .18s ease}.choice-button:hover{filter:brightness(.9);transform:translateY(-1px)}.choice-button span{position:absolute;right:25px;top:50%;transform:translateY(-52%);font-size:42px;line-height:1;font-weight:300}
+.select-note{width:min(1260px,100%);margin:18px auto 0;padding:13px 20px;border:1px solid #d6e0ea;border-radius:14px;background:rgba(255,255,255,.7);text-align:center;color:#47668f;font-size:17px}.select-note span{margin-right:18px;font-size:23px}
+@media(min-width:901px){
+ body{height:100vh;overflow:hidden}
+ .select-page{height:100vh;padding:clamp(13px,2.8vh,28px) 0 clamp(10px,2vh,24px);display:flex;flex-direction:column}
+ .select-top{flex:0 0 auto}.select-logo{height:clamp(45px,7vh,70px);width:auto}
+ .back-pill{top:clamp(90px,13vh,132px)}
+ .select-heading{flex:0 0 auto;margin:clamp(0px,.7vh,6px) 0 clamp(10px,2.6vh,26px)}
+ .mode-pill{font-size:clamp(18px,2.7vh,25px);padding:clamp(2px,.7vh,5px) 30px}
+ .select-heading h1{font-size:clamp(34px,5.2vh,58px);margin-top:clamp(5px,1.3vh,12px)}
+ .select-heading p{font-size:clamp(16px,2.3vh,21px);margin-top:2px}
+ .product-grid{flex:1 1 auto;min-height:0}
+ .product-choice{min-height:0;padding:clamp(12px,2.2vh,20px) 20px clamp(9px,1.5vh,14px);display:flex;flex-direction:column}
+ .product-brand{height:clamp(38px,6vh,54px)}.product-brand img{max-height:100%}
+ .product-tag{flex:0 0 auto;margin:clamp(4px,.8vh,8px) auto clamp(5px,1.2vh,13px);font-size:clamp(14px,1.9vh,17px)}
+ .product-choice p{flex:0 0 auto;font-size:clamp(15px,2.1vh,19px);line-height:1.4;min-height:0}
+ .product-photo{flex:1 1 auto;min-height:0;height:auto;padding:4px 20px}
+ .choice-button{flex:0 0 clamp(48px,6.8vh,62px);height:auto;font-size:clamp(19px,2.6vh,24px)}
+ .select-note{flex:0 0 auto;margin-top:clamp(7px,1.7vh,18px);padding:clamp(6px,1.3vh,13px) 20px;font-size:clamp(13px,1.8vh,17px)}
+}
+@media(max-width:900px){.select-page{width:min(100% - 28px,700px)}.select-logo{width:240px}.select-actions{gap:5px}.nav-pill,.back-pill{padding:8px 12px;font-size:14px}.select-heading{margin-top:4px}.product-grid{grid-template-columns:1fr}.product-photo{height:250px}.product-brand{height:48px}}
+@media(max-width:520px){.select-logo{width:180px}.nav-pill{font-size:14px;padding:7px 12px}.mode-pill{font-size:19px}.select-heading h1{font-size:34px}.select-heading p{font-size:17px}.product-choice{padding:17px 13px 12px}.product-choice p{font-size:16px}.product-photo{height:215px}.choice-button{height:55px;font-size:19px}}

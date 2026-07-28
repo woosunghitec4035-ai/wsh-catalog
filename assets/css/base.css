@@ -2,8 +2,13 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);line-height:1.6;
  font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body.landing .nav,body.landing .bc,body.landing .foot{display:none}
+/* 예전에는 랜딩을 스크롤 없이 한 화면에 담으려고 타일 높이를 화면 높이에 맞췄습니다.
+   그러면 사진 칸 비율이 창 크기에 따라 계속 바뀌어 제품 사진의 위아래(또는 좌우)가 잘렸습니다.
+   사진이 온전히 보이는 쪽을 택해, 랜딩도 일반 스크롤 배치로 두고
+   사진 칸은 원본 비율(4:5)을 그대로 지키게 했습니다. → app.css 의 .cthumb */
 img{max-width:100%}
-.wrap{max-width:1500px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1840px;margin:0 auto;padding:0 52px}
 .nav{background:#fff;border-bottom:1px solid var(--line)}
 .navin{max-width:1500px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:28px}
 .navin img{height:30px;width:auto}
@@ -14,9 +19,9 @@ img{max-width:100%}
 .bcin{max-width:1500px;margin:0 auto;padding:9px 20px}
 .bcin b{color:var(--ink)} .bcin a{color:var(--g);text-decoration:none;font-weight:600}
 .bcin a:hover{text-decoration:underline}
-.head{text-align:center;padding:28px 0 18px}
-.head h1{font-size:clamp(24px,4vw,33px);font-weight:700;letter-spacing:-.5px}
-.head p{margin-top:7px;font-size:15.5px;color:var(--mut)}
+.head{text-align:left;padding:38px 18px 24px}
+.head h1{font-size:clamp(32px,3vw,48px);font-weight:800;letter-spacing:-1.8px;color:#182230}
+.head p{margin-top:2px;font-size:21px;color:#647386}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px}
 .secttl{font-size:19px;font-weight:700;margin:24px 0 11px}
 .foot{margin:32px 0 40px;font-size:12.5px;color:#8d939a;text-align:center;line-height:1.8}
@@ -51,5 +56,13 @@ body.locked{overflow:hidden}
 #notice .ntitle{font-size:18px;font-weight:800;margin:8px 0 12px;color:#1a1a1a}
 #notice .ntext{font-size:14px;color:#444;line-height:1.7}
 #notice .nsub{display:block;font-size:11.5px;color:#9a9a9a;margin-top:10px;line-height:1.5}
+/* 게이트와 배포금지 안내에는 한국어 아래 영어 병기 문구가 붙어 있습니다.
+   영어·일본어로 볼 때는 본문이 이미 번역되어 있어 병기 문구가 중복되므로 감춥니다.
+   data-lang 이 붙기 전이나 스크립트가 실패한 경우에는 한국어 화면이므로 그대로 보입니다. */
+html[data-lang="en"] #gate .gdesc span,
+html[data-lang="ja"] #gate .gdesc span,
+html[data-lang="en"] #notice .nsub,
+html[data-lang="ja"] #notice .nsub{display:none}
 #notice button{margin-top:18px;width:100%;background:#33A648;color:#fff;border:0;padding:12px;
  border-radius:10px;font-size:15px;font-weight:800;cursor:pointer}
+@media(max-width:800px){.wrap{padding:0 16px}.head{padding:26px 4px 18px}.head p{font-size:16px}}

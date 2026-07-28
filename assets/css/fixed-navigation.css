@@ -1,0 +1,121 @@
+/* Shared position and dimensions for the navigation controls used across the product flow. */
+.vent-actions,
+.select-actions,
+.top-actions,
+.detail-actions{
+ position:fixed!important;
+ top:20px!important;
+ right:max(22px,calc((100vw - 1460px)/2))!important;
+ z-index:900;
+ display:flex;
+ align-items:center;
+ gap:8px!important;
+ margin:0!important;
+}
+.vent-actions a,
+.select-actions a,
+.top-actions a,
+.detail-actions a{
+ box-sizing:border-box;
+ width:112px;
+ height:38px;
+ min-width:112px;
+ padding:0 10px!important;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:7px!important;
+ border:1px solid #d2dce8;
+ border-radius:22px;
+ background:rgba(255,255,255,.96);
+ color:#0b3b80;
+ font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+ font-size:14px!important;
+ line-height:1!important;
+ font-weight:750;
+ white-space:nowrap;
+ text-decoration:none;
+ box-shadow:0 2px 7px rgba(19,40,75,.05);
+}
+.vent-actions a span,
+.select-actions a span,
+.top-actions a span,
+.detail-actions a span{
+ width:17px;
+ flex:0 0 17px;
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ font-size:19px!important;
+ line-height:1!important;
+}
+.detail-crumb,
+.rs-top .crumb{
+ position:fixed!important;
+ top:70px!important;
+ right:max(22px,calc((100vw - 1460px)/2))!important;
+ z-index:890;
+ margin:0!important;
+ font-size:13px!important;
+ line-height:20px!important;
+ white-space:nowrap;
+ text-align:right;
+}
+
+@media(max-width:1000px){
+ .vent-actions,
+ .select-actions,
+ .top-actions,
+ .detail-actions{
+  top:14px!important;
+  right:14px!important;
+ }
+ .vent-actions a,
+ .select-actions a,
+ .top-actions a,
+ .detail-actions a{
+  width:96px;
+  min-width:96px;
+  height:34px;
+  font-size:12px!important;
+ }
+ .detail-crumb,
+ .rs-top .crumb{display:none!important}
+}
+
+/* 언어 전환 도구모음(.global-tools)이 붙으면 그 아래로 내려갑니다.
+ * 위쪽 규칙들이 !important 를 쓰고 있어 여기서도 !important 로 덮어씁니다.
+ * 화면이 좁아지면 도구모음이 하단으로 내려가므로 이 보정은 필요 없습니다. */
+@media(min-width:801px){
+ .has-global-tools .vent-actions,
+ .has-global-tools .select-actions,
+ .has-global-tools .top-actions,
+ .has-global-tools .detail-actions{
+  top:62px!important;
+ }
+ .has-global-tools .detail-crumb,
+ .has-global-tools .rs-top .crumb{
+  top:112px!important;
+ }
+}
+
+@media(max-width:520px){
+ .vent-actions,
+ .select-actions,
+ .top-actions,
+ .detail-actions{
+  top:10px!important;
+  right:10px!important;
+  gap:5px!important;
+ }
+ .vent-actions a,
+ .select-actions a,
+ .top-actions a,
+ .detail-actions a{
+  width:88px;
+  min-width:88px;
+  height:32px;
+  padding:0 7px!important;
+  font-size:11.5px!important;
+ }
+}

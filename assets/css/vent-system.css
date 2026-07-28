@@ -1,0 +1,43 @@
+body{min-height:100vh;background:radial-gradient(circle at 50% 18%,#fff 0,#f8fbff 42%,#edf3f8 100%);color:#101a2b;font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+.vent-page{width:min(1460px,calc(100% - 56px));margin:0 auto;padding:36px 0 26px}
+.vent-top{display:flex;align-items:flex-start;justify-content:space-between}.vent-actions{display:flex;gap:9px}
+.vent-logo{width:min(430px,34vw);height:auto}
+.all-products,.previous-page{display:flex;align-items:center;gap:9px;border:1px solid #ccd3db;border-radius:30px;padding:10px 22px;background:rgba(255,255,255,.78);color:#222;text-decoration:none;font-size:18px;font-weight:700}.previous-page span{font-size:30px;line-height:.75}
+.all-products span{font-size:27px;line-height:1}
+.vent-heading{text-align:center;margin:-4px 0 18px}
+.vent-heading h1{font-size:clamp(38px,4vw,60px);font-weight:800;letter-spacing:-2.2px;line-height:1.22}
+.vent-heading p{font-size:22px;color:#596a82;margin-top:3px}
+.system-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.system-card{background:rgba(255,255,255,.86);border:1px solid;border-radius:18px;padding:24px 27px 16px;box-shadow:0 7px 20px rgba(33,57,78,.11);min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.system-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(33,57,78,.17)}
+.roll-card{border-color:#edcb91;--accent:#e58a0b}.rack-card{border-color:#9fc7ea;--accent:#0871c8}
+.card-title{display:flex;align-items:flex-start;gap:17px;color:var(--accent);padding-bottom:13px;border-bottom:2px solid var(--accent)}
+.card-icon{font-size:52px;line-height:.92;font-weight:800}.card-icon.gear{font-size:48px}
+.card-title h2{font-size:29px;line-height:1.15;letter-spacing:-.8px;font-weight:750}.card-title h3{font-size:31px;line-height:1.3;color:#171717;margin-top:4px;letter-spacing:-1px;font-weight:800}
+.card-copy{font-size:18px;line-height:1.55;margin:13px 0 10px;color:#303640;letter-spacing:-.25px}
+.product-visual{aspect-ratio:5/3;overflow:hidden;background:#fff;border-radius:5px;display:flex;align-items:center;justify-content:center}
+.product-visual img{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
+.system-button{width:100%;height:64px;margin-top:16px;border:0;border-radius:8px;background:linear-gradient(110deg,var(--accent),color-mix(in srgb,var(--accent),#fff 12%));display:flex;align-items:center;justify-content:center;position:relative;color:#fff;text-decoration:none;font-family:inherit;font-size:25px;font-weight:800;cursor:pointer;transition:filter .18s ease,transform .18s ease}
+.system-button:hover{filter:brightness(.92);transform:translateY(-1px)}
+.system-button span{position:absolute;right:24px;top:50%;transform:translateY(-52%);font-size:42px;line-height:1;font-weight:300}
+.vent-note{margin-top:20px;border:1px solid #cfd9e2;border-radius:18px;padding:16px 22px;text-align:center;background:rgba(255,255,255,.44);font-size:18px;color:#333}
+.vent-note span{margin-right:16px;color:#556a83;font-size:24px}
+@media(min-width:901px){
+ body{height:100vh;overflow:hidden}
+ .vent-page{height:100vh;padding:clamp(14px,3vh,36px) 0 clamp(12px,2vh,26px);display:flex;flex-direction:column}
+ .vent-top{flex:0 0 auto}.vent-logo{height:clamp(46px,7vh,76px);width:auto}
+ .vent-heading{flex:0 0 auto;margin:clamp(-4px,.5vh,5px) 0 clamp(10px,2vh,18px)}
+ .vent-heading h1{font-size:clamp(34px,5.3vh,60px)}
+ .vent-heading p{font-size:clamp(16px,2.4vh,22px)}
+ .system-grid{flex:1 1 auto;min-height:0;gap:clamp(22px,3.2vw,48px)}
+ .system-card{min-height:0;padding:clamp(14px,2.4vh,24px) 27px clamp(10px,1.6vh,16px);display:flex;flex-direction:column}
+ .card-title{flex:0 0 auto;padding-bottom:clamp(8px,1.5vh,13px)}
+ .card-title h2{font-size:clamp(22px,3.1vh,29px)}.card-title h3{font-size:clamp(23px,3.3vh,31px)}
+ .card-icon{font-size:clamp(37px,5.5vh,52px)}.card-icon.gear{font-size:clamp(36px,5.1vh,48px)}
+ .card-copy{flex:0 0 auto;font-size:clamp(14px,2vh,18px);line-height:1.42;margin:clamp(7px,1.4vh,13px) 0 clamp(6px,1vh,10px)}
+ .product-visual{flex:1 1 auto;min-height:0;aspect-ratio:auto}
+ .system-button{flex:0 0 clamp(48px,7vh,64px);height:auto;margin-top:clamp(8px,1.6vh,16px);font-size:clamp(19px,2.7vh,25px)}
+ .vent-note{flex:0 0 auto;margin-top:clamp(8px,1.6vh,20px);padding:clamp(7px,1.5vh,16px) 22px;font-size:clamp(14px,1.9vh,18px)}
+}
+@media(max-width:900px){.vent-page{width:min(100% - 28px,720px);padding-top:20px}.vent-logo{width:260px}.vent-heading{margin:20px 0}.system-grid{grid-template-columns:1fr;gap:22px}.vent-actions{gap:5px}.all-products,.previous-page{padding:8px 12px;font-size:14px}.card-title h2{font-size:25px}.card-title h3{font-size:27px}}
+@media(max-width:520px){.vent-logo{width:190px}.vent-heading h1{font-size:34px}.vent-heading p{font-size:17px}.system-card{padding:18px 16px 14px}.card-icon{font-size:38px}.card-title{gap:10px}.card-title h2{font-size:21px}.card-title h3{font-size:22px}.card-copy{font-size:16px}.source-crop{height:210px}.system-button{font-size:19px;height:55px}.vent-note{font-size:15px}}
