@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no">
+<head>
+<meta charset="UTF-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RMP·WRM시리즈 — 롤업마스터 수동 컨트롤러</title>
+<meta name="description" content="롤업마스터 RMP·WRM 수동 컨트롤러의 케이스 구분, 모델 구성, 운전 방법과 기본 제공 부품">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/common-ui.css"><link rel="stylesheet" href="assets/css/wsm-detail.css"><link rel="stylesheet" href="assets/css/d-series-detail.css"><link rel="stylesheet" href="assets/css/rmp-series-detail.css"><link rel="stylesheet" href="assets/css/controller-feature-cards.css"><link rel="stylesheet" href="assets/css/fixed-navigation.css">
+<script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script>
+</head>
+<body class="d-detail rmp-detail">
+<div id="gate"><div class="gbox"><div class="glogo">㈜우성하이텍</div><div class="gtitle">전체 제품 카탈로그</div><div class="gdesc">열람하려면 비밀번호를 입력하세요.<span>Enter password to view</span></div><input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호"><button id="gbtn" type="button">확인</button><div id="gerr" class="gerr"></div></div></div>
+<div id="notice"><div class="nbox"><div class="nic">⚠</div><div class="ntitle">배포 금지 안내</div><div class="ntext">본 자료는 <b>㈜우성하이텍</b>의 자산입니다.<br>무단 <b>복제·배포·전송·게시</b>를 금지합니다.</div><button id="nbtn" type="button">확인했습니다</button></div></div>
+
+<main class="detail-page">
+ <header class="detail-top">
+  <div class="detail-brands"><img src="assets/img/vent-logo.png" alt="VENT CONTROL SYSTEM"><img src="assets/img/logo-efarmer-vent.png" alt="eFarmer Vent"></div>
+  <nav class="detail-crumb">자연환기창 제어시스템　›　롤·업·다운 방식　›　롤업마스터　›　<strong>RMP·WRM시리즈</strong></nav>
+  <div class="detail-actions"><a href="rollupmaster-select.html"><span>‹</span> 이전으로</a><a href="index.html"><span>⌂</span> 전체 제품</a></div>
+ </header>
+
+ <div class="detail-layout">
+  <aside class="detail-side">
+   <h2>롤업마스터 모델</h2>
+   <div class="model-switcher"><button type="button" aria-expanded="false"><span>현재 모델</span><strong>RMP·WRM시리즈</strong><b>⌄</b></button><div class="model-switch-list"><a class="active" href="rmp-series.html">RMP·WRM시리즈</a><a href="d-series.html">D시리즈</a><a href="wsdt-series.html">WSDT시리즈</a><a href="ttc-series.html">TTC시리즈</a><a href="wfvc-series.html">WFVC시리즈</a><a href="wftc-series.html">WFTC시리즈</a><a href="svc-series.html">SVC시리즈</a><a href="rollupmaster.html#RVC">RVC</a></div><a class="all-models" href="rollupmaster-select.html">전체 모델 보기 <b>›</b></a></div>
+   <a href="#overview"><i>01</i> 제품 개요 <b>›</b></a>
+   <a href="#models"><i>02</i> 모델 구성 <b>›</b></a>
+   <a href="#operation"><i>03</i> 운전 방법 <b>›</b></a>
+   <a href="#included"><i>04</i> 기본 제공 부품 <b>›</b></a>
+   <div class="detail-about"><div><img src="assets/img/ctrl-rmp.jpg" alt=""><h3>RMP·WRM이란?</h3></div><p>각 개폐라인의 스위치를 직접 조작하는 DC24V 수동 컨트롤러입니다.</p><p>기능은 같으며 RMP는 플라스틱 케이스, WRM은 스틸 케이스로 구분합니다.</p></div>
+  </aside>
+
+  <section class="detail-main" id="overview">
+   <div class="product-title"><img src="assets/img/logo-rollupmaster.png" alt="롤업마스터"><span></span><h1>RMP·WRM시리즈</h1></div>
+   <p class="product-copy">동일한 수동운전 기능을 사용하며, 연결 규모와 케이스 재질에 따라 RMP와 WRM으로 구분합니다.</p>
+   <div class="d-summary"><span><b>RMP</b> 플라스틱 케이스</span><span><b>WRM</b> 스틸 케이스</span><span><b>출력</b> DC24V</span><span><b>운전</b> 개별 수동</span><small>50W·100W 출력과 필요한 개폐라인 수에 맞춰 선택합니다.</small></div>
+
+   <div class="d-main-grid">
+    <section class="d-product-hero">
+     <div><img src="assets/img/ctrl-rmp2.jpg" alt="RMP 플라스틱 케이스 수동 컨트롤러"><b>RMP시리즈</b><span>플라스틱 케이스</span></div>
+     <div><img src="assets/img/ctrl-wrm.png" alt="WRM 스틸 케이스 수동 컨트롤러"><b>WRM시리즈</b><span>스틸 케이스</span></div>
+    </section>
+    <section class="d-features rmp-quick-features">
+     <h2>핵심 기능</h2>
+     <div class="rmp-feature-badges">
+     <article class="blue"><strong>수동<br>운전</strong><p>현장에서 스위치를 직접 조작</p></article>
+     <article class="gold"><strong>개별작동<br>개별퓨즈</strong><p>필요한 라인만 독립 운전·보호</p></article>
+     <article class="navy"><strong>방우<br>타입</strong><p>온실 현장을 고려한 케이스</p></article>
+      <article class="sky"><strong>3단<br>운전</strong><p>열림·정지·닫힘 선택</p></article>
+      <article class="amber"><strong>LED<br>표시</strong><p>적색·녹색으로 작동 확인</p></article>
+      <article class="deep"><strong>DC24V<br>출력</strong><p>전동개폐기용 직류 출력</p></article>
+     </div>
+    </section>
+   </div>
+
+   <section class="d-spec-section">
+    <h2>제품 사양과 선택 기준</h2>
+    <div class="d-spec-grid"><dl><div><dt>입력전압</dt><dd>AC220V</dd></div><div><dt>출력전압</dt><dd>DC24V</dd></div><div><dt>출력구성</dt><dd>라인당 50W 또는 100W</dd></div><div><dt>운전방식</dt><dd>각 개폐라인 스위치에 의한 개별 수동운전</dd></div><div><dt>케이스</dt><dd>RMP 플라스틱 / WRM 스틸</dd></div></dl><div class="d-key-point"><b>D시리즈와의 차이</b><p>RMP·WRM은 마그네틱 스위치가 없어 센트럴 컨트롤러의 릴레이 신호를 받을 수 없으며 전체 일괄운전 기능도 없습니다. 초기 비용을 줄이고 현장에서 개별 수동운전만 할 때 적합합니다. 전체운전이나 향후 중앙제어 확장이 필요하면 D시리즈가 알맞습니다.</p></div></div>
+   </section>
+
+   <div class="rmp-detail-menu controller-detail-menu">
+    <span>상세 정보</span>
+    <a href="#models">모델 구성 <b>＋</b></a><a href="#operation">운전 방법 <b>＋</b></a><a href="#included">기본 제공 부품 <b>＋</b></a>
+   </div>
+
+   <details class="d-model-section rmp-fold controller-fold" id="models">
+    <summary><span><small>MODEL LINEUP</small><b>케이스와 출력별 모델 구성</b></span><i>＋</i></summary>
+    <div class="rmp-fold-body controller-fold-body"><div class="d-section-title"><p>RMP와 WRM은 운전 기능이 같으며, 케이스 재질과 필요한 개폐라인 수에 따라 모델명이 달라집니다.</p></div>
+    <div class="d-output-grid rmp-model-grid">
+     <article><header><b>RMP · 플라스틱</b><span>50W 출력</span></header><table><thead><tr><th>모델</th><th>연결 대수</th></tr></thead><tbody><tr><td>RMP-502</td><td>2대</td></tr><tr><td>RMP-504</td><td>4대</td></tr><tr><td>RMP-506</td><td>6대</td></tr><tr><td>RMP-508</td><td>8대</td></tr><tr><td>RMP-5012</td><td>12대</td></tr></tbody></table></article>
+     <article><header><b>WRM · 스틸</b><span>50W 출력</span></header><table><thead><tr><th>모델</th><th>연결 대수</th></tr></thead><tbody><tr><td>WRM-5016</td><td>16대</td></tr><tr><td>WRM-5020</td><td>20대</td></tr><tr><td>WRM-5024</td><td>24대</td></tr></tbody></table></article>
+     <article><header><b>RMP · 플라스틱</b><span>100W 출력</span></header><table><thead><tr><th>모델</th><th>연결 대수</th></tr></thead><tbody><tr><td>RMP-1002</td><td>2대</td></tr><tr><td>RMP-1004</td><td>4대</td></tr><tr><td>RMP-1006</td><td>6대</td></tr></tbody></table></article>
+     <article><header><b>WRM · 스틸</b><span>100W 출력</span></header><table><thead><tr><th>모델</th><th>연결 대수</th></tr></thead><tbody><tr><td>WRM-1008</td><td>8대</td></tr><tr><td>WRM-10012</td><td>12대</td></tr><tr><td>WRM-10024</td><td>24대</td></tr></tbody></table></article>
+    </div>
+    <p class="rmp-caution"><b>연결 원칙</b> 출력 단자 한 라인에 전동개폐기 한 대만 연결하십시오. 한 라인에 두 대 이상 연결하면 과부하로 고장 날 수 있습니다.</p>
+    </div>
+   </details>
+
+   <details class="d-central-section rmp-fold controller-fold" id="operation">
+    <summary><span><small>MANUAL OPERATION</small><b>열림·정지·닫힘 운전 방법</b></span><i>＋</i></summary>
+    <div class="rmp-fold-body controller-fold-body"><p class="rmp-fold-intro controller-fold-intro">각 라인의 스위치를 천천히 조작하고, 정방향과 역방향으로 급격하게 전환하지 마십시오.</p>
+    <div class="d-central-flow rmp-operation"><div><b>상단</b><span>열림 작동<br>적색 LED 점등</span></div><i>›</i><div><b>중립</b><span>정지<br>LED 소등</span></div><i>›</i><div><b>하단</b><span>닫힘 작동<br>녹색 LED 점등</span></div></div>
+    <p>스위치 방향과 실제 개폐기의 회전 방향이 맞지 않으면 해당 개폐기의 전선 두 가닥을 서로 바꾸어 연결합니다. 배선 작업 전에는 반드시 전원을 차단하십시오.</p>
+    </div>
+   </details>
+
+   <details class="d-included-section rmp-fold controller-fold" id="included">
+    <summary><span><small>STANDARD PARTS</small><b>케이스별 기본 제공 부품</b></span><i>＋</i></summary>
+    <div class="rmp-fold-body controller-fold-body">
+    <div class="d-parts-grid">
+     <article><b>RMP · 플라스틱 케이스</b><ul><li>설치 고정부품</li><li>예비 퓨즈</li><li>사용설명서</li></ul></article>
+     <article><b>WRM · 스틸 케이스</b><ul><li>전원 코드</li><li>설치 고정부품</li><li>예비 퓨즈</li><li>사용설명서</li></ul></article>
+    </div>
+    </div>
+   </details>
+  </section>
+ </div>
+</main>
+<script src="assets/js/gate.js"></script>
+<script src="assets/js/common-ui.js"></script><script src="assets/js/i18n-dict.js"></script><script src="assets/js/site-i18n.js"></script>
+<script>(function(){function openFold(){var id=location.hash.slice(1),el=id&&document.getElementById(id);if(el&&el.tagName==='DETAILS')el.open=true;}document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){var el=document.querySelector(a.getAttribute('href'));if(el&&el.tagName==='DETAILS')el.open=true;});});window.addEventListener('hashchange',openFold);openFold();})();</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no">
+<head>
+<meta charset="UTF-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WSDT시리즈 — 롤업마스터 시간 자동 컨트롤러</title>
+<meta name="description" content="WSDT 시간 자동 컨트롤러의 기능, 모델 구성, 시간 설정과 운전 방식">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/common-ui.css"><link rel="stylesheet" href="assets/css/wsm-detail.css"><link rel="stylesheet" href="assets/css/d-series-detail.css"><link rel="stylesheet" href="assets/css/controller-feature-cards.css"><link rel="stylesheet" href="assets/css/wsdt-series-detail.css"><link rel="stylesheet" href="assets/css/fixed-navigation.css">
+<script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script>
+</head>
+<body class="d-detail wsdt-detail">
+<div id="gate"><div class="gbox"><div class="glogo">㈜우성하이텍</div><div class="gtitle">전체 제품 카탈로그</div><div class="gdesc">열람하려면 비밀번호를 입력하세요.<span>Enter password to view</span></div><input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호"><button id="gbtn" type="button">확인</button><div id="gerr" class="gerr"></div></div></div>
+<div id="notice"><div class="nbox"><div class="nic">⚠</div><div class="ntitle">배포 금지 안내</div><div class="ntext">본 자료는 <b>㈜우성하이텍</b>의 자산입니다.<br>무단 <b>복제·배포·전송·게시</b>를 금지합니다.</div><button id="nbtn" type="button">확인했습니다</button></div></div>
+<main class="detail-page">
+ <header class="detail-top"><div class="detail-brands"><img src="assets/img/vent-logo.png" alt="VENT CONTROL SYSTEM"><img src="assets/img/logo-efarmer-vent.png" alt="eFarmer Vent"></div><nav class="detail-crumb">자연환기창 제어시스템　›　롤·업·다운 방식　›　롤업마스터　›　<strong>WSDT시리즈</strong></nav><div class="detail-actions"><a href="rollupmaster-select.html"><span>‹</span> 이전으로</a><a href="index.html"><span>⌂</span> 전체 제품</a></div></header>
+ <div class="detail-layout">
+  <aside class="detail-side">
+   <h2>롤업마스터 모델</h2>
+   <div class="model-switcher"><button type="button" aria-expanded="false"><span>현재 모델</span><strong>WSDT시리즈</strong><b>⌄</b></button><div class="model-switch-list"><a href="rmp-series.html">RMP·WRM시리즈</a><a href="d-series.html">D시리즈</a><a class="active" href="wsdt-series.html">WSDT시리즈</a><a href="ttc-series.html">TTC시리즈</a><a href="wfvc-series.html">WFVC시리즈</a><a href="wftc-series.html">WFTC시리즈</a><a href="svc-series.html">SVC시리즈</a><a href="rollupmaster.html#RVC">RVC</a></div><a class="all-models" href="rollupmaster-select.html">전체 모델 보기 <b>›</b></a></div>
+   <a href="#overview"><i>01</i> 제품 개요 <b>›</b></a><a href="#models"><i>02</i> 모델 구성 <b>›</b></a><a href="#settings"><i>03</i> 시간·작동 설정 <b>›</b></a><a href="#operation"><i>04</i> 운전 방식 <b>›</b></a><a href="#troubleshooting"><i>05</i> 점검 및 문제 해결 <b>›</b></a>
+   <div class="detail-about"><div><img src="assets/img/ctrl-wsdt.jpg" alt=""><h3>WSDT란?</h3></div><p>설정한 열림·닫힘 시각에 맞춰 하루 한 번씩 자동 운전하는 시간제어 컨트롤러입니다.</p><p>스텝작동과 작동제한으로 개폐기의 이동을 나누고 보호합니다.</p></div>
+  </aside>
+  <section class="detail-main" id="overview">
+   <div class="product-title"><img src="assets/img/logo-rollupmaster.png" alt="롤업마스터"><span></span><h1>WSDT시리즈</h1></div>
+   <p class="product-copy">매일 정해진 시각에 자연환기창을 열고 닫는 1채널 시간 자동 컨트롤러입니다.</p>
+   <div class="d-summary"><span><b>제어</b> 시간 자동</span><span><b>채널</b> 1채널</span><span><b>출력</b> DC24V</span><span><b>설정</b> 10분 단위</span><small>열림·닫힘 시각, 스텝횟수와 작동제한 시간을 설정합니다.</small></div>
+   <div class="d-main-grid">
+    <section class="d-product-hero wsdt-hero"><div><img src="assets/img/ctrl-wsdt.jpg" alt="WSDT 시간 자동 컨트롤러"><b>WSDT시리즈</b><span>그린하우스 타이머 컨트롤러</span></div><div class="wsdt-time-visual"><span>OPEN</span><strong>09:30</strong><i>설정한 시각에 자동 열림</i><em>↓</em><span>CLOSE</span><strong>19:20</strong><i>설정한 시각에 자동 닫힘</i><p>열림시간과 닫힘시간을 설정하면 매일 같은 시각에 환기창을 자동으로 열고 닫습니다.</p></div></section>
+    <section class="d-features d-quick-features">
+     <h2>핵심 기능 <small>카드를 눌러 상세 내용을 확인하세요.</small></h2>
+     <div class="d-feature-badges is-dense wsdt-feature-badges">
+      <button class="clock" type="button" data-feature="timer"><strong>시간<br>자동운전</strong><p>설정 시각에 자동 열림·닫힘</p></button><button class="lime" type="button" data-feature="step"><strong>스텝<br>작동</strong><p>작동과 대기를 반복</p></button><button class="gray" type="button" data-feature="individual"><strong>개별작동<br>개별퓨즈</strong><p>라인별 직접운전·퓨즈보호</p></button><button class="slate" type="button" data-feature="limit"><strong>열림 작동<br>제한시간</strong><p>열림 최대 운전시간 설정</p></button><button class="cream" type="button" data-feature="sleep"><strong>잠자기<br>기능</strong><p>보호 정지 후 다음 운전 대기</p></button><button class="olive" type="button" data-feature="rewind"><strong>분할되감기<br>닫힘작동</strong><p>비닐 되말림 완화</p></button><button class="pale" type="button" data-feature="surge"><strong>과전압<br>방지기능</strong><p>TNR 회로 보호</p></button><button class="orange" type="button" data-feature="thermostat"><strong>고온<br>특별작동</strong><p>서모스타트 비상 열림</p></button>
+     </div>
+    </section>
+   </div>
+   <section class="d-spec-section"><h2>제품 사양과 핵심 설정</h2><div class="d-spec-grid"><dl><div><dt>입력전압</dt><dd>AC220V 60Hz</dd></div><div><dt>출력전압</dt><dd>DC24V(±10%)</dd></div><div><dt>호환 개폐기</dt><dd>50W: WSM-4035(소비전류 2A 이하) / 100W: WSM-6035(소비전류 4A 이하)</dd></div><div><dt>표시방식</dt><dd>FND 디지털 표시</dd></div><div><dt>운전방식</dt><dd>자동운전 또는 개별 수동운전</dd></div><div><dt>제어방식</dt><dd>디지털 타이머에 의한 시간제어</dd></div><div><dt>작동방식</dt><dd>열림·복귀·스텝작동</dd></div><div><dt>안전기능</dt><dd>단락 작동 시 분할되감기 및 잠자기 기능</dd></div><div><dt>안전장치</dt><dd>서모스타트에 의한 고온 비상 작동</dd></div></dl><div class="d-key-point"><b>출력 용량을 먼저 확인하십시오</b><p>50W 출력 모델은 WSM-4035, 100W 출력 모델은 WSM-6035를 기준으로 합니다. 연결 대수뿐 아니라 사용하는 전동개폐기의 소비전류에 맞춰 출력 계열을 선택해야 합니다.</p><b class="key-subtitle">이런 시설에 적합합니다</b><p>온도와 관계없이 매일 일정한 시각에 환기창을 열고 닫아야 하는 시설에 적합합니다. 설정한 시간은 한 채널에 공통으로 적용되므로, 연결된 개폐기들은 모두 같은 열림·닫힘 시각에 함께 운전합니다.</p></div></div></section>
+   <div class="controller-detail-menu"><span>상세 정보</span><a href="#models">모델 구성 <b>＋</b></a><a href="#settings">시간·작동 설정 <b>＋</b></a><a href="#operation">운전 방식 <b>＋</b></a><a href="#troubleshooting">문제 해결 <b>＋</b></a></div>
+   <details class="d-model-section controller-fold" id="models"><summary><span><small>MODEL LINEUP</small><b>출력 용량·연결 대수별 모델 구성</b></span><i>＋</i></summary><div class="controller-fold-body"><p class="controller-fold-intro">사용하는 전동개폐기의 소비전류에 맞춰 50W 또는 100W 출력을 먼저 선택한 후 필요한 최대 연결 대수를 확인하십시오.</p><div class="d-output-grid wsdt-model-grid"><article><header><b>50W 출력</b><span>WSM-4035 · 2A 이하</span></header><table><thead><tr><th>모델</th><th>최대 연결</th></tr></thead><tbody><tr><td>WSDT-502</td><td>2대</td></tr><tr><td>WSDT-504</td><td>4대</td></tr><tr><td>WSDT-506</td><td>6대</td></tr><tr><td>WSDT-508</td><td>8대</td></tr><tr><td>WSDT-5012</td><td>12대</td></tr><tr><td>WSDT-5016</td><td>16대</td></tr><tr><td>WSDT-5020</td><td>20대</td></tr><tr><td>WSDT-5024</td><td>24대</td></tr></tbody></table></article><article><header><b>100W 출력</b><span>WSM-6035 · 4A 이하</span></header><table><thead><tr><th>모델</th><th>최대 연결</th></tr></thead><tbody><tr><td>WSDT-1002</td><td>2대</td></tr><tr><td>WSDT-1004</td><td>4대</td></tr><tr><td>WSDT-1006</td><td>6대</td></tr><tr><td>WSDT-1008</td><td>8대</td></tr></tbody></table><p class="model-note">100W 출력은 최대 8대 연결 모델까지 생산됩니다.</p></article></div><p class="controller-fold-intro">※ 최대 연결 대수는 전동개폐기 수량 기준입니다.</p></div></details>
+   <details class="d-central-section controller-fold" id="settings"><summary><span><small>TIME & STEP SETTING</small><b>시간·스텝·작동제한 설정</b></span><i>＋</i></summary><div class="controller-fold-body"><div class="wsdt-setting-flow"><div><b>1. 현재시각</b><span>24시간제로 맞춤</span></div><i>›</i><div><b>2. 열림·닫힘</b><span>10분 단위 설정</span></div><i>›</i><div><b>3. 스텝횟수</b><span>1~8회 또는 oF</span></div><i>›</i><div><b>4. 열림 제한</b><span>1~30분 설정</span></div></div><p>설정 버튼을 누를 때마다 현재시각 → 열림시각 → 닫힘시각 → 스텝횟수 → 작동제한 순서로 이동합니다. 열림은 설정한 제한시간, 닫힘은 고정 30분이 지나면 잠자기 상태로 들어갑니다.</p></div></details>
+   <details class="d-included-section controller-fold" id="operation"><summary><span><small>AUTO & MANUAL</small><b>자동운전과 개별 수동운전</b></span><i>＋</i></summary><div class="controller-fold-body"><div class="d-central-flow"><div><b>자동 선택</b><span>설정 시각에 전체 라인 운전</span></div><i>›</i><div><b>개별 스위치</b><span>자동 중 해당 라인 정지 가능</span></div><i>›</i><div><b>수동 선택</b><span>각 라인을 직접 열림·정지·닫힘</span></div></div><p>자동운전 전에 현재시각과 열림·닫힘 설정값을 확인하십시오. 개별 스위치를 중앙의 정지 위치로 두면 자동운전 중에도 해당 라인은 작동하지 않습니다.</p></div></details>
+   <details class="d-central-section controller-fold" id="troubleshooting"><summary><span><small>TROUBLESHOOTING</small><b>점검 및 문제 해결</b></span><i>＋</i></summary><div class="controller-fold-body">
+    <p class="controller-fold-intro">증상을 선택하면 확인 순서와 조치 방법이 펼쳐집니다. 전기 작업 전에는 반드시 전원을 차단하십시오.</p>
+    <div class="wsdt-trouble-list">
+     <details><summary><b>컨트롤러가 켜지지 않는다</b><span>전원·차단기·퓨즈 확인</span><i>＋</i></summary><div><ol><li>전기가 정상적으로 공급되는지 확인합니다. 정전이면 작물 피해 방지를 위한 응급조치를 합니다.</li><li>누전차단기와 전원차단기 스위치가 ON인지 확인합니다.</li><li>퓨즈가 끊어졌는지 확인하고, 끊어졌다면 반드시 규정 용량의 새 퓨즈로 교환합니다.</li></ol></div></details>
+     <details><summary><b>누전차단기가 내려온다</b><span>배선 누전·내부 손상 확인</span><i>＋</i></summary><div><ol><li>컨트롤러 전원을 완전히 끈 상태에서도 차단기가 내려가면, 연결 전선의 피복이 벗겨져 금속 파이프나 구조물에 닿았는지 확인합니다.</li><li>컨트롤러 전원을 켤 때 차단기가 내려가면 내부 누전 또는 과부하·과전압에 의한 부품 손상 가능성이 있습니다.</li></ol><p class="trouble-danger">작물 피해 방지를 위한 응급조치 후 내부를 임의로 분해하지 말고 당사에 연락하십시오.</p></div></details>
+     <details><summary><b>퓨즈가 계속 끊어진다</b><span>퓨즈 용량·합선·과부하 확인</span><i>＋</i></summary><div><ol><li>퓨즈 양 끝의 표시를 보고 규정 용량인지 확인합니다.</li><li>모든 개별 스위치를 정지에 놓아도 끊어지면 컨트롤러 내부 고장 가능성이 있습니다.</li><li>특정 개폐기를 작동할 때만 끊어지면 출력 단자부터 개폐기까지의 합선, 개폐기 고장 또는 과부하를 확인합니다.</li></ol><p class="trouble-danger">큰 용량의 퓨즈로 임의 교체하지 마십시오. 내부 고장이 의심되면 당사에 연락하십시오.</p></div></details>
+     <details><summary><b>전동개폐기가 반대로 회전한다</b><span>출력극성 확인</span><i>＋</i></summary><div><p>전동개폐기의 구동축 회전방향과 출력극성이 맞지 않은 경우입니다. 전원을 차단한 후 해당 개폐기의 전선 두 가닥을 서로 바꾸어 연결하고 열림·닫힘 방향을 다시 확인합니다.</p></div></details>
+     <details><summary><b>자동운전이 되지 않는다</b><span>선택스위치·시간·개별 정지 확인</span><i>＋</i></summary><div><ol><li>자동·수동 선택스위치가 상향의 자동 위치인지 확인합니다.</li><li>현재시각과 열림·닫힘 시간이 올바르게 설정되어 있는지 확인합니다.</li><li>개별 스위치가 중앙의 정지 위치인 라인은 자동운전에서도 작동하지 않습니다.</li></ol></div></details>
+     <details><summary><b>수동운전이 되지 않는다</b><span>수동 선택·개별 스위치 확인</span><i>＋</i></summary><div><ol><li>자동·수동 선택스위치가 하향의 수동 위치인지 확인합니다.</li><li>운전하려는 라인의 개별 스위치가 중앙의 정지 위치인지 확인하고 열림 또는 닫힘으로 조작합니다.</li></ol></div></details>
+     <details><summary><b>열리기만 하고 닫히지 않는다</b><span>서모스타트 설정온도 확인</span><i>＋</i></summary><div><p>서모스타트 주변 온도가 설정온도보다 높으면 고온 특별작동이 적용되어 닫힘이 실행되지 않을 수 있습니다. 주변 온도와 서모스타트 설정온도를 확인하고 현장 조건에 맞게 설정합니다.</p></div></details>
+    </div>
+   </div></details>
+  </section>
+ </div>
+</main>
+<dialog class="feature-dialog" id="featureDialog"><form method="dialog"><button class="feature-dialog-close" aria-label="닫기">×</button></form><div class="feature-dialog-head"><span>WSDT FUNCTION</span><h2 id="featureDialogTitle"></h2><p id="featureDialogLead"></p></div><div class="feature-dialog-visual" id="featureDialogVisual"></div><div class="feature-dialog-body" id="featureDialogBody"></div></dialog>
+<script src="assets/js/gate.js"></script><script src="assets/js/common-ui.js"></script><script src="assets/js/i18n-dict.js"></script><script src="assets/js/site-i18n.js"></script><script src="assets/js/wsdt-series.js"></script>
+</body>
+</html>

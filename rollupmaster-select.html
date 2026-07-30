@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no">
+<head>
+<meta charset="UTF-8"><meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>롤업마스터 제품 선택 — 우성하이텍</title>
+<meta name="description" content="수동, 반자동, 자동 제어 방식에 따라 롤업마스터 컨트롤러를 선택합니다.">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/common-ui.css">
+<link rel="stylesheet" href="assets/css/rollupmaster-select.css">
+<link rel="stylesheet" href="assets/css/fixed-navigation.css">
+<script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script>
+</head>
+<body>
+<div id="gate">
+ <div class="gbox"><div class="glogo">◤ (주)우성하이텍</div><div class="gtitle">전체 제품 카탈로그</div>
+ <div class="gdesc">열람하려면 비밀번호를 입력하세요.<span>Enter password to view</span></div>
+ <input id="gpw" type="password" inputmode="numeric" maxlength="8" placeholder="비밀번호" autocomplete="off" aria-label="비밀번호">
+ <button id="gbtn" type="button">확인</button><div id="gerr" class="gerr"></div></div>
+</div>
+<div id="notice"><div class="nbox"><div class="nic">⚠</div><div class="ntitle">배포 금지 안내</div>
+ <div class="ntext">본 자료는 <b>(주)우성하이텍</b>의 자산입니다.<br>무단 <b>복제·배포·전송·게시</b>를 금지합니다.</div>
+ <button id="nbtn" type="button">확인했습니다</button></div></div>
+
+<main class="rm-page">
+ <header class="rm-top">
+  <div class="rm-brands"><img src="assets/img/vent-logo.png" alt="VENT CONTROL SYSTEM"><img src="assets/img/logo-rollupmaster.png" alt="롤업마스터"></div>
+  <nav class="rm-crumb" aria-label="현재 위치">자연환기창 제어시스템 <b>›</b> 롤·업·다운 방식 <b>›</b> <strong>롤업마스터</strong></nav>
+  <div class="top-actions"><a href="rollup-select.html" class="back-link"><span aria-hidden="true">‹</span> 이전으로</a><a href="index.html" class="home-link"><span aria-hidden="true">⌂</span> 전체 제품</a></div>
+ </header>
+
+ <section class="rm-intro">
+  <div>
+   <span class="rm-kicker">ROLL-UP MASTER · CONTROLLER</span>
+   <h1>운전 방식에 맞는 롤업마스터를 선택하세요.</h1>
+   <p>직접 조작하는 수동형부터 온도·시간·기상환경을 종합 관리하는 자동형까지 기능을 비교할 수 있습니다.</p>
+  </div>
+  <img src="assets/img/rollupmaster-svc2.png" alt="롤업마스터 컨트롤러">
+ </section>
+
+ <nav class="control-filter" aria-label="운전 방식 선택">
+  <button type="button" class="active" data-filter="all" aria-pressed="true"><b>08</b><span>전체</span><small>모든 시리즈</small></button>
+  <button type="button" data-filter="manual" aria-pressed="false"><b>01</b><span>수동</span><small>직접 개별운전</small></button>
+  <button type="button" data-filter="semi" aria-pressed="false"><b>01</b><span>반자동</span><small>센트럴 신호 연동</small></button>
+  <button type="button" data-filter="auto" aria-pressed="false"><b>06</b><span>자동</span><small>시간·온도 자동제어</small></button>
+ </nav>
+
+ <div class="rm-sections">
+  <section class="control-section manual-section" data-category="manual">
+   <header><span>MANUAL</span><div><h2>수동제어</h2><p>사람이 개별 스위치를 직접 조작하는 가장 기본적인 방식</p></div></header>
+   <div class="series-grid single">
+    <a class="series-card manual" href="rmp-series.html">
+     <div class="series-photo"><img src="assets/img/ctrl-rmp.jpg" alt="RMP·WRM 수동 컨트롤러"></div>
+     <div class="series-copy"><span class="type-badge">수동 · 개별운전</span><h3>RMP · WRM</h3><p>개별 스위치를 직접 조작하여 전동개폐기를 운전합니다.</p><ul><li>화면 표시 없음</li><li>최대 24대 연결</li><li>플라스틱·스틸 케이스</li></ul><strong>상세 보기 <b>›</b></strong></div>
+    </a>
+   </div>
+  </section>
+
+  <section class="control-section semi-section" data-category="semi">
+   <header><span>SEMI AUTO</span><div><h2>반자동제어</h2><p>자체 수동운전과 센트럴 컨트롤러의 릴레이 신호 연동운전을 함께 사용하는 방식</p></div></header>
+   <div class="series-grid single">
+    <a class="series-card semi" href="d-series.html">
+     <div class="series-photo"><img src="assets/img/ctrl-d.jpg" alt="D 시리즈 반자동 컨트롤러"></div>
+     <div class="series-copy"><span class="type-badge">반자동 · 릴레이 신호 연동</span><h3>D 시리즈</h3><p>내부 마그네틱 스위치가 센트럴 컨트롤러의 릴레이 신호를 받아 전동개폐기를 작동시킵니다. 자체 스위치로 전체 또는 개별 수동운전도 가능합니다.</p><ul><li>센트럴 릴레이 신호 연동</li><li>마그네틱 스위치 내장</li><li>전체·개별 수동운전</li></ul><strong>상세 보기 <b>›</b></strong></div>
+    </a>
+   </div>
+   <details class="central-guide">
+    <summary><div><b>센트럴 컨트롤러란?</b><span>여러 환기창을 중앙에서 운전하기 위한 릴레이 신호 출력 장치입니다.</span></div><i>⌄</i></summary>
+    <div class="central-guide-body">
+     <div class="central-flow" aria-label="센트럴 컨트롤러와 D시리즈 연결 구조">
+      <div><b>센트럴 컨트롤러</b><span>열림·닫힘 릴레이 신호 출력</span></div><i>›</i>
+      <div><b>D시리즈</b><span>마그네틱 스위치가 신호 수신</span></div><i>›</i>
+      <div><b>전동개폐기</b><span>환기창 열림·닫힘 작동</span></div>
+     </div>
+     <p>센트럴 컨트롤러가 전동개폐기를 직접 구동하는 것이 아니라, D시리즈에 운전 신호를 전달하고 D시리즈가 실제 개폐기 회로를 제어합니다.</p>
+     <div class="central-compare"><span><b>수동 컨트롤러</b> 초기 구입 비용이 비교적 낮으며, 자체 스위치를 이용한 직접 수동운전에 적합합니다.</span><span><b>D시리즈</b> 수동 컨트롤러보다 구입 비용은 높지만, 개별·전체 수동운전과 센트럴 릴레이 신호 연동이 가능합니다.</span></div>
+     <p class="d-choice-note"><b>선택 기준</b> 개폐기가 적고 직접 수동운전만 필요하면 수동 컨트롤러가 경제적입니다. 여러 개폐기의 전체운전이 필요하거나 향후 중앙제어 시스템으로 확장할 계획이 있다면 D시리즈가 유리합니다.</p>
+    </div>
+   </details>
+  </section>
+
+  <section class="control-section auto-section" data-category="auto">
+   <header><span>AUTOMATIC</span><div><h2>자동제어</h2><p>필요한 채널 수와 시간·온도·기상환경 관리 수준에 따라 선택</p></div></header>
+
+   <details class="channel-guide">
+    <summary class="channel-guide-title">
+     <span>CHANNEL GUIDE</span>
+     <div><h3>채널이란?</h3><p>채널은 개폐기 한 대가 아니라, 서로 다른 조건으로 독립 운전할 수 있는 <b>제어 구역</b>입니다.</p></div>
+     <b class="channel-toggle"><span class="toggle-more">자세히 보기</span><span class="toggle-close">접기</span><i>⌄</i></b>
+    </summary>
+    <div class="channel-guide-body">
+     <figure class="channel-visual rvc-channel-visual">
+      <div class="rvc-controller">
+       <span class="diagram-label">컨트롤러</span>
+       <img src="assets/img/ctrl-rvc.jpg" alt="RVC-508 컨트롤러">
+       <div><b>RVC-508</b><small>총 8개 출력라인</small></div>
+      </div>
+      <div class="channel-branch channel-one">
+       <header><span>채널 1</span><div><b>온도제어 선택</b><small>4개 라인 · 동일한 온도 설정으로 함께 작동</small></div></header>
+       <div class="opener-lines">
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 1의 첫 번째 전동개폐기"><span>1라인</span></div>
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 1의 두 번째 전동개폐기"><span>2라인</span></div>
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 1의 세 번째 전동개폐기"><span>3라인</span></div>
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 1의 네 번째 전동개폐기"><span>4라인</span></div>
+       </div>
+      </div>
+      <div class="channel-branch channel-two">
+       <header><span>채널 2</span><div><b>시간제어 선택</b><small>4개 라인 · 동일한 시간 설정으로 함께 작동</small></div></header>
+       <div class="opener-lines">
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 2의 첫 번째 전동개폐기"><span>5라인</span></div>
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 2의 두 번째 전동개폐기"><span>6라인</span></div>
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 2의 세 번째 전동개폐기"><span>7라인</span></div>
+        <div><img src="assets/img/wsm-4035-hq.png" alt="채널 2의 네 번째 전동개폐기"><span>8라인</span></div>
+       </div>
+      </div>
+      <figcaption><b>RVC-508의 구성 예</b> 총 8개 출력라인이 채널 1에 4라인, 채널 2에 4라인으로 나뉩니다. 각 채널은 5단 변온제어 또는 시간제어 중 한 가지를 선택하여 서로 독립적으로 운전할 수 있습니다.</figcaption>
+     </figure>
+     <div class="channel-definitions">
+      <div><b>채널</b><span>독립된 조건으로 운전하는 제어 구역</span></div>
+      <div><b>라인·회로</b><span>채널에 연결되는 개별 개폐기 출력선</span></div>
+      <div><b>연결 대수</b><span>컨트롤러 한 대가 운전할 수 있는 전체 개폐기 수</span></div>
+     </div>
+     <div class="channel-example"><b>WFTC 적용 예</b><span>연동형 온실: 1중 환기창은 채널 1 온도제어, 2중 환기창은 채널 2 시간제어</span><span>단동형 온실: 온실 구역을 나누어 한쪽은 온도제어, 다른 쪽은 시간제어</span></div>
+     <p class="channel-note">ⓘ 하나의 채널에 여러 개폐기를 연결할 수 있으며, 같은 채널의 개폐기는 동일한 조건에 따라 함께 작동합니다.</p>
+    </div>
+   </details>
+
+   <div class="auto-group">
+    <div class="group-heading"><b>01</b><div><h3>기본 자동제어</h3><p>시간 또는 온도를 기준으로 한 채널을 자동 관리</p></div></div>
+    <div class="series-grid">
+     <a class="series-card auto" href="wsdt-series.html">
+      <div class="series-photo"><img src="assets/img/ctrl-wsdt.jpg" alt="WSDT 시간제어 컨트롤러"></div>
+      <div class="series-copy"><span class="type-badge">1채널 · 시간</span><h3>WSDT</h3><p>정해진 시각에 자동으로 열고 닫는 시간 전용 모델입니다.</p><ul><li>디지털 타이머</li><li>스텝작동</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
+     </a>
+     <a class="series-card auto" href="ttc-series.html">
+      <div class="series-photo"><img src="assets/img/ctrl-ttc.jpg" alt="TTC 온도 또는 시간제어 컨트롤러"></div>
+      <div class="series-copy"><span class="type-badge">1채널 · 온도 또는 시간</span><h3>TTC</h3><p>온도제어와 시간제어 중 한 가지 방식을 선택해 운전합니다.</p><ul><li>온도·시간 택1</li><li>기본·표준·고급 작동</li><li>적색 FND</li></ul><strong>상세 보기 <b>›</b></strong></div>
+     </a>
+    </div>
+   </div>
+
+   <div class="auto-group">
+    <div class="group-heading"><b>02</b><div><h3>온도·시간 특화제어</h3><p>시간대별 변온관리 또는 채널별 온도·시간 분리운전</p></div></div>
+    <div class="series-grid">
+     <a class="series-card auto" href="wfvc-series.html">
+      <div class="series-photo"><img src="assets/img/ctrl-wfvc.jpg" alt="WFVC 4단 변온 컨트롤러"></div>
+      <div class="series-copy"><span class="type-badge">1채널 · 4단 변온</span><h3>WFVC</h3><p>하루를 네 구간으로 나누어 시간대별 목표온도를 관리합니다.</p><ul><li>1단 온도·4단 변온</li><li>퍼지·스텝·기본</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
+     </a>
+     <a class="series-card auto" href="wftc-series.html">
+      <div class="series-photo"><img src="assets/img/ctrl-wftc.jpg" alt="WFTC 채널별 온도·시간 분리제어 컨트롤러"></div>
+      <div class="series-copy"><span class="type-badge">2채널 · Ch.1 온도 / Ch.2 시간</span><h3>WFTC</h3><p>채널 1은 온도제어, 채널 2는 시간제어로 각각 독립 운전합니다.</p><ul><li>채널별 설정버튼</li><li>온도·시간 분리제어</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
+     </a>
+    </div>
+   </div>
+
+   <div class="auto-group premium-group">
+    <div class="group-heading"><b>03</b><div><h3>온도·시간 선택제어</h3><p>각 채널에서 5단 변온제어 또는 시간제어를 선택하여 운전</p></div></div>
+    <div class="series-grid">
+     <a class="series-card premium" href="svc-series.html">
+      <div class="series-photo"><img src="assets/img/ctrl-svc.jpg" alt="SVC 1채널 5단 변온·시간 선택 컨트롤러"></div>
+      <div class="series-copy"><span class="type-badge">1채널 · 5단 변온 / 시간 선택</span><h3>SVC</h3><p>1개 채널에서 5단 변온제어 또는 시간제어를 선택하여 운전합니다.</p><ul><li>1채널</li><li>5단 변온·시간 선택</li><li>5인치 TFT</li></ul><strong>상세 보기 <b>›</b></strong></div>
+     </a>
+     <a class="series-card premium" href="rollupmaster.html#RVC">
+      <div class="series-photo"><img src="assets/img/ctrl-rvc.jpg" alt="RVC 2채널 5단 변온·시간 선택 컨트롤러"></div>
+      <div class="series-copy"><span class="type-badge">2채널 · 채널별 5단 변온 / 시간 선택</span><h3>RVC</h3><p>2개 채널에서 각각 5단 변온제어 또는 시간제어를 선택하여 독립 운전합니다.</p><ul><li>2채널 독립</li><li>채널별 제어방식 선택</li><li>5인치 TFT</li></ul><strong>상세 보기 <b>›</b></strong></div>
+     </a>
+    </div>
+   </div>
+  </section>
+ </div>
+
+ <aside class="selection-note">ⓘ 표시된 기능은 시리즈 선택을 위한 요약입니다. 연결 대수와 세부 설정은 각 시리즈 상세 화면에서 확인하십시오.</aside>
+</main>
+<script>
+(function(){
+ var buttons=document.querySelectorAll('[data-filter]'),sections=document.querySelectorAll('[data-category]');
+ buttons.forEach(function(button){
+ button.addEventListener('click',function(){
+   var scrollPosition=window.scrollY;
+   var filter=button.dataset.filter;
+   buttons.forEach(function(item){var active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active))});
+   sections.forEach(function(section){section.hidden=filter!=='all'&&section.dataset.category!==filter});
+   requestAnimationFrame(function(){window.scrollTo({top:scrollPosition,left:0,behavior:'auto'})});
+  });
+ });
+})();
+</script>
+<script src="assets/js/gate.js"></script>
+<script src="assets/js/common-ui.js"></script><script src="assets/js/i18n-dict.js"></script><script src="assets/js/rollupmaster-select-i18n.js"></script><script src="assets/js/site-i18n.js"></script>
+</body>
+</html>

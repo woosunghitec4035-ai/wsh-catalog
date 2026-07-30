@@ -3,9 +3,9 @@
 .select-actions,
 .top-actions,
 .detail-actions{
- position:fixed!important;
+ position:absolute!important;
  top:20px!important;
- right:max(22px,calc((100vw - 1460px)/2))!important;
+ right:0!important;
  z-index:900;
  display:flex;
  align-items:center;
@@ -50,16 +50,29 @@
  line-height:1!important;
 }
 .detail-crumb,
-.rs-top .crumb{
- position:fixed!important;
+.rs-top .crumb,
+.parts-top .crumb{
+ position:absolute!important;
  top:70px!important;
- right:max(22px,calc((100vw - 1460px)/2))!important;
+ right:0!important;
  z-index:890;
  margin:0!important;
  font-size:13px!important;
  line-height:20px!important;
  white-space:nowrap;
  text-align:right;
+}
+
+/* 상단 도구, 이동 버튼과 현재 경로는 페이지 처음의 오른쪽 위에 배치합니다. */
+.global-tools,
+.vent-actions,
+.select-actions,
+.top-actions,
+.detail-actions,
+.detail-crumb,
+.rs-top .crumb,
+.parts-top .crumb{
+ backface-visibility:hidden;
 }
 
 @media(max-width:1000px){
@@ -80,7 +93,8 @@
   font-size:12px!important;
  }
  .detail-crumb,
- .rs-top .crumb{display:none!important}
+ .rs-top .crumb,
+ .parts-top .crumb{display:none!important}
 }
 
 /* 언어 전환 도구모음(.global-tools)이 붙으면 그 아래로 내려갑니다.
@@ -94,7 +108,8 @@
   top:62px!important;
  }
  .has-global-tools .detail-crumb,
- .has-global-tools .rs-top .crumb{
+ .has-global-tools .rs-top .crumb,
+ .has-global-tools .parts-top .crumb{
   top:112px!important;
  }
 }

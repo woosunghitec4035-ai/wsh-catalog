@@ -1,0 +1,27 @@
+.svc-screen-visual{padding:16px!important;background:linear-gradient(145deg,#e9f2f8,#dce9f2)!important}
+.svc-screen-visual>small{color:#57758e;font-size:10px;font-weight:900;letter-spacing:.12em}
+.svc-screen-values{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.svc-screen-values span{padding:10px;border:1px solid #bdd4e4;border-radius:9px;background:#f8fcff;text-align:center}
+.svc-screen-values small{display:block;color:#6e8495;font-size:10px}
+.svc-screen-values b{display:block;margin-top:4px;color:#1765a5;font-size:17px}
+.svc-screen-status{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.svc-screen-status b{padding:7px 4px;border-radius:7px;background:#426e92;color:#fff;text-align:center;font-size:10px}
+.svc-screen-visual>p{color:#526b7f;font-size:11px;line-height:1.5}
+.svc-detail .ttc-feature-badges .stage{background:#b9d335;color:#315c86}
+.svc-detail .controller-fold{scroll-margin-top:120px}
+.svc-model-table{overflow:hidden;border:1px solid #dce4eb;border-radius:11px}
+.svc-model-table table{width:100%;border-collapse:collapse}
+.svc-model-table th,.svc-model-table td{padding:9px 12px;border-right:1px solid #dce4eb;border-bottom:1px solid #dce4eb;text-align:center;font-size:13px}
+.svc-model-table th{background:#f1f5f8;color:#42617b}
+.svc-model-table td:first-child{color:#0c5ca9;font-weight:800}
+.svc-model-table tr:last-child td{border-bottom:0}
+.svc-model-table th:last-child,.svc-model-table td:last-child{border-right:0}
+.svc-control-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc-control-grid article{padding:17px;border:1px solid #d5e2ec;border-radius:12px;background:#f5f9fc}
+.svc-control-grid span{display:inline-block;padding:5px 10px;border-radius:16px;background:#2d72a9;color:#fff;font-size:11px;font-weight:900}
+.svc-control-grid b{display:block;margin-top:11px;color:#294f70;font-size:15px}
+.svc-control-grid p{margin-top:7px;color:#5d7182;font-size:12px;line-height:1.6}
+.svc-screen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.svc-screen-grid span{padding:13px 8px;border:1px solid #d4e2ec;border-radius:9px;background:#eef5fa;color:#315e82;text-align:center;font-size:12px;font-weight:800}
+.svc-parts-grid{grid-template-columns:repeat(4,1fr)!important}
+@media(max-width:650px){.svc-screen-values,.svc-control-grid{grid-template-columns:1fr}.svc-screen-status,.svc-screen-grid,.svc-parts-grid{grid-template-columns:1fr 1fr!important}}
