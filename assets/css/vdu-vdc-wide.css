@@ -1,0 +1,45 @@
+@media(min-width:1001px){
+ body.vdu-wide-detail{height:100vh;overflow:hidden}
+ .vdu-wide-detail .detail-page{width:min(1740px,calc(100% - 30px));height:100vh;padding:12px 0;display:flex;flex-direction:column}
+ .vdu-wide-detail .detail-top{height:76px;flex:0 0 76px}
+ .vdu-wide-detail .detail-layout{min-height:0;flex:1;grid-template-columns:245px minmax(0,1fr);gap:22px}
+ .vdu-wide-detail .detail-side{min-height:0;height:100%;padding-top:18px}
+ .vdu-wide-detail .detail-side>a{height:49px;font-size:15px}
+ .vdu-wide-detail .detail-side>a i{font-size:20px}
+ .vdu-wide-detail .detail-about{padding:10px}
+ .vdu-wide-detail .detail-about p{font-size:11px;line-height:1.4}
+ .vdu-wide-detail .detail-main{min-height:0;height:100%;padding:0;display:flex;flex-direction:column}
+ .vdu-wide-detail .product-title{height:43px}
+ .vdu-wide-detail .product-copy{margin:0 0 7px;font-size:15px}
+ .vdu-wide-detail .model-summary{flex:0 0 auto;margin-bottom:7px}
+ .vdu-wide-detail .vdu-overview-grid{min-height:0;flex:1;margin:0 0 9px;grid-template-columns:.92fr 1.08fr;gap:12px}
+ .vdu-wide-detail .vdu-overview-grid>.product-hero,.vdu-wide-detail .vdu-overview-grid>.features{height:100%;min-height:250px}
+ .vdu-wide-detail .vdu-model-types{height:calc(100% - 64px)}
+ .vdu-wide-detail .vdu-model-types img{height:100%;max-height:245px}
+ .vdu-wide-detail .vdu-hero .quick-specs{flex-basis:58px}
+ .vdu-wide-detail .vdu-features{padding:14px;display:flex;flex-direction:column}
+ .vdu-wide-detail .vdu-features h2{font-size:21px}
+ .vdu-wide-detail .vdu-features h2 small{display:inline;margin-left:7px;font-size:12px}
+ .vdu-wide-detail .vdu-features .feature-cards{flex:1;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:7px}
+ .vdu-wide-detail .vdu-features .feature-card{height:100%;min-height:0;padding:7px 11px}
+ .vdu-wide-detail .vdu-features .feature-card span{font-size:15px}
+ .vdu-wide-detail .vdu-features .feature-detail{display:none}
+ .vdu-wide-detail .vdu-lower-grid{flex:0 0 176px;display:block;margin:0}
+ .vdu-wide-detail .vdu-lower-grid>.spec-table{display:none}
+ .vdu-wide-detail .vdu-guide-grid{height:100%;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:25px repeat(2,minmax(0,1fr));gap:8px}
+ .vdu-wide-detail .vdu-guide-grid a,.vdu-wide-detail .vdu-guide-grid button{min-width:0;min-height:0;height:100%;padding:8px 10px}
+ .vdu-wide-detail .safety-note{flex:0 0 auto;margin-top:8px;padding:7px 12px}
+}
+.vdu-spec-card{box-sizing:border-box;border:1px solid #9fc8df;border-radius:10px;background:#f1f8fc;color:#154c9a;display:flex;align-items:center;gap:9px;text-align:left;font-family:inherit;cursor:pointer}
+.vdu-spec-card>b{flex:0 0 auto;color:#17658f;font-size:20px}.vdu-spec-card span{min-width:0;display:flex;flex-direction:column}.vdu-spec-card strong{font-size:14px}.vdu-spec-card small{margin-top:3px;color:#526b7e;font-size:12px}.vdu-spec-card em{margin-left:auto;font-size:23px;font-style:normal}
+.vdu-info-dialog{width:min(920px,calc(100% - 32px));max-height:calc(100vh - 40px);padding:0;border:0;border-radius:18px;background:#fff;box-shadow:0 24px 70px rgba(11,40,72,.28);overflow:hidden}
+.vdu-info-dialog::backdrop{background:rgba(8,27,48,.58);backdrop-filter:blur(3px)}
+.vdu-info-dialog[open]{position:fixed;inset:0;margin:auto;display:flex;flex-direction:column}
+.vdu-info-dialog>header{flex:0 0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dce6ef;background:linear-gradient(110deg,#eef7fd,#fff)}
+.vdu-info-dialog>header small{color:#2672a8;font-size:11px;font-weight:850;letter-spacing:.1em}.vdu-info-dialog>header h2{margin:3px 0 0;color:#153e64;font-size:24px}.vdu-info-close{width:38px;height:38px;border:0;border-radius:50%;background:#e8f0f6;color:#285879;font-size:25px;cursor:pointer}
+.vdu-info-body{min-height:0;overflow:auto;padding:20px 22px;overscroll-behavior:contain;color:#40576b}
+.vdu-info-body .feature-popup-lead{margin:0;font-size:16px;line-height:1.75;word-break:keep-all}.vdu-info-body .feature-popup-benefit{margin-top:15px;padding:14px 16px;border-left:4px solid #2380bd;border-radius:9px;background:#eef7fd;color:#174f78;font-size:15px;line-height:1.65}
+.vdu-info-body .spec-table{display:block}.vdu-info-body .spec-table h2{display:none}.vdu-info-body .spec-table table{width:100%;font-size:14px}.vdu-info-body .spec-table th,.vdu-info-body .spec-table td{padding:9px}
+.vdu-section-dialog,.vdu-parts-dialog{max-height:calc(100vh - 40px);overflow:hidden}.vdu-section-dialog .vdu-section-modal-body,.vdu-parts-dialog .parts-panel{min-height:0;overflow:auto;overscroll-behavior:contain}
+@media(max-width:1000px){.vdu-info-dialog{width:min(760px,calc(100% - 24px))}.vdu-spec-card{min-height:76px;padding:10px 11px}.vdu-lower-grid>.spec-table{display:none}.vdu-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.vdu-info-dialog{max-height:calc(100vh - 20px)}.vdu-info-dialog>header{padding:14px 15px}.vdu-info-dialog>header h2{font-size:20px}.vdu-info-body{padding:15px}.vdu-info-body .spec-table table{font-size:11px}.vdu-guide-grid{grid-template-columns:1fr}}

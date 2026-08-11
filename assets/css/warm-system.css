@@ -1,0 +1,16 @@
+:root{--warm-green:#83b817;--warm-dark:#355d22;--warm-orange:#ed7a16}
+body:before{inset:118px 0 auto;height:380px;opacity:1;background:radial-gradient(circle at 22% 30%,rgba(139,188,42,.14),transparent 34%),radial-gradient(circle at 78% 22%,rgba(237,122,22,.08),transparent 28%),linear-gradient(180deg,#f6f9fc 0%,rgba(246,249,252,.4) 70%,transparent 100%)}
+.warm-logo{display:grid;grid-template-columns:auto auto;grid-template-rows:auto auto;column-gap:8px;align-items:center;text-decoration:none;line-height:.8;transform:skew(-7deg)}
+.warm-logo-ko{grid-column:1/3;color:#3c4651;font-weight:800;font-size:18px;letter-spacing:-.5px;transform:skew(7deg);margin-bottom:3px}
+.warm-logo strong{font-size:56px;letter-spacing:-5px;font-style:italic;color:var(--warm-green);text-shadow:0 2px 0 #527d12}
+.warm-logo b{color:var(--warm-orange);font-size:17px;line-height:.82;text-align:left}
+.warm-select-page .mode-pill{background:linear-gradient(110deg,#668e19,#99c82b)}
+.warm-select-page .select-heading h1{margin-bottom:2px}
+.opener-choice{border-color:#91b83d;--accent:#719c20}.warm-product-grid .master-choice{border-color:#2e75b8;--accent:#2468a8}
+.product-title-lockup{height:54px;display:flex;flex-direction:column;justify-content:center}.product-title-lockup small{font-size:12px;color:#6c8e2e;font-weight:900;letter-spacing:1.5px}.product-title-lockup h2{font-size:30px;line-height:1.15;color:#315e29;margin:2px 0 0}
+.warm-opener-photo{position:relative}.warm-opener-photo img{image-rendering:auto}
+.quality-note{position:absolute;right:18px;bottom:10px;padding:5px 10px;border-radius:20px;background:rgba(52,65,80,.86);color:#fff;font-size:12px;font-weight:700}
+.warm-select-page .select-note span{color:var(--warm-green);font-size:12px}
+.warm-placeholder{min-height:100vh;background:#f4f7f1;display:grid;place-items:center;font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif;color:#17334c}.warm-placeholder main{width:min(940px,calc(100% - 40px));padding:48px;border-radius:24px;background:#fff;box-shadow:0 20px 60px rgba(31,59,40,.12);display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative}.warm-placeholder img{width:100%;max-height:340px;object-fit:contain}.warm-placeholder span{font-size:13px;font-weight:900;letter-spacing:1.5px;color:#719c20}.warm-placeholder h1{font-size:42px;margin:8px 0 14px}.warm-placeholder p{font-size:19px;line-height:1.7;color:#4d5e6e}.warm-placeholder b{display:inline-block;margin-top:18px;padding:10px 20px;border-radius:20px;background:#edf5dd;color:#567e11}.placeholder-back{position:absolute;left:28px;top:22px;color:#315f8e;text-decoration:none;font-weight:800}
+@media(max-width:900px){.warm-logo strong{font-size:40px}.warm-logo-ko{font-size:14px}.warm-logo b{font-size:13px}.warm-placeholder main{grid-template-columns:1fr;padding:70px 28px 32px;gap:20px}.warm-placeholder h1{font-size:34px}}
+@media(max-width:520px){.warm-logo strong{font-size:30px}.warm-logo-ko{font-size:11px}.warm-logo b{font-size:9px}.product-title-lockup h2{font-size:25px}.quality-note{right:4px;bottom:5px}}

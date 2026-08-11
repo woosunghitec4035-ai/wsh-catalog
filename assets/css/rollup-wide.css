@@ -1,0 +1,38 @@
+@media(min-width:1001px){
+ body.rollup-wide{height:100vh;overflow:hidden}
+ body.rollup-wide .navin,body.rollup-wide .bcin{max-width:1740px}
+ body.rollup-wide .wrap{width:min(1740px,calc(100% - 30px));max-width:none;height:min(838px,calc(100vh - 102px));padding:8px 0 0;display:grid;grid-template-columns:1.12fr .88fr;grid-template-rows:54px 350px 46px minmax(0,1fr);gap:9px 14px;overflow:hidden}
+ body.rollup-wide .head{grid-column:1/-1;padding:0 4px;display:flex;align-items:center;justify-content:space-between}
+ body.rollup-wide .head h1{font-size:29px;margin:0}
+ body.rollup-wide .head p{font-size:13px;margin:0;text-align:right}
+ body.rollup-wide .row1{grid-column:1;grid-row:2;min-height:0;display:grid;grid-template-columns:.72fr 1.28fr;gap:12px;flex-wrap:nowrap}
+ body.rollup-wide .row1>.card{min-width:0;height:100%;padding:13px}
+ body.rollup-wide .gal{max-width:none}
+ body.rollup-wide .gal .big{min-height:0}
+ body.rollup-wide .gal .big img{max-height:235px}
+ body.rollup-wide .sel{overflow:hidden}
+ body.rollup-wide table.mt{font-size:11px}
+ body.rollup-wide table.mt th,body.rollup-wide table.mt td{padding:5px}
+ body.rollup-wide .secttl{display:none}
+ body.rollup-wide .perf{grid-column:2;grid-row:2;align-self:start;height:128px;gap:7px;flex-wrap:nowrap}
+ body.rollup-wide .pc{min-width:0;padding:11px}.rollup-wide .pc .big{font-size:23px}
+ body.rollup-wide .spec{grid-column:2;grid-row:2;align-self:end;height:210px;grid-template-columns:repeat(3,1fr);overflow:hidden}
+ body.rollup-wide .spec div{padding:7px 9px;font-size:11px}
+ body.rollup-wide .info{display:none}
+ body.rollup-wide .tabs{grid-column:1/-1;grid-row:3;margin:0;gap:8px}
+ body.rollup-wide .tabs button{min-height:0;padding:9px;font-size:14px}
+ body.rollup-wide .tp{grid-column:1/-1;grid-row:4;min-height:0;height:100%;padding:15px;overflow:hidden}
+ body.rollup-wide .tp.on{display:block}
+ body.rollup-wide .tp .g2{height:100%;gap:14px;flex-wrap:nowrap;overflow:hidden}
+ body.rollup-wide .tp .c{min-width:0;overflow:hidden}
+ body.rollup-wide .tp .fig{flex-basis:260px}.rollup-wide .tp .fig img{max-height:210px}
+ body.rollup-wide .ladder{grid-column:1/-1;margin:0;align-self:center}
+ body.rollup-wide .lcap{display:none}
+ body.rollup-wide:has(#ladder) .head{grid-row:1}
+ body.rollup-wide:has(#ladder) .ladder{grid-row:2;grid-column:1/-1;align-self:start;height:44px;z-index:2}
+ body.rollup-wide:has(#ladder) .row1{grid-row:2;grid-column:1/-1;padding-top:50px;grid-template-columns:.75fr 1.25fr}
+ body.rollup-wide:has(#ladder) .tabs{grid-row:3}
+ body.rollup-wide:has(#ladder) .tp{grid-row:4}
+ body.rollup-wide:has(#ladder) .gal{max-width:none}
+}
+@media(min-width:1001px) and (min-height:1000px){body.rollup-wide .wrap{margin-top:0;margin-bottom:auto}}

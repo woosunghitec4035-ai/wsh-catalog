@@ -1,0 +1,42 @@
+.custom-model-section{margin-top:22px;padding-top:18px;border-top:1px solid #dbe5ee}
+.custom-model-heading{display:grid;grid-template-columns:minmax(250px,.7fr) 1.3fr;gap:20px;align-items:end}
+.custom-model-heading h3{margin:3px 0 0}.custom-model-heading>p{margin:0}
+.custom-model-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.custom-model-card{min-width:0;padding:0;border:1px solid #ccdbe7;border-radius:14px;background:#f8fbfd;overflow:hidden;cursor:pointer;text-align:left;transition:transform .16s,box-shadow .16s}
+.custom-model-card:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(31,72,105,.14)}
+.custom-model-card img{display:block;width:100%;height:230px;object-fit:contain;background:#fff}
+.custom-model-card>span{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:9px;padding:11px 13px}
+.custom-model-card b{font-size:23px;color:#2369a6}.custom-model-card em{font-size:13px;color:#415d75;font-style:normal;font-weight:800}
+.custom-model-card small{grid-column:2/3;color:#667d91}.custom-model-card i{grid-column:3;grid-row:1/3;color:#2875ad;font-size:12px;font-style:normal;font-weight:850}
+.custom-order-note{margin-top:12px!important;padding:11px 13px;border-radius:9px;background:#fff7e7;color:#72591f!important}.custom-order-note b{margin-right:7px;color:#9a6710}
+.custom-spec-image{display:block;width:100%;max-height:310px;margin:14px 0;object-fit:contain;border:1px solid #dde5ec;border-radius:11px;background:#fff}
+.custom-spec-tables{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:15px 0}.custom-spec-tables section{min-width:0;border:1px solid #d7e1ea;border-radius:11px;overflow:hidden;background:#fff}.custom-spec-tables h3{margin:0!important;padding:9px 12px;background:#edf4fa;color:#245b88;font-size:15px!important}.custom-spec-tables table{width:100%;border-collapse:collapse;table-layout:fixed}.custom-spec-tables th,.custom-spec-tables td{padding:7px 9px;border-top:1px solid #e1e7ed;font-size:12px;line-height:1.45;text-align:left;vertical-align:middle}.custom-spec-tables th{width:34%;background:#f8fafc;color:#415c73;font-weight:800}.custom-spec-tables td{color:#50677b}
+.custom-spec-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.custom-spec-summary span{padding:11px;border-radius:9px;background:#f1f6fb;color:#36546f;font-size:13px}.custom-spec-summary b{display:block;margin-bottom:4px;color:#1765a6;font-size:11px}
+.modal-back{margin:0 0 15px;padding:8px 13px;border:1px solid #b9cde0;border-radius:999px;background:#f5f9fc;color:#245f91;font:800 13px inherit;cursor:pointer}.modal-back:hover{border-color:#6f9fc7;background:#edf5fb}
+@media(max-width:700px){.custom-model-heading{grid-template-columns:1fr}.custom-model-grid{grid-template-columns:1fr}.custom-model-card img{height:200px}.custom-spec-summary{grid-template-columns:1fr 1fr}.custom-spec-tables{grid-template-columns:1fr}}
+.direct-model-card{display:grid;grid-template-columns:minmax(280px,46%) 1fr;width:100%;margin:16px 0;padding:0;border:1px solid #cbdbe8;border-radius:16px;overflow:hidden;background:#f5f9fc;text-align:left;cursor:pointer}.direct-model-card>img{width:100%;height:285px;object-fit:contain;background:#eaf3fb}.direct-model-card>span{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:28px}.direct-model-card small{color:#2d73ab;font-weight:800}.direct-model-card strong{margin:7px 0;font-size:32px;color:#123f6d}.direct-model-card em{font-style:normal;color:#4b657c}.direct-model-card i{margin-top:20px;color:#1769a9;font-style:normal;font-weight:850}
+.win5000-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:15px;margin:14px 0 20px}.win5000-gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}.win5000-gallery img{width:100%;height:300px;object-fit:contain;border:1px solid #dce5ed;border-radius:12px;background:#f8fafc}.win5000-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px}.win5000-summary span{display:flex;flex-direction:column;justify-content:center;padding:12px;border-radius:10px;background:#eef5fb}.win5000-summary small{color:#63809a;font-size:11px}.win5000-summary b{margin-top:4px;color:#155f9c;font-size:14px}
+.direct-mixing-note{display:grid;grid-template-columns:190px 1fr;align-items:center;gap:14px;margin:-6px 0 18px;padding:13px 16px;border:1px solid #f1cf8e;border-radius:12px;background:#fff8e9;color:#5e4b29}.direct-mixing-note b{color:#a86100;font-size:15px}.direct-mixing-note span{line-height:1.6}
+.win5000-advantages{margin:18px 0 22px;padding:16px;border:1px solid #d7e3ed;border-radius:13px;background:#f7fafc}.win5000-advantages>h3{margin:0 0 13px!important;color:#173d63;font-size:18px!important}.win5000-advantage-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.win5000-advantage-card{position:relative;display:grid;grid-template-rows:48px 54px minmax(58px,auto);align-content:start;min-width:0;padding:13px;border:1px solid #d5e2ed;border-radius:12px;background:linear-gradient(145deg,#fff 20%,#f3f8fd 100%);overflow:hidden}.win5000-advantage-card:nth-child(2),.win5000-advantage-card:nth-child(6){background:linear-gradient(145deg,#fff 20%,#f0faf4 100%)}.win5000-advantage-card:nth-child(4),.win5000-advantage-card:nth-child(8){background:linear-gradient(145deg,#fff 20%,#fff7e9 100%)}.win5000-advantage-card i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#e4f1ff;color:#1768aa;font-size:11px;font-style:normal;font-weight:900}.win5000-advantage-card:nth-child(2) i,.win5000-advantage-card:nth-child(6) i{background:#e3f5e9;color:#2b7948}.win5000-advantage-card:nth-child(4) i,.win5000-advantage-card:nth-child(8) i{background:#fff0d5;color:#a56509}.win5000-advantage-card b{align-self:start;color:#2369a6;font-size:15px;line-height:1.35}.win5000-advantage-card strong{align-self:start;color:#405a70;font-size:12px;font-weight:650;line-height:1.55}
+.win5000-parts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 20px}.win5000-parts figure{margin:0;border:1px solid #dce5ed;border-radius:11px;overflow:hidden;background:#fff}.win5000-parts img{display:block;width:100%;height:180px;object-fit:contain;background:#f8fafc}.win5000-parts figcaption{padding:9px;text-align:center;color:#294c69;font-size:13px;font-weight:800}.win5000-spec-table{overflow:auto;border:1px solid #cfd9e2;border-radius:10px}.win5000-spec-table table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff}.win5000-spec-table th,.win5000-spec-table td{padding:7px 9px;border-right:1px solid #dce3e9;border-bottom:1px solid #dce3e9;font-size:13px;line-height:1.35}.win5000-spec-table th{width:18%;background:#f5f7f9;color:#38556d}.win5000-spec-table td{color:#425e75}.spec-change-note{margin-top:9px!important;color:#75889a!important;font-size:12px!important}
+@media(max-width:1050px){.win5000-advantage-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.direct-model-card,.win5000-hero{grid-template-columns:1fr}.direct-model-card>img{height:220px}.win5000-gallery img{height:230px}.win5000-parts{grid-template-columns:1fr 1fr}.win5000-parts img{height:150px}.win5000-advantage-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.win5000-advantage-grid{grid-template-columns:1fr}}
+
+/* TCK·DCK 선택 카드의 이미지·설명·모델 영역 기준선을 통일합니다. */
+@media(min-width:1001px){
+ .system-select{align-items:stretch}
+ .supply-card{height:100%}
+ .supply-body,.direct-body{grid-template-rows:minmax(0,1fr) 108px}
+ .supply-info{min-height:108px;display:grid;grid-template-rows:44px 56px;align-content:end}
+ .supply-info p{min-height:0;margin:0;display:flex;align-items:flex-start}
+ .capacity-chips{height:48px;margin-top:8px;grid-template-columns:repeat(4,minmax(0,1fr))}
+ .capacity-chips span{height:48px;justify-content:center}
+ .direct-card .single-model{width:100%;height:48px;margin-top:8px;padding:0 12px;display:flex;align-items:center;justify-content:center;border-radius:9px;text-align:center}
+ .supply-image,.direct-product-image{height:100%}
+}
+@media(min-width:1001px) and (max-width:1120px){
+ .capacity-chips{gap:4px}
+ .capacity-chips span{padding-left:2px;padding-right:2px}
+ .capacity-chips b,.capacity-chips small{font-size:10px}
+}

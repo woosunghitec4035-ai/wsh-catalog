@@ -1,0 +1,10 @@
+const dialog=document.querySelector('dialog'),modal=document.querySelector('#modal');
+const contents={
+ intro:`<h2>이리시스란?</h2><p>이리시스는 토양재배 시설에 원수와 액비를 혼합해 구역별로 순차 공급하는 자동 관수 시스템입니다. 관수 주기·시작시각·공급시간·액비 선택을 설정하면 펌프와 밸브를 자동 운전합니다.</p><ul><li>관수 전용 소프트웨어로 설정과 운전 상태를 확인합니다.</li><li>벤추리 방식으로 액비를 흡입하고 정량밸브로 유입량을 조절합니다.</li><li>설정과 다른 운전 상태에는 정지 또는 경보로 대응할 수 있습니다.</li></ul>`,
+ compare:`<h2>이리시스 I·II 비교</h2><table><tr><th>구분</th><th>이리시스 I</th><th>이리시스 II</th></tr><tr><th>권장 성격</th><td>표준 토양 관수</td><td>EC 확인·확장 운전</td></tr><tr><th>공급 구역</th><td>최대 10구역</td><td>최대 12구역</td></tr><tr><th>액비 흡입</th><td>A·B 2라인</td><td>3라인</td></tr><tr><th>센서</th><td>강우 입력</td><td>강우 입력·EC 측정 및 표시</td></tr><tr><th>팜시스 연결</th><td>연결 가능</td><td>연결 가능</td></tr><tr><th>EC 자동제어</th><td>해당 없음</td><td>지원하지 않음 — 측정값 확인용</td></tr></table><p class="note"><b>팜시스 연결 안내:</b> 두 모델 모두 팜시스와 연결할 수 있습니다. 실제 운전 범위와 접속 구성은 적용되는 팜시스 및 주문 사양에 따라 확인해야 합니다.</p><p class="note"><b>EC 기능 안내:</b> 이리시스 II의 EC 센서는 측정값을 확인하는 용도이며, 설정 EC에 따라 액비 투입량을 자동 보정하는 기능은 아닙니다.</p><p>세부 구성은 주문 사양과 설치 현장에 따라 달라질 수 있으므로 최종 선정 전에 확인하십시오.</p>`,
+ piping:`<h2>관수 시설 배관 예</h2><img src="assets/img/irrisys-piping.png" alt="이리시스 관수 배관 예"><p>원수와 액비 라인에는 이물질 유입을 막기 위한 여과가 필요합니다. 설명서 기준으로 120메시 필터 사용, 배관 세척, 누수·막힘 확인이 중요합니다.</p>`,
+ field:`<h2>일반 관수와 상부 미세분무 활용</h2><p><strong>표준 활용:</strong> 토양재배지에 물과 액비를 구역별로 순차 공급합니다.</p><p><strong>현장 응용 사례:</strong> 농가에서는 상부 노즐과 연결하여 잎 주변의 열을 낮추고 시설 내부의 열환경을 관리하는 미세분무 방식으로도 활용하고 있습니다.</p><div class="review-box"><strong>현장 설계 검토 필요</strong><br>미세분무 효과는 노즐 입경·분무압력·유량·환기·습도·작물 종류에 따라 달라집니다. 병해와 과습을 막기 위해 분무 입자, 가동시간, 배수와 환기를 함께 검토하고, 액비 관수 배관과 병용할 때에는 세척·역류방지·수질 조건을 확인하십시오.</div>`,
+ software:`<h2>관수 전용 소프트웨어</h2><img src="assets/img/irrisys-monitor-compare.png" alt="이리시스 모니터 화면"><p>현재 구역, 공급 진행시간, 펌프와 액비밸브 상태를 실시간으로 표시합니다. 관수 주기와 시간, 구역별 공급 조건을 설정하고 최근 공급 기록을 점검할 수 있습니다.</p>`
+};
+document.querySelectorAll('[data-info]').forEach(button=>button.addEventListener('click',()=>{modal.innerHTML=contents[button.dataset.info];dialog.showModal()}));
+document.querySelector('.close').onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog)dialog.close()};

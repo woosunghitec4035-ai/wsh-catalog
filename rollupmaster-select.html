@@ -7,7 +7,7 @@
 <meta name="description" content="수동, 반자동, 자동 제어 방식에 따라 롤업마스터 컨트롤러를 선택합니다.">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/common-ui.css">
-<link rel="stylesheet" href="assets/css/rollupmaster-select.css">
+<link rel="stylesheet" href="assets/css/rollupmaster-select.css?v=3">
 <link rel="stylesheet" href="assets/css/fixed-navigation.css">
 <script>(function(){try{if(sessionStorage.getItem('wsh-cat-auth')==='1')document.documentElement.setAttribute('data-auth','1');}catch(e){}})();</script>
 </head>
@@ -35,22 +35,41 @@
    <h1>운전 방식에 맞는 롤업마스터를 선택하세요.</h1>
    <p>직접 조작하는 수동형부터 온도·시간·기상환경을 종합 관리하는 자동형까지 기능을 비교할 수 있습니다.</p>
   </div>
-  <img src="assets/img/rollupmaster-svc2.png" alt="롤업마스터 컨트롤러">
  </section>
 
- <nav class="control-filter" aria-label="운전 방식 선택">
-  <button type="button" class="active" data-filter="all" aria-pressed="true"><b>08</b><span>전체</span><small>모든 시리즈</small></button>
-  <button type="button" data-filter="manual" aria-pressed="false"><b>01</b><span>수동</span><small>직접 개별운전</small></button>
-  <button type="button" data-filter="semi" aria-pressed="false"><b>01</b><span>반자동</span><small>센트럴 신호 연동</small></button>
-  <button type="button" data-filter="auto" aria-pressed="false"><b>06</b><span>자동</span><small>시간·온도 자동제어</small></button>
- </nav>
+  <section class="control-mode-picker" aria-labelledby="mode-picker-title">
+   <div class="mode-picker-heading">
+    <span>CONTROL TYPE</span>
+    <div><h2 id="mode-picker-title">먼저 운전 방식을 선택하세요.</h2><p>선택한 운전 방식에 해당하는 시리즈만 아래에 표시됩니다.</p></div>
+   </div>
+   <div class="mode-card-grid">
+    <button type="button" class="mode-card manual" data-filter="manual" aria-pressed="false">
+     <span class="mode-number">01</span><span class="mode-label">수동</span><img class="mode-product-image" src="assets/img/rollupmaster-mode-manual.png" alt="RMP·WRM 수동 롤업마스터 제어반">
+     <strong>직접 조작하는 기본 운전</strong>
+     <p>각 개폐기의 스위치를 사람이 직접 조작합니다. 단순한 운전 방식과 경제적인 구성을 우선할 때 적합합니다.</p>
+     <small>RMP · WRM 보기 <b>›</b></small>
+    </button>
+    <button type="button" class="mode-card semi" data-filter="semi" aria-pressed="false">
+     <span class="mode-number">02</span><span class="mode-label">반자동</span><img class="mode-product-image" src="assets/img/rollupmaster-mode-semi.png" alt="D 시리즈 반자동 롤업마스터 제어반">
+     <strong>수동운전과 중앙 신호 연동</strong>
+     <p>자체 스위치로 개별·전체 운전이 가능하고, 센트럴 컨트롤러의 릴레이 신호를 받아 향후 중앙제어로 확장할 수 있습니다.</p>
+     <small>D 시리즈 보기 <b>›</b></small>
+    </button>
+    <button type="button" class="mode-card auto" data-filter="auto" aria-pressed="false">
+     <span class="mode-number">03</span><span class="mode-label">자동</span><img class="mode-product-image" src="assets/img/rollupmaster-mode-auto.png" alt="RVC 시리즈 자동 롤업마스터 제어반">
+     <strong>시간·온도 조건에 따른 자동운전</strong>
+     <p>채널별로 시간 또는 온도 조건을 설정해 운전합니다. 한 채널에 연결된 여러 개폐기는 같은 조건으로 함께 작동합니다.</p>
+     <small>자동제어 6개 시리즈 보기 <b>›</b></small>
+    </button>
+   </div>
+  </section>
 
  <div class="rm-sections">
   <section class="control-section manual-section" data-category="manual">
    <header><span>MANUAL</span><div><h2>수동제어</h2><p>사람이 개별 스위치를 직접 조작하는 가장 기본적인 방식</p></div></header>
    <div class="series-grid single">
     <a class="series-card manual" href="rmp-series.html">
-     <div class="series-photo"><img src="assets/img/ctrl-rmp.jpg" alt="RMP·WRM 수동 컨트롤러"></div>
+     <div class="series-photo"><img src="assets/img/ctrl-rmp-plastic-hq.png" alt="RMP·WRM 수동 컨트롤러"></div>
      <div class="series-copy"><span class="type-badge">수동 · 개별운전</span><h3>RMP · WRM</h3><p>개별 스위치를 직접 조작하여 전동개폐기를 운전합니다.</p><ul><li>화면 표시 없음</li><li>최대 24대 연결</li><li>플라스틱·스틸 케이스</li></ul><strong>상세 보기 <b>›</b></strong></div>
     </a>
    </div>
@@ -60,7 +79,7 @@
    <header><span>SEMI AUTO</span><div><h2>반자동제어</h2><p>자체 수동운전과 센트럴 컨트롤러의 릴레이 신호 연동운전을 함께 사용하는 방식</p></div></header>
    <div class="series-grid single">
     <a class="series-card semi" href="d-series.html">
-     <div class="series-photo"><img src="assets/img/ctrl-d.jpg" alt="D 시리즈 반자동 컨트롤러"></div>
+     <div class="series-photo"><img src="assets/img/ctrl-d-plastic-hq.png" alt="D 시리즈 반자동 컨트롤러"></div>
      <div class="series-copy"><span class="type-badge">반자동 · 릴레이 신호 연동</span><h3>D 시리즈</h3><p>내부 마그네틱 스위치가 센트럴 컨트롤러의 릴레이 신호를 받아 전동개폐기를 작동시킵니다. 자체 스위치로 전체 또는 개별 수동운전도 가능합니다.</p><ul><li>센트럴 릴레이 신호 연동</li><li>마그네틱 스위치 내장</li><li>전체·개별 수동운전</li></ul><strong>상세 보기 <b>›</b></strong></div>
     </a>
    </div>
@@ -120,47 +139,47 @@
       <div><b>라인·회로</b><span>채널에 연결되는 개별 개폐기 출력선</span></div>
       <div><b>연결 대수</b><span>컨트롤러 한 대가 운전할 수 있는 전체 개폐기 수</span></div>
      </div>
-     <div class="channel-example"><b>WFTC 적용 예</b><span>연동형 온실: 1중 환기창은 채널 1 온도제어, 2중 환기창은 채널 2 시간제어</span><span>단동형 온실: 온실 구역을 나누어 한쪽은 온도제어, 다른 쪽은 시간제어</span></div>
+     <div class="channel-example"><b>WFTC 적용 예</b><span>연동형 온실: 1중 환기창은 1채널 온도제어, 2중 환기창은 2채널 시간제어</span><span>단동형 온실: 온실 구역을 나누어 한쪽은 온도제어, 다른 쪽은 시간제어</span></div>
      <p class="channel-note">ⓘ 하나의 채널에 여러 개폐기를 연결할 수 있으며, 같은 채널의 개폐기는 동일한 조건에 따라 함께 작동합니다.</p>
     </div>
    </details>
 
-   <div class="auto-group">
-    <div class="group-heading"><b>01</b><div><h3>기본 자동제어</h3><p>시간 또는 온도를 기준으로 한 채널을 자동 관리</p></div></div>
+   <div class="auto-group basic-control-group">
+    <div class="group-heading"><b>01</b><div><h3>단일 기능 자동제어</h3><p>한 채널에서 시간 또는 온도 중 선택한 기준으로 자동 관리</p></div></div>
     <div class="series-grid">
-     <a class="series-card auto" href="wsdt-series.html">
-      <div class="series-photo"><img src="assets/img/ctrl-wsdt.jpg" alt="WSDT 시간제어 컨트롤러"></div>
+     <a class="series-card auto control-time" href="wsdt-series.html">
+      <div class="series-photo"><img src="assets/img/ctrl-wsdt-hq.png" alt="WSDT 시간제어 컨트롤러"></div>
       <div class="series-copy"><span class="type-badge">1채널 · 시간</span><h3>WSDT</h3><p>정해진 시각에 자동으로 열고 닫는 시간 전용 모델입니다.</p><ul><li>디지털 타이머</li><li>스텝작동</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
      </a>
-     <a class="series-card auto" href="ttc-series.html">
+     <a class="series-card auto control-choice" href="ttc-series.html">
       <div class="series-photo"><img src="assets/img/ctrl-ttc.jpg" alt="TTC 온도 또는 시간제어 컨트롤러"></div>
       <div class="series-copy"><span class="type-badge">1채널 · 온도 또는 시간</span><h3>TTC</h3><p>온도제어와 시간제어 중 한 가지 방식을 선택해 운전합니다.</p><ul><li>온도·시간 택1</li><li>기본·표준·고급 작동</li><li>적색 FND</li></ul><strong>상세 보기 <b>›</b></strong></div>
      </a>
     </div>
    </div>
 
-   <div class="auto-group">
+   <div class="auto-group specialized-group">
     <div class="group-heading"><b>02</b><div><h3>온도·시간 특화제어</h3><p>시간대별 변온관리 또는 채널별 온도·시간 분리운전</p></div></div>
     <div class="series-grid">
-     <a class="series-card auto" href="wfvc-series.html">
+     <a class="series-card auto control-variable" href="wfvc-series.html">
       <div class="series-photo"><img src="assets/img/ctrl-wfvc.jpg" alt="WFVC 4단 변온 컨트롤러"></div>
       <div class="series-copy"><span class="type-badge">1채널 · 4단 변온</span><h3>WFVC</h3><p>하루를 네 구간으로 나누어 시간대별 목표온도를 관리합니다.</p><ul><li>1단 온도·4단 변온</li><li>퍼지·스텝·기본</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
      </a>
-     <a class="series-card auto" href="wftc-series.html">
+     <a class="series-card auto control-split" href="wftc-series.html">
       <div class="series-photo"><img src="assets/img/ctrl-wftc.jpg" alt="WFTC 채널별 온도·시간 분리제어 컨트롤러"></div>
-      <div class="series-copy"><span class="type-badge">2채널 · Ch.1 온도 / Ch.2 시간</span><h3>WFTC</h3><p>채널 1은 온도제어, 채널 2는 시간제어로 각각 독립 운전합니다.</p><ul><li>채널별 설정버튼</li><li>온도·시간 분리제어</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
+      <div class="series-copy"><span class="type-badge">2채널 · 1채널 온도 / 2채널 시간</span><h3>WFTC</h3><p>1채널은 온도제어, 2채널은 시간제어로 각각 독립 운전합니다.</p><ul><li>채널별 설정버튼</li><li>온도·시간 분리제어</li><li>최대 24대 연결</li></ul><strong>상세 보기 <b>›</b></strong></div>
      </a>
     </div>
    </div>
 
    <div class="auto-group premium-group">
-    <div class="group-heading"><b>03</b><div><h3>온도·시간 선택제어</h3><p>각 채널에서 5단 변온제어 또는 시간제어를 선택하여 운전</p></div></div>
+    <div class="group-heading"><b>03</b><div><h3>고급 자동제어</h3><p>각 채널에서 5단 변온제어 또는 시간제어를 선택하여 운전</p></div></div>
     <div class="series-grid">
      <a class="series-card premium" href="svc-series.html">
       <div class="series-photo"><img src="assets/img/ctrl-svc.jpg" alt="SVC 1채널 5단 변온·시간 선택 컨트롤러"></div>
       <div class="series-copy"><span class="type-badge">1채널 · 5단 변온 / 시간 선택</span><h3>SVC</h3><p>1개 채널에서 5단 변온제어 또는 시간제어를 선택하여 운전합니다.</p><ul><li>1채널</li><li>5단 변온·시간 선택</li><li>5인치 TFT</li></ul><strong>상세 보기 <b>›</b></strong></div>
      </a>
-     <a class="series-card premium" href="rollupmaster.html#RVC">
+     <a class="series-card premium" href="rvc-series.html">
       <div class="series-photo"><img src="assets/img/ctrl-rvc.jpg" alt="RVC 2채널 5단 변온·시간 선택 컨트롤러"></div>
       <div class="series-copy"><span class="type-badge">2채널 · 채널별 5단 변온 / 시간 선택</span><h3>RVC</h3><p>2개 채널에서 각각 5단 변온제어 또는 시간제어를 선택하여 독립 운전합니다.</p><ul><li>2채널 독립</li><li>채널별 제어방식 선택</li><li>5인치 TFT</li></ul><strong>상세 보기 <b>›</b></strong></div>
      </a>
@@ -173,16 +192,43 @@
 </main>
 <script>
 (function(){
- var buttons=document.querySelectorAll('[data-filter]'),sections=document.querySelectorAll('[data-category]');
- buttons.forEach(function(button){
- button.addEventListener('click',function(){
-   var scrollPosition=window.scrollY;
-   var filter=button.dataset.filter;
-   buttons.forEach(function(item){var active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active))});
-   sections.forEach(function(section){section.hidden=filter!=='all'&&section.dataset.category!==filter});
-   requestAnimationFrame(function(){window.scrollTo({top:scrollPosition,left:0,behavior:'auto'})});
+ var warmUsage=new URLSearchParams(location.search).get('usage')==='warm';
+ if(warmUsage){
+  document.body.classList.add('warm-usage');
+  var intro=document.querySelector('.rm-intro');
+  if(intro){var guide=document.createElement('div');guide.className='warm-output-guide';guide.innerHTML='<b>보온재 개폐 시스템용 모델 선택</b><span>보온재 전동개폐기는 소비전력이 100W 이상이므로 <strong>100W 이상 출력 모델만 선택</strong>하십시오.</span>';intro.insertAdjacentElement('afterend',guide)}
+  var backLink=document.querySelector('.back-link');if(backLink)backLink.href='warm-system.html';
+  document.querySelectorAll('.series-card[href]').forEach(function(link){var url=new URL(link.getAttribute('href'),location.href);url.searchParams.set('usage','warm');link.setAttribute('href',url.pathname.split('/').pop()+url.search)});
+ }
+  var params=new URLSearchParams(location.search);
+  var view=params.get('view');
+  var buttons=document.querySelectorAll('[data-filter]'),sections=document.querySelectorAll('[data-category]');
+  function target(path){
+    if(!warmUsage)return path;
+    var url=new URL(path,location.href);url.searchParams.set('usage','warm');
+    return url.pathname.split('/').pop()+url.search;
+  }
+  sections.forEach(function(section){section.hidden=true});
+  if(view==='auto'){
+    document.body.classList.add('auto-catalog-view');
+    var picker=document.querySelector('.control-mode-picker');if(picker)picker.hidden=true;
+    var intro=document.querySelector('.rm-intro');if(intro)intro.remove();
+    var autoSection=document.querySelector('[data-category="auto"]');if(autoSection)autoSection.hidden=false;
+    var note=document.querySelector('.selection-note');if(note)note.hidden=true;
+    document.querySelector('.rm-sections').classList.add('has-selection');
+  }else{
+    document.body.classList.add('mode-entry-view');
+  }
+  buttons.forEach(function(button){
+    button.addEventListener('click',function(){
+      var filter=button.dataset.filter;
+      if(filter==='manual'){location.href=target('rmp-series.html');return;}
+      if(filter==='semi'){location.href=target('d-series.html');return;}
+      if(filter==='auto'){
+        location.href='rollupmaster-select.html?view=auto'+(warmUsage?'&usage=warm':'');
+      }
+    });
   });
- });
 })();
 </script>
 <script src="assets/js/gate.js"></script>

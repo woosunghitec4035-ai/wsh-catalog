@@ -1166,7 +1166,13 @@ window.WSH_I18N_DICT = {
  '가이드롤러 사용 시 가이드 암용 볼트 제외': ['Guide-arm bolts excluded when guide rollers are used', 'ガイドローラー使用時はガイドアーム用ボルトを除外'],
  '가이드롤러 사용 시 제외': ['Excluded when guide rollers are used', 'ガイドローラー使用時は除外'],
  '설치 방식에 따른 구성': ['Configuration by installation method', '設置方式による構成'],
- '가이드롤러 방식으로 설치하는 경우 가이드 암용 볼트, 가이드 암 핀 및 가이드 암 선회축 부품은 제공 구성에서 제외될 수 있습니다.': ['For guide-roller installation, the guide-arm bolts, guide-arm pin and guide-arm pivot parts may be excluded from the supplied configuration.', 'ガイドローラー方式で設置する場合、ガイドアーム用ボルト、ガイドアームピンおよびガイドアーム旋回軸部品は提供構成から除外される場合があります。']
+ '가이드롤러 방식으로 설치하는 경우 가이드 암용 볼트, 가이드 암 핀 및 가이드 암 선회축 부품은 제공 구성에서 제외될 수 있습니다.': ['For guide-roller installation, the guide-arm bolts, guide-arm pin and guide-arm pivot parts may be excluded from the supplied configuration.', 'ガイドローラー方式で設置する場合、ガイドアーム用ボルト、ガイドアームピンおよびガイドアーム旋回軸部品は提供構成から除外される場合があります。'],
+ '특수강 유성기어': ['Special-steel planetary gear', '特殊鋼遊星ギア'],
+ '높은 동력 전달 효율과 내구성': ['High power-transmission efficiency and durability', '高い動力伝達効率と耐久性'],
+ '다이얼 방식 리미트': ['Dial-type limit adjustment', 'ダイヤル式リミット調整'],
+ '열림·닫힘 정지 위치 설정': ['Set opening and closing stop positions', '開閉停止位置の設定'],
+ '우성하이텍 자체 생산': ['Manufactured by Woosung Hitec', 'ウソンハイテック自社生産'],
+ '주요 부품과 제품 생산 과정': ['Production process for key parts and products', '主要部品と製品の生産工程']
 };
 
 /* 숫자가 들어가는 문자열은 사전 대신 규칙으로 처리합니다.

@@ -1,6 +1,6 @@
 body{min-height:100vh;background:radial-gradient(circle at 50% 18%,#fff 0,#f8fbff 42%,#edf3f8 100%);color:#101a2b;font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
 .vent-page{width:min(1460px,calc(100% - 56px));margin:0 auto;padding:36px 0 26px}
-.vent-top{display:flex;align-items:flex-start;justify-content:space-between}.vent-actions{display:flex;gap:9px}
+.vent-top{display:flex;align-items:flex-start;justify-content:space-between;position:relative}.vent-actions{display:flex;gap:9px}
 .vent-logo{width:min(430px,34vw);height:auto}
 .all-products,.previous-page{display:flex;align-items:center;gap:9px;border:1px solid #ccd3db;border-radius:30px;padding:10px 22px;background:rgba(255,255,255,.78);color:#222;text-decoration:none;font-size:18px;font-weight:700}.previous-page span{font-size:30px;line-height:.75}
 .all-products span{font-size:27px;line-height:1}

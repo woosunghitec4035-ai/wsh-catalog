@@ -1,0 +1,65 @@
+@media(min-width:1001px){.detail-page{width:min(1700px,calc(100% - 28px));padding:14px 0 20px}.detail-top{height:82px}.detail-layout{grid-template-columns:250px minmax(0,1fr);gap:18px}.detail-side{min-height:790px;padding-top:20px}.detail-main{width:100%;min-width:0}.main-grid{grid-template-columns:minmax(390px,.82fr) minmax(590px,1.18fr);gap:14px}.product-hero,.features{height:400px}.product-hero>img{height:270px}.quick-specs{height:86px}.feature-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.feature-card{min-height:47px;padding:7px 8px;font-size:12px}.feature-detail{margin-top:9px;padding:10px 4px 0}.feature-detail strong{font-size:12px}.feature-detail p{font-size:11.5px;line-height:1.5}.lower-grid{grid-template-columns:minmax(450px,.9fr) minmax(0,1.1fr);gap:14px;margin-top:13px}.guide-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(84px,auto);gap:8px}.guide-grid a{min-height:84px;padding:10px}.detail-crumb{margin-right:205px}}
+@media(min-width:1001px) and (max-width:1300px){.detail-layout{grid-template-columns:225px minmax(0,1fr)}.main-grid{grid-template-columns:minmax(340px,.9fr) minmax(470px,1.1fr)}.feature-cards{grid-template-columns:repeat(3,minmax(0,1fr))}.product-hero,.features{height:445px}.lower-grid{grid-template-columns:1fr}.detail-side>a{padding:0 16px;font-size:15px}}
+@media(min-width:1181px){body{height:100vh;overflow:hidden}.detail-page{height:100vh;padding:10px 0;display:flex;flex-direction:column}.detail-top{flex:0 0 72px;height:72px}.detail-layout{flex:1 1 auto;min-height:0;grid-template-columns:235px minmax(0,1fr) 195px;gap:14px;align-items:stretch}.detail-side{height:100%;min-height:0;padding:14px 0 10px}.detail-side h2{padding-bottom:10px}.detail-side>a{height:48px;padding:0 17px;font-size:14px}.detail-side>a i{font-size:19px}.detail-about{padding:9px}.detail-about p{font-size:10.5px;line-height:1.4;margin-top:5px}.model-switcher{margin-bottom:7px}.model-switcher>button{min-height:49px}.detail-main{height:100%;min-height:0;display:flex;flex-direction:column}.product-title{flex:0 0 44px;height:44px}.product-copy{flex:0 0 auto;margin:0 0 5px;font-size:12px}.model-summary{flex:0 0 auto;margin:0 0 5px}.main-grid{flex:1 1 auto;min-height:285px;grid-template-columns:minmax(350px,.83fr) minmax(520px,1.17fr);gap:10px}.product-hero,.features{height:100%;min-height:0;padding:10px}.product-hero{display:flex;flex-direction:column}.product-hero>img{flex:1 1 auto;min-height:0;height:auto}.quick-specs{flex:0 0 68px;height:68px}.features{display:flex;flex-direction:column}.features h2{flex:0 0 auto;margin-bottom:6px}.feature-cards{flex:1 1 auto;min-height:0;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(38px,1fr));gap:5px}.feature-card{height:100%;min-height:0;padding:5px 7px;font-size:10.5px}.feature-detail{flex:0 0 56px;margin-top:5px;padding-top:6px}.feature-detail p{font-size:10px;line-height:1.35}.lower-grid{flex:0 0 166px;grid-template-columns:minmax(430px,.9fr) minmax(0,1.1fr);gap:10px;margin-top:8px}.spec-table table{font-size:9.5px}.spec-table th,.spec-table td{padding:3px}.guide-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,1fr);grid-auto-rows:auto;gap:5px}.guide-grid a{min-height:0;height:100%;padding:7px}.guide-grid a>b{font-size:18px}.guide-grid strong{font-size:11px}.guide-grid small{font-size:9px}.safety-note{flex:0 0 auto;margin-top:6px;padding:6px 10px;font-size:10px}.video-side{height:360px;margin-top:112px;padding:10px}.video-side button{height:93px}.video-side h2{font-size:15px}}
+@media(min-width:1181px) and (max-height:790px){.detail-top{flex-basis:62px;height:62px}.detail-brands img:first-child{width:180px}.detail-brands img:last-child{width:135px}.detail-side>a{height:42px}.detail-about p:last-child{display:none}.main-grid{min-height:250px}.lower-grid{flex-basis:145px}.quick-specs{flex-basis:58px}.feature-detail{flex-basis:47px}.video-side{height:320px;margin-top:95px}.video-side button{height:80px}}
+
+/* WSM-4035 wide layout: keep the upper and lower column boundaries aligned. */
+@media(min-width:1181px){
+ .main-grid,
+ .lower-grid{grid-template-columns:minmax(350px,.83fr) minmax(520px,1.17fr)}
+
+ /* The source is a vertical strip of three thumbnails. Scale by height so
+    each frame keeps its original aspect ratio instead of stretching. */
+ .video-side button{background:#eef2f5}
+ .video-thumb{background-size:auto 300%;background-position-x:center}
+ .video-thumb.v1{background-position:center top}
+ .video-thumb.v2{background-position:center center}
+ .video-thumb.v3{background-position:center bottom}
+
+ /* Keep all six guides, but reduce their visual weight below the specs. */
+ .guide-grid{gap:6px}
+ .guide-grid a{padding:6px 8px;align-items:center;border-radius:8px}
+ .guide-grid a>b{font-size:16px}
+ .guide-grid a span{gap:2px}
+ .guide-grid strong{font-size:10.5px;line-height:1.2}
+ .guide-grid small{font-size:8.5px;line-height:1.25}
+ .guide-grid em{width:18px;height:18px}
+}
+
+/* Readable one-screen composition: specifications open from the guide card. */
+.spec-popup-body{padding:24px}
+.spec-popup-body>p{margin:0 0 16px;color:#53677d;font-size:15px}
+.spec-popup-body table{width:100%;border-collapse:collapse;text-align:center;font-size:15px}
+.spec-popup-body th,.spec-popup-body td{padding:13px 14px;border:1px solid #ccd9e7}
+.spec-popup-body th{background:#edf5fd;color:#0b4f9e;font-size:16px}
+.spec-popup-body aside{margin-top:15px;padding:12px 15px;border-radius:9px;background:#f4f8fc;color:#3e5975;font-size:13px}
+
+@media(min-width:1181px){
+ .main-grid{min-height:330px}
+ .lower-grid{flex:0 0 142px;display:block;margin-top:10px}
+ .lower-grid .guide-grid{height:100%;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,minmax(62px,1fr));gap:8px}
+ .lower-grid .guide-grid a{padding:10px 12px;border-radius:10px}
+ .lower-grid .guide-grid a>b{font-size:21px}
+ .lower-grid .guide-grid a span{gap:4px}
+ .lower-grid .guide-grid strong{font-size:13px;line-height:1.25}
+ .lower-grid .guide-grid small{font-size:10px;line-height:1.3}
+ .lower-grid .guide-grid em{width:22px;height:22px;font-size:14px}
+ .spec-guide-card{border-color:#91bbe4!important;background:#f1f7fd!important}
+ .features h2{font-size:20px}
+ .feature-card{font-size:13px;padding:8px 10px}
+ .feature-card b{font-size:12px}
+ .feature-detail{flex-basis:68px;padding:9px 6px 0}
+ .feature-detail strong{font-size:14px}
+ .feature-detail p{font-size:12px;line-height:1.45}
+ .quick-specs span{font-size:11px}
+ .quick-specs strong{font-size:13px}
+}
+
+@media(min-width:1181px) and (max-height:790px){
+ .main-grid{min-height:285px}
+ .lower-grid{flex-basis:128px}
+ .lower-grid .guide-grid{grid-template-rows:repeat(2,minmax(56px,1fr))}
+ .feature-card{font-size:12px;padding:6px 8px}
+ .feature-detail{flex-basis:58px}
+ .feature-detail p{font-size:11px}
+}

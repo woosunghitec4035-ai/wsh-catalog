@@ -1,0 +1,69 @@
+.fan-research-benefits {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) 1.28fr;
+  gap: 7px;
+}
+.fan-research-benefits > header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 2px 3px 1px;
+}
+.fan-research-benefits > header small {
+  color: #2476a5;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.fan-research-benefits > header strong {
+  color: #173d59;
+  font-size: 17px;
+}
+.fan-research-benefits > header span {
+  margin: 0;
+  color: #687d8d;
+  font-size: 11px;
+}
+.fan-research-benefits article,
+.fan-research-benefits aside {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #d3e2eb;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.fan-research-benefits article > b {
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  border-radius: 8px;
+  background: #e8f3f8;
+  display: grid;
+  place-items: center;
+  color: #2476a5;
+  font-size: 10px;
+}
+.fan-research-benefits div { min-width: 0; }
+.fan-research-benefits strong,
+.fan-research-benefits span { display: block; }
+.fan-research-benefits strong { color: #214d69; font-size: 13px; }
+.fan-research-benefits span { margin-top: 2px; color: #687d8d; font-size: 10px; line-height: 1.35; }
+.fan-research-benefits aside { border-color: #e8c98d; background: #fff9ed; }
+.fan-research-benefits aside strong { flex: 0 0 auto; color: #9a5b09; }
+.fan-research-benefits aside span { color: #745f42; }
+@media (max-width: 1100px) {
+  .fan-research-benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fan-research-benefits aside { grid-column: 1 / -1; }
+}
+@media (max-width: 650px) {
+  .fan-research-benefits { grid-template-columns: 1fr; }
+  .fan-research-benefits aside { grid-column: auto; }
+  .fan-research-benefits > header { display: block; }
+  .fan-research-benefits > header strong { margin-top: 3px; }
+  .fan-research-benefits > header span { margin-top: 3px; }
+}

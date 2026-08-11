@@ -2,20 +2,29 @@
 .vent-actions,
 .select-actions,
 .top-actions,
-.detail-actions{
- position:absolute!important;
+.detail-actions,
+.win-actions{
+ position:fixed!important;
  top:20px!important;
- right:0!important;
+ right:max(28px,calc((100vw - 1460px)/2))!important;
  z-index:900;
  display:flex;
  align-items:center;
  gap:8px!important;
  margin:0!important;
 }
+
+/* WIN nutrient detail: keep the lower guide cards inside the desktop viewport. */
+body:has(.win-page) .win-main{display:flex;flex-direction:column}
+body:has(.win-page) .win-hero{height:auto;min-height:0;flex:1}
+body:has(.win-page) .detail-cards,
+body:has(.win-page) .selection-warning{flex:0 0 auto}
+@media(max-width:900px){body:has(.win-page) .win-main{display:block;overflow:visible}}
 .vent-actions a,
 .select-actions a,
 .top-actions a,
-.detail-actions a{
+.detail-actions a,
+.win-actions a{
  box-sizing:border-box;
  width:112px;
  height:38px;
@@ -40,7 +49,8 @@
 .vent-actions a span,
 .select-actions a span,
 .top-actions a span,
-.detail-actions a span{
+.detail-actions a span,
+.win-actions a span{
  width:17px;
  flex:0 0 17px;
  display:inline-flex;
@@ -51,10 +61,13 @@
 }
 .detail-crumb,
 .rs-top .crumb,
-.parts-top .crumb{
+.parts-top .crumb,
+.win-top nav,
+.fan-top nav{
  position:absolute!important;
  top:70px!important;
  right:0!important;
+ left:auto!important;
  z-index:890;
  margin:0!important;
  font-size:13px!important;
@@ -69,9 +82,12 @@
 .select-actions,
 .top-actions,
 .detail-actions,
+.win-actions,
 .detail-crumb,
 .rs-top .crumb,
-.parts-top .crumb{
+.parts-top .crumb,
+.win-top nav,
+.fan-top nav{
  backface-visibility:hidden;
 }
 
@@ -79,14 +95,16 @@
  .vent-actions,
  .select-actions,
  .top-actions,
- .detail-actions{
+ .detail-actions,
+ .win-actions{
   top:14px!important;
   right:14px!important;
  }
  .vent-actions a,
  .select-actions a,
  .top-actions a,
- .detail-actions a{
+ .detail-actions a,
+ .win-actions a{
   width:96px;
   min-width:96px;
   height:34px;
@@ -94,7 +112,9 @@
  }
  .detail-crumb,
  .rs-top .crumb,
- .parts-top .crumb{display:none!important}
+ .parts-top .crumb,
+ .win-top nav,
+ .fan-top nav{display:none!important}
 }
 
 /* 언어 전환 도구모음(.global-tools)이 붙으면 그 아래로 내려갑니다.
@@ -104,12 +124,15 @@
  .has-global-tools .vent-actions,
  .has-global-tools .select-actions,
  .has-global-tools .top-actions,
- .has-global-tools .detail-actions{
+ .has-global-tools .detail-actions,
+ .has-global-tools .win-actions{
   top:62px!important;
  }
  .has-global-tools .detail-crumb,
  .has-global-tools .rs-top .crumb,
- .has-global-tools .parts-top .crumb{
+ .has-global-tools .parts-top .crumb,
+ .has-global-tools .win-top nav,
+ .has-global-tools .fan-top nav{
   top:112px!important;
  }
 }
@@ -118,7 +141,8 @@
  .vent-actions,
  .select-actions,
  .top-actions,
- .detail-actions{
+ .detail-actions,
+ .win-actions{
   top:10px!important;
   right:10px!important;
   gap:5px!important;

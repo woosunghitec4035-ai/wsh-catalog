@@ -1,0 +1,59 @@
+/* 제품 이미지는 유지하고 오른쪽 설명 묶음을 상자 안에서 세로 중앙 배치 */
+.fan-detail-page .fan-detail-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fan-detail-page .fan-detail-copy h1 {
+  font-size: 38px;
+  letter-spacing: .01em;
+}
+
+.fan-detail-page .fan-detail-copy .lead {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.65;
+  letter-spacing: .012em;
+}
+
+.fan-detail-page .fan-detail-copy h2 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.fan-detail-page .fan-page-specs {
+  gap: 8px;
+}
+
+.fan-detail-page .fan-page-specs div {
+  padding: 11px 12px;
+}
+
+.fan-detail-page .fan-page-specs b {
+  font-size: 11px;
+}
+
+.fan-detail-page .fan-page-specs span {
+  font-size: 13px;
+}
+
+.fan-detail-page .fan-page-benefits {
+  gap: 9px;
+}
+
+.fan-detail-page .fan-page-benefits li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: .008em;
+}
+
+.fan-detail-page .fan-review-note {
+  margin-top: 14px;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+}
