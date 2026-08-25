@@ -21,6 +21,19 @@
  document.body.appendChild(tools);
  document.body.classList.add('has-global-tools');
  var isCatalogHome = /(?:^|\/)index\.html$/i.test(location.pathname) || /(?:^|\/)$/i.test(location.pathname);
+ var exhibitionHome=document.createElement(isCatalogHome?'button':'a');
+ exhibitionHome.className='exhibition-home-button';
+ exhibitionHome.innerHTML='<span>⌂</span> 처음 화면';
+ if(isCatalogHome){
+  exhibitionHome.type='button';
+  exhibitionHome.addEventListener('click',function(){if(window.openExhibitionWelcome)window.openExhibitionWelcome();});
+ }else{
+  exhibitionHome.href='index.html';
+ }
+ tools.appendChild(exhibitionHome);
+ var exhibitionHomeStyle=document.createElement('style');
+ exhibitionHomeStyle.textContent='.exhibition-home-button{display:inline-flex;align-items:center;gap:5px;height:31px;padding:0 12px;border:1px solid #2f734f;border-radius:16px;background:#2f734f;color:#fff!important;font:inherit;font-size:11px;font-weight:800;text-decoration:none;cursor:pointer;white-space:nowrap}.exhibition-home-button span{font-size:14px}@media(max-width:700px){.exhibition-home-button{height:29px;padding:0 9px;font-size:10px}}';
+ document.head.appendChild(exhibitionHomeStyle);
 
  /* 화면마다 달랐던 이전/전체 제품 링크를 공통 도구막대로 모읍니다.
   * 링크 주소는 기존 값을 그대로 사용하므로 제품 탐색 흐름은 바뀌지 않습니다. */
@@ -41,7 +54,7 @@
    nav.className = 'global-navigation';
    nav.setAttribute('aria-label', '제품 화면 이동');
    nav.innerHTML = '<a class="global-back" href="' + backLink.getAttribute('href') + '"><span>‹</span> 이전으로</a>' +
-    '<a class="global-home" href="' + homeLink.getAttribute('href') + '"><span>⌂</span> 전체 제품</a>';
+    '<a class="global-home" href="index.html?view=products"><span>▦</span> 전체 제품</a>';
    tools.appendChild(nav);
    actionSource.classList.add('actions-unified-source');
    document.body.classList.add('has-unified-navigation');
@@ -56,7 +69,7 @@
    fallbackNav.className = 'global-navigation';
    fallbackNav.setAttribute('aria-label', '제품 화면 이동');
    fallbackNav.innerHTML = '<a class="global-back" href="' + (fallbackBack.getAttribute('href') || 'index.html') + '"><span>‹</span> 이전으로</a>' +
-    '<a class="global-home" href="index.html"><span>⌂</span> 전체 제품</a>';
+    '<a class="global-home" href="index.html?view=products"><span>▦</span> 전체 제품</a>';
    tools.appendChild(fallbackNav);
    document.body.classList.add('has-unified-navigation');
   }
@@ -66,7 +79,7 @@
  var breadcrumbStyle = document.createElement('style');
  breadcrumbStyle.textContent = 'body.has-global-breadcrumb .global-breadcrumb{position:fixed!important;top:57px!important;right:20px!important;left:auto!important;bottom:auto!important;z-index:8990!important;margin:0!important;padding:6px 11px!important;border:1px solid #d9e3ec!important;border-radius:16px!important;background:rgba(255,255,255,.94)!important;box-shadow:0 2px 8px rgba(22,49,79,.06)!important;color:#617286!important;font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif!important;font-size:12px!important;line-height:18px!important;text-align:right!important;white-space:nowrap!important;transform:none!important}body.has-global-breadcrumb .global-breadcrumb b{margin:0 8px!important}body.has-global-breadcrumb .global-breadcrumb strong{color:#145b96!important}@media(max-width:800px){body.has-global-breadcrumb .global-breadcrumb{display:none!important}}';
  document.head.appendChild(breadcrumbStyle);
- var breadcrumbCandidates = isCatalogHome ? [] : document.querySelectorAll('.detail-crumb,.parts-crumb,.crumb,.bcin,.fan-top nav,.screen-top nav,.measure-top nav,.win-top nav,.warm-detail-top nav,.fs-topbar nav');
+ var breadcrumbCandidates = isCatalogHome ? [] : document.querySelectorAll('.detail-crumb,.parts-crumb,.rm-crumb,.crumb,.bcin,.fan-top nav,.screen-top nav,.measure-top nav,.win-top nav,.warm-detail-top nav,.fs-topbar nav');
  var breadcrumb = Array.prototype.find.call(breadcrumbCandidates, function (element) {
   return element && !element.closest('.global-tools') && element.textContent.indexOf('›') > -1;
  });
@@ -201,6 +214,13 @@
  document.addEventListener('click',function(event){
   var trigger=event.target.closest&&event.target.closest('[data-feature]');
   if(!trigger||!controllerBenefits[trigger.dataset.feature])return;
+  var benefit=controllerBenefits[trigger.dataset.feature];
+  if(document.body.classList.contains('svc-detail')||document.body.classList.contains('rvc-detail')){
+   if(trigger.dataset.feature==='outside')benefit='현재 실내온도와 열림·닫힘 작동 개시온도의 차이가 클수록 대기시간을 줄여 빠르게 대응하고, 차이가 작을수록 대기시간을 늘려 세밀하게 조절합니다.';
+   if(trigger.dataset.feature==='sleep')benefit='환기가 되지 않는 처마·비닐 겹침 구간을 설정시간 동안 연속으로 열어 실제 환기가 시작되는 위치까지 빠르게 이동할 수 있습니다.';
+   if(trigger.dataset.feature==='sun')benefit='경기도 기준 일출·일몰 시각을 시간대 시작 기준으로 사용할 수 있어 날짜별 운전시각 설정에 활용할 수 있습니다.';
+   if(trigger.dataset.feature==='opening')benefit='농가가 필요한 개방 정도를 열림률(%)로 설정하여 환기창의 목표 개방 범위를 조절할 수 있습니다.';
+  }
   setTimeout(function(){
    var dialog=document.querySelector('dialog[open]');
    if(!dialog)return;
@@ -210,8 +230,26 @@
    if(old)old.remove();
    var note=document.createElement('div');
    note.className='feature-benefit-note';
-   note.innerHTML='<strong>운용 장점</strong>'+controllerBenefits[trigger.dataset.feature];
+   note.innerHTML='<strong>운용 장점</strong>'+benefit;
    body.appendChild(note);
   },0);
  });
+ /* 제품 안내 공통 이미지 확대 보기 */
+ var imageViewer=document.createElement('dialog');
+ imageViewer.className='catalog-image-viewer';imageViewer.setAttribute('aria-hidden','true');
+ imageViewer.innerHTML='<div class="catalog-image-stage"><img alt="확대 이미지"></div><div class="catalog-image-tools"><button type="button" data-zoom="out" aria-label="축소">−</button><output>100%</output><button type="button" data-zoom="in" aria-label="확대">＋</button><button type="button" data-zoom="reset">원본 맞춤</button><button type="button" data-zoom="close" aria-label="닫기">×</button></div><p>휠로 확대·축소 · 확대 후 드래그 이동</p>';
+ document.body.appendChild(imageViewer);
+ var viewerImage=imageViewer.querySelector('img'),viewerOutput=imageViewer.querySelector('output'),viewerScale=1,viewerX=0,viewerY=0,viewerDragging=false,viewerStartX=0,viewerStartY=0;
+ function viewerRender(){viewerImage.style.transform='translate('+viewerX+'px,'+viewerY+'px) scale('+viewerScale+')';viewerOutput.value=Math.round(viewerScale*100)+'%';viewerOutput.textContent=viewerOutput.value;}
+ function viewerReset(){viewerScale=1;viewerX=0;viewerY=0;viewerRender();}
+ function viewerOpen(img){var rect=img.getBoundingClientRect();var isMonitor=!!img.closest('.measure-monitor-gallery');var isMonitorMain=isMonitor&&/(모니터_0메인화면|통합모니터 메인화면)/.test((img.currentSrc||img.src)+' '+(img.alt||''));var boxWidth=isMonitorMain?Math.min(620,window.innerWidth-60):isMonitor?Math.min(760,window.innerWidth-60):Math.min(Math.max(rect.width*2.5,420),window.innerWidth-60,1050);var boxHeight=isMonitorMain?Math.min(410,window.innerHeight-150):isMonitor?Math.min(500,window.innerHeight-150):Math.min(Math.max(rect.height*2.5,300),window.innerHeight-150,720);imageViewer.style.setProperty('--viewer-box-width',boxWidth+'px');imageViewer.style.setProperty('--viewer-box-height',boxHeight+'px');viewerImage.src=img.currentSrc||img.src;viewerImage.alt=img.alt||'제품 안내 이미지';viewerReset();if(!imageViewer.open)imageViewer.showModal();imageViewer.classList.add('open');imageViewer.setAttribute('aria-hidden','false');document.body.classList.add('catalog-image-viewer-open');}
+ function viewerClose(){imageViewer.classList.remove('open');imageViewer.setAttribute('aria-hidden','true');if(imageViewer.open)imageViewer.close();document.body.classList.remove('catalog-image-viewer-open');viewerImage.removeAttribute('src');}
+ function isZoomableImage(img){if(!img||!img.src)return false;if(img.closest('.global-tools,.nav,.measure-top,.detail-top,.select-top,.vent-top,.win-top,.screen-top,.fan-top,a,button,.ctile,.pcard,[data-system]'))return false;if(img.classList.contains('catalog-no-zoom')||/logo/i.test(img.src))return false;return (img.naturalWidth||img.width)>=240&&(img.naturalHeight||img.height)>=160;}
+ document.addEventListener('click',function(event){var img=event.target.closest&&event.target.closest('img');if(!isZoomableImage(img))return;event.preventDefault();event.stopPropagation();viewerOpen(img);},true);
+ imageViewer.addEventListener('click',function(event){var action=event.target.closest('button');if(action){var key=action.dataset.zoom;if(key==='close')viewerClose();else if(key==='reset')viewerReset();else{viewerScale=Math.max(.5,Math.min(3,viewerScale+(key==='in'?.25:-.25)));viewerRender();}return;}if(event.target===imageViewer) viewerClose();});
+ imageViewer.addEventListener('wheel',function(event){event.preventDefault();viewerScale=Math.max(.5,Math.min(3,viewerScale+(event.deltaY<0?.15:-.15)));viewerRender();},{passive:false});
+ viewerImage.addEventListener('pointerdown',function(event){if(viewerScale<=1)return;viewerDragging=true;viewerStartX=event.clientX-viewerX;viewerStartY=event.clientY-viewerY;viewerImage.setPointerCapture(event.pointerId);});
+ viewerImage.addEventListener('pointermove',function(event){if(!viewerDragging)return;viewerX=event.clientX-viewerStartX;viewerY=event.clientY-viewerStartY;viewerRender();});
+ viewerImage.addEventListener('pointerup',function(){viewerDragging=false;});viewerImage.addEventListener('pointercancel',function(){viewerDragging=false;});
+ document.addEventListener('keydown',function(event){if(!imageViewer.classList.contains('open'))return;if(event.key==='Escape')viewerClose();if(event.key==='+'||event.key==='='){viewerScale=Math.min(3,viewerScale+.25);viewerRender();}if(event.key==='-'){viewerScale=Math.max(.5,viewerScale-.25);viewerRender();}});
 })();

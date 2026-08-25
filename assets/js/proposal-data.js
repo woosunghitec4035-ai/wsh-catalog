@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   window.PROPOSAL_CONTEXT = {
     targets: [
       ['farm', '시설원예 농가'], ['hydroponic', '수경재배 농가'], ['soil', '토경재배 농가'],
@@ -17,28 +17,28 @@
   };
 
   window.PROPOSAL_PRODUCTS = [
-    {id:'wsm4035',family:'opener',group:'비닐용 롤업스타',name:'WSM-4035',tag:'4kg·m · 35회전',role:'비닐 환기창을 열고 닫는 대표 전동개폐기',value:'우성하이텍이 직접 생산하는 주력 모델로 안정적인 제품 공급과 기술 대응, 부품 및 유지관리의 일관성을 확보할 수 있습니다.',link:'wsm-4035.html'},
-    {id:'wsm6035',family:'opener',group:'비닐용 롤업스타',name:'WSM-6035',tag:'6kg·m · 35회전',role:'더 높은 부하의 비닐 환기창에 적용하는 전동개폐기',value:'시설의 부하 조건에 맞춰 보다 높은 토크가 필요한 환기창에 적용할 수 있습니다.',link:'wsm-6035.html'},
-    {id:'wsm2475',family:'opener',group:'비닐용 롤업스타',name:'WSM-2475',tag:'5kg·m · 75회전',role:'넓은 리미트 범위가 필요한 비닐 환기창 구동장치',value:'긴 개폐 범위가 필요한 시설에 대응하여 설치 조건에 맞는 모델 선택 폭을 넓힙니다.',link:'wsm-2475.html'},
-    {id:'wsm2475h',family:'opener',group:'비닐용 롤업스타',name:'WSM-2475H',tag:'6kg·m · 75회전',role:'높은 토크와 넓은 개폐 범위를 갖춘 환기창 구동장치',value:'부하와 개폐 범위를 함께 고려해야 하는 현장에 적용할 수 있습니다.',link:'wsm-2475h.html'},
+    {id:'wsm4035',family:'opener',group:'비닐용 롤업스타',name:'WSM-4035',tag:'4kg·m · 35회전',role:'비닐하우스 측창을 열고 닫아 자연환기하는 대표 전동개폐기',value:'비닐하우스 측창의 비닐을 전동으로 말아 올리거나 내려 환기량을 조절하고, 반복되는 수동 개폐 작업을 줄입니다. 우성하이텍이 직접 생산하여 제품 공급부터 기술 대응, 부품 및 유지관리까지 일관되게 지원할 수 있습니다.',link:'wsm-4035.html'},
+    {id:'wsm6035',family:'opener',group:'비닐용 롤업스타',name:'WSM-6035',tag:'6kg·m · 35회전',role:'비닐하우스의 무거운 측창을 전동으로 열고 닫아 자연환기하는 고토크 전동개폐기',value:'6kg·m의 높은 토크로 부하가 큰 비닐 측창을 안정적으로 개폐하여 고온과 습기를 배출하고 하우스 내부의 자연환기를 돕습니다.',link:'wsm-6035.html'},
+    {id:'wsm2475',family:'opener',group:'비닐용 롤업스타',name:'WSM-2475',tag:'5kg·m · 75회전',role:'길거나 높은 비닐하우스 측창을 넓게 열고 닫아 자연환기하는 장거리 개폐용 전동개폐기',value:'최대 75회전의 넓은 개폐 범위로 긴 비닐 측창을 충분히 열어 더 많은 외부 공기가 드나들게 하고 시설 내부의 열기와 습기를 배출합니다.',link:'wsm-2475.html'},
+    {id:'wsm2475h',family:'opener',group:'비닐용 롤업스타',name:'WSM-2475H',tag:'6kg·m · 75회전',role:'부하와 긴 개폐 범위를 함께 고려한 비닐하우스 측창용 전동개폐기',value:'6kg·m의 토크와 최대 75회전의 개폐 범위로 길게 말아 올려야 하는 비닐하우스 측창을 안정적으로 열고 닫아 자연환기를 돕습니다.',link:'wsm-2475h.html'},
     {id:'wsm9055',family:'opener',group:'보온재용 롤업스타',name:'WSM-9055',tag:'9kg·m · 55회전',role:'축사·시설의 보온재를 개폐하는 고토크 구동장치',value:'비닐 환기창보다 큰 부하가 걸리는 보온재 운전에 적합한 구동력을 제공합니다.',link:'warm-model.html?model=9055'},
     {id:'wsm15033',family:'opener',group:'보온재용 롤업스타',name:'WSM-15033',tag:'15kg·m · 33회전',role:'중량 보온커튼을 개폐하는 고토크 구동장치',value:'중량 보온재의 반복 개폐 작업을 기계화하여 현장 작업 부담을 줄입니다.',link:'warm-model.html?model=15033'},
     {id:'wsm16033',family:'opener',group:'보온재용 롤업스타',name:'WSM-16033',tag:'16kg·m · 33회전',role:'중량 보온커튼용 고토크 구동장치',value:'시설 규모와 보온재 부하에 맞는 안정적인 구동 구성을 지원합니다.',link:'warm-model.html?model=16033'},
     {id:'wsm18033',family:'opener',group:'보온재용 롤업스타',name:'WSM-18033',tag:'18kg·m · 33회전',role:'고중량 보온재용 전동개폐기',value:'높은 토크가 필요한 대형 시설의 보온재 자동화에 적용할 수 있습니다.',link:'warm-model.html?model=18033'},
     {id:'wsm18066',family:'opener',group:'보온재용 롤업스타',name:'WSM-18066',tag:'18kg·m · 66회전',role:'고중량·광범위 개폐용 보온재 전동개폐기',value:'높은 토크와 넓은 개폐 범위가 동시에 필요한 현장에 대응합니다.',link:'warm-model.html?model=18066'},
-    {id:'rmp',family:'controller',group:'롤업마스터',name:'RMP·WRM 시리즈',tag:'수동 · 개별운전',role:'현장에서 전동개폐기를 직접 조작하는 수동 컨트롤러',value:'구성이 단순하고 경제적이며, 작업자가 필요한 설비를 직접 확인하고 운전하는 현장에 적합합니다.',link:'rmp-series.html'},
-    {id:'d',family:'controller',group:'롤업마스터',name:'D 시리즈',tag:'반자동 · 중앙 신호 연동',role:'현장 수동운전과 외부 릴레이 신호 연동을 지원하는 컨트롤러',value:'개별·전체 수동운전의 편의성을 유지하면서 센트럴 컨트롤러의 신호를 받아 향후 중앙제어로 확장할 수 있습니다.',link:'d-series.html'},
+    {id:'rmp',family:'controller',group:'롤업마스터',name:'RMP·WRM 시리즈',tag:'수동 · 개별운전',role:'작업자가 현장에서 스위치를 조작해 비닐하우스 환기창 전동개폐기를 열고 닫는 수동 컨트롤러',value:'작업자가 작물 상태와 현장 환경을 직접 살피면서 원하는 환기창만 즉시 선택해 열거나 닫을 수 있습니다. 자동 운전보다 작업자의 판단과 직접 조작이 중요한 현장에 적합합니다.',link:'rmp-series.html'},
+    {id:'d',family:'controller',group:'롤업마스터',name:'D 시리즈',tag:'반자동 · 중앙 신호 연동',role:'현장 스위치와 외부 릴레이 신호로 비닐하우스 환기창 전동개폐기를 운전하는 반자동 컨트롤러',value:'현장에서는 환기창을 개별 또는 전체로 직접 열고 닫을 수 있고, 센트럴 컨트롤러나 팜시스의 열림·닫힘 신호를 연결하면 여러 환기창을 중앙에서 제어할 수 있습니다.',link:'d-series.html'},
     {id:'wsdt',family:'controller',group:'롤업마스터 자동제어',name:'WSDT 시리즈',tag:'1채널 · 시간제어',role:'설정한 시간에 환기·보온 설비를 자동 운전하는 컨트롤러',value:'매일 반복되는 개폐 작업을 정해진 시간에 수행하여 작업 누락과 반복 노동을 줄입니다.',link:'wsdt-series.html'},
-    {id:'ttc',family:'controller',group:'롤업마스터 자동제어',name:'TTC 시리즈',tag:'1채널 · 온도/시간 선택',role:'온도 또는 시간 기준을 선택해 자동 운전하는 컨트롤러',value:'시설의 관리 목적에 따라 온도 중심 또는 시간 중심 운전을 선택할 수 있습니다.',link:'ttc-series.html'},
+    {id:'ttc',family:'controller',group:'롤업마스터 자동제어',name:'TTC 시리즈',tag:'1채널 · 온도/시간 선택',role:'실내온도 또는 설정시간을 기준으로 비닐하우스 환기창 전동개폐기를 자동 운전하는 컨트롤러',value:'온도제어를 선택하면 실내온도가 설정값보다 높을 때 환기창을 열고 낮아지면 닫습니다. 시간제어를 선택하면 사용자가 정한 열림·닫힘 시각에 환기창을 자동으로 움직여 매일 반복되는 개폐 작업을 줄입니다.',link:'ttc-series.html'},
     {id:'wfvc',family:'controller',group:'롤업마스터 자동제어',name:'WFVC 시리즈',tag:'1채널 · 4단 변온',role:'시간대별 목표온도로 환기창을 자동 관리하는 컨트롤러',value:'하루 중 변화하는 재배환경에 맞춰 목표온도를 나누어 관리할 수 있습니다.',link:'wfvc-series.html'},
-    {id:'wftc',family:'controller',group:'롤업마스터 자동제어',name:'WFTC 시리즈',tag:'2채널 · 온도+시간',role:'두 제어구역을 온도와 시간 조건으로 나누어 운전하는 컨트롤러',value:'서로 다른 두 설비 또는 구역을 각각의 목적에 맞게 관리할 수 있습니다.',link:'wftc-series.html'},
+    {id:'wftc',family:'controller',group:'롤업마스터 자동제어',name:'WFTC 시리즈',tag:'2채널 · 온도+시간',role:'두 환기창 제어구역을 온도조건과 시간조건으로 나누어 자동 운전하는 컨트롤러',value:'한쪽 환기창은 실내온도에 따라 열고 닫고, 다른 쪽 환기창은 설정한 시각에 열고 닫도록 구성할 수 있어 서로 다른 두 구역을 한 대의 컨트롤러로 관리합니다.',link:'wftc-series.html'},
     {id:'svc',family:'controller',group:'롤업마스터 자동제어',name:'SVC 시리즈',tag:'1채널 · 5단 변온',role:'온도·시간·기상조건을 종합해 한 제어구역을 관리하는 롤업마스터 자동형 컨트롤러',value:'시간대별 목표온도와 외부 기상조건을 반영하여 한 제어구역의 환기설비를 현장에서 정밀하게 자동관리할 수 있습니다.',link:'svc-series.html'},
-    {id:'rvc',family:'controller',group:'롤업마스터 자동제어',name:'RVC 시리즈',tag:'2채널 · 독립 자동제어',role:'두 제어구역을 각각의 조건으로 독립 운전하는 롤업마스터 자동형 컨트롤러',value:'한 시설에서 서로 다른 두 구역의 목표조건과 운전방식을 분리하여 독립적으로 관리할 수 있습니다.',link:'rvc-series.html'},
+    {id:'rvc',family:'controller',group:'롤업마스터 자동제어',name:'RVC 시리즈',tag:'2채널 · 독립 자동제어',role:'비닐하우스의 두 환기창 제어구역을 각각의 환경조건으로 독립 자동운전하는 컨트롤러',value:'좌·우 또는 서로 다른 두 구역에 목표온도와 운전방식을 따로 설정해 각 구역의 환기창 전동개폐기를 독립적으로 열고 닫습니다. 작물이나 시설조건이 다른 구역을 한 대로 세밀하게 관리합니다.',link:'rvc-series.html'},
     {id:'irrisys1',family:'irrigation',group:'토양 관수·액비',name:'이리시스 I',tag:'최대 10구역 · 액비 2라인',role:'토양 재배지의 구역별 관수와 액비 공급을 관리하는 시스템',value:'여러 구역의 물과 액비 공급을 설정하여 반복 작업을 줄이고 일관된 공급 관리 기반을 구축합니다.',hifarm:'connected',link:'irrisys-detail.html?model=1'},
     {id:'irrisys2',family:'irrigation',group:'토양 관수·액비',name:'이리시스 II',tag:'최대 12구역 · 액비 3라인',role:'관수·액비 공급과 EC 측정·표시를 지원하는 확장형 시스템',value:'더 많은 구역과 액비 라인을 관리할 수 있으며 EC는 공급 상태를 확인하는 참고 정보로 활용합니다.',hifarm:'connected',link:'irrisys-detail.html?model=2'},
-    {id:'win7000',family:'nutrient',group:'배지·수경 양액',name:'WIN-7000S',tag:'130L/분',role:'배지·수경재배에 배양액을 자동 공급하는 시스템',value:'EC·pH와 공급 조건을 설정하여 배양액 관리의 반복성과 편차를 줄이는 데 도움을 줍니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-7000S'},
-    {id:'win8000',family:'nutrient',group:'배지·수경 양액',name:'WIN-8000S',tag:'160L/분',role:'중간 공급용량의 자동 양액공급 시스템',value:'재배 규모와 필요 유량에 맞는 공급용량을 선택하여 체계적인 양액관리를 지원합니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-8000S'},
-    {id:'win9000',family:'nutrient',group:'배지·수경 양액',name:'WIN-9000S',tag:'200L/분',role:'대용량 재배시설용 자동 양액공급 시스템',value:'다수 구역 또는 넓은 시설의 공급 요구에 대응할 수 있습니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-9000S'},
+    {id:'win7000',family:'nutrient',group:'배지·수경 양액',name:'WIN-7000S',tag:'130L/분',role:'분당 최대 130L를 공급하는 배지·수경재배용 자동 양액공급 시스템',value:'설정한 EC·pH와 공급 조건에 맞춰 배양액을 자동으로 조성·공급하여 반복 작업과 공급 편차를 줄입니다. 분당 최대 공급량은 130L입니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-7000S'},
+    {id:'win8000',family:'nutrient',group:'배지·수경 양액',name:'WIN-8000S',tag:'160L/분',role:'분당 최대 160L를 공급하는 배지·수경재배용 자동 양액공급 시스템',value:'설정한 EC·pH와 공급 조건에 맞춰 배양액을 자동으로 조성·공급하여 반복 작업과 공급 편차를 줄입니다. 분당 최대 공급량은 160L입니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-8000S'},
+    {id:'win9000',family:'nutrient',group:'배지·수경 양액',name:'WIN-9000S',tag:'200L/분',role:'분당 최대 200L를 공급하는 배지·수경재배용 자동 양액공급 시스템',value:'설정한 EC·pH와 공급 조건에 맞춰 배양액을 자동으로 조성·공급하여 반복 작업과 공급 편차를 줄입니다. 분당 최대 공급량은 200L입니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-9000S'},
     {id:'win9300',family:'nutrient',group:'배지·수경 양액',name:'WIN-9300S',tag:'300L/분',role:'대규모 배지·수경재배시설용 고용량 양액공급 시스템',value:'높은 공급용량이 필요한 대규모 시설에서 양액 공급을 체계화할 수 있습니다.',hifarm:'connected',link:'win-9300s.html'},
     {id:'win5000',family:'nutrient',group:'배지·수경 양액',name:'WIN-5000S',tag:'직접주입 · 130L/분',role:'원수 배관에 배양액을 직접 혼합·주입하는 시스템',value:'시설 조건에 따라 직접주입 방식으로 배양액 공급체계를 구성할 수 있습니다.',hifarm:'connected',link:'win-9300s.html?model=WIN-5000S'},
     {id:'gac400',family:'circulation',group:'실내공기 순환팬',name:'GAC-1P400A',tag:'43㎥/min · 95W',role:'넓은 시설에 높은 순환풍량을 제공하는 400급 순환팬',value:'4개 모델 중 가장 큰 풍량으로 넓은 시설의 온습도 편차와 정체공기 개선을 지원합니다.',link:'circulation-fan.html'},
@@ -48,9 +48,11 @@
     {id:'ftc102',family:'fancontroller',group:'순환팬 컨트롤러',name:'FTC-1P02',tag:'온도·시간 · 2라인',role:'온도 또는 시간 기준으로 2개 라인의 순환팬을 운전하는 컨트롤러',value:'반복되는 팬 운전을 자동화하고 두 출력라인으로 나누어 시설을 관리할 수 있습니다.',link:'circulation-fan.html'},
     {id:'ftc103',family:'fancontroller',group:'순환팬 컨트롤러',name:'FTC-1P03',tag:'온도·시간 · 3라인',role:'더 많은 팬을 3개 출력라인으로 관리하는 컨트롤러',value:'30A·3라인 구성으로 FTC-1P02보다 많은 순환팬을 구역별로 나누어 운전할 수 있습니다.',link:'circulation-fan.html'},
     {id:'fhc1500',family:'fancontroller',group:'순환팬 컨트롤러',name:'FHC-1500',tag:'5인치 TFT · 인버터 속도제어',role:'온도·시간·습도·CO₂ 조건과 팬 회전속도를 관리하는 고급 컨트롤러',value:'환경정보를 한 화면에서 확인하고 설정조건에 따라 팬 속도를 조절하여 필요한 공기 흐름을 구성합니다.',link:'circulation-fan.html'},
-    {id:'farmsys',family:'platform',group:'스마트팜 환경제어',name:'팜시스 FSC-1520',tag:'정·역 10 + ON·OFF 10 + 관수 1',role:'환경센서와 21개 제어채널을 활용하는 복합 환경제어 시스템',value:'환기·냉난방·팬·펌프·관수 등 다양한 시설장치를 하나의 환경제어 체계로 관리합니다.',hifarm:'developing',link:'farmsys-system.html'},
+    {id:'farmsys',family:'platform',group:'스마트팜 환경제어',name:'팜시스 FSC-1520',tag:'정·역 10 + ON·OFF 10 + 관수 1',role:'환경센서와 21개 독립 제어채널을 기반으로 온실 설비의 자동운전과 웹 원격관리를 지원하는 스마트팜 환경제어 시스템',value:'온도·습도·CO₂·강우·풍속·배지 등 환경정보를 설정조건과 비교해 환기창, 커튼, 팬, 냉난방, 펌프와 관수설비를 자동 운전합니다. 스마트폰·PC에서 상태와 데이터·CCTV를 확인하고 필요 시 응급운전할 수 있어 현장 방문 부담을 줄이고 환경 변화에 빠르게 대응합니다.',hifarm:'developing',link:'farmsys-system.html'},
     {id:'epsr600',family:'measurement',group:'재배환경 측정',name:'배액 측정시스템 EPSR-600',tag:'EC · pH · 배액량',role:'수경재배 배액의 농도와 양을 실시간 측정하는 시스템',value:'공급 후 배출되는 배액 데이터를 통해 다음 양액의 농도와 공급량을 판단하는 근거를 제공합니다.',link:'drainage-system.html'},
-    {id:'swsr400',family:'measurement',group:'재배환경 측정',name:'배지 수분·온도 측정 SWSR-400',tag:'표본 베드 중량 · 온도',role:'표본 베드의 중량과 온도로 배지 상태를 확인하는 시스템',value:'감각에 의존하던 배지 수분 판단을 데이터로 보완하여 공급 시기와 양을 검토하는 데 도움을 줍니다.',link:'drainage-system.html'}
+    {id:'swsr400',family:'measurement',group:'재배환경 측정',name:'배지 수분·온도 측정 SWSR-400',tag:'표본 베드 중량 · 온도',role:'표본 베드의 중량과 온도로 배지 상태를 확인하는 시스템',value:'감각에 의존하던 배지 수분 판단을 데이터로 보완하여 공급 시기와 양을 검토하는 데 도움을 줍니다.',link:'drainage-system.html'},
+    {id:'yn2',family:'controller',group:'롤업마스터 자동제어',name:'YN-2',tag:'2채널 · 좌우 온도제어',role:'단동하우스 좌·우 측창 모터를 서로 다른 목표온도로 독립 운전하는 컨트롤러',value:'좌측과 우측 측창의 목표온도를 각각 설정해 일사량이나 바람 조건이 다른 단동하우스의 환기를 세밀하게 관리할 수 있습니다.',link:'yn2-series.html'},
+    {id:'tc502',family:'controller',group:'롤업마스터 자동제어',name:'TC-502',tag:'2채널 · 온도 또는 시간 선택',role:'좌·우 채널마다 온도제어 또는 시간제어를 선택해 단동하우스 측창을 독립 운전하는 컨트롤러',value:'각 채널의 운전 목적에 따라 온도 또는 시간제어를 선택할 수 있으며 WSM-4035 2대와 함께 콤팩트키트로 구성할 수 있습니다.',link:'tc502-series.html'}
   ];
   window.PROPOSAL_EFFECTS = {
     byFamily: {
@@ -97,3 +99,6 @@
     }
   };
 })();
+
+
+

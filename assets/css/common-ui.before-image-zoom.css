@@ -1,0 +1,35 @@
+.global-tools{position:fixed;z-index:9000;top:12px;right:20px;display:flex;align-items:center;gap:7px;padding:5px 6px;border:1px solid #d7e1ec;border-radius:25px;background:rgba(255,255,255,.95);box-shadow:0 3px 12px rgba(22,49,79,.08);font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif}
+.language-set{display:flex;gap:3px}.language-set button,.inquiry-button{height:31px;border:0;border-radius:18px;padding:0 10px;background:transparent;color:#34506f;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer}.language-set button.active{background:#075bbd;color:#fff}.inquiry-button{border-left:1px solid #dbe3ec;border-radius:0 18px 18px 0;color:#084e9f;padding-left:13px}.global-tools button:hover{background:#eaf3fd;color:#084e9f}.global-tools .active:hover{background:#075bbd;color:#fff}
+.has-global-tools .detail-actions,.has-global-tools .top-actions,.has-global-tools .select-actions,.has-global-tools .vent-actions,.has-global-tools .win-actions{top:51px}.has-global-tools .detail-crumb{margin-top:68px}.has-global-tools .crumb{margin-top:55px}
+/* 고정 내비게이션과 경로 표시가 도구모음 아래로 내려간 만큼(fixed-navigation.css)
+   헤더 높이를 늘려 본문이 가려지지 않게 합니다. */
+@media(min-width:801px){.has-global-tools .rs-top{min-height:144px;flex-basis:144px!important}.has-global-tools .select-top,.has-global-tools .vent-top{min-height:112px}.has-global-tools .detail-top{min-height:144px}.has-global-tools .win-top{height:132px}.has-global-tools .win-layout{height:calc(100% - 144px)}}
+@media(max-width:800px){.global-tools{top:10px;right:10px;bottom:auto;padding:4px}.language-set button,.inquiry-button{height:29px;font-size:11px;padding:0 8px}.has-global-tools .detail-actions,.has-global-tools .top-actions,.has-global-tools .select-actions,.has-global-tools .vent-actions{top:0}.has-global-tools .win-actions{top:52px!important;right:10px!important}}
+.catalog-feature-guide{margin-left:7px;color:#6b7d8d;font-size:11px;font-weight:600;line-height:1.4}
+@media(max-width:650px){.catalog-feature-guide{display:block;margin:4px 0 0;font-size:10.5px}}
+/* 카탈로그의 native dialog 팝업은 화면 정중앙을 공통 기준으로 사용합니다. */
+dialog[open]{position:fixed;inset:0;margin:auto}dialog.basic-feature-dialog[open],dialog.d-info-dialog[open]{position:fixed;inset:0;margin:auto}
+.whole-card-link{cursor:pointer}.whole-card-link:focus-visible{outline:4px solid rgba(23,103,181,.32);outline-offset:4px}
+.global-navigation{display:flex;align-items:center;gap:4px;padding-left:7px;border-left:1px solid #dbe3ec}.global-navigation a{height:31px;padding:0 11px;display:inline-flex;align-items:center;gap:5px;border:1px solid #d4dee8;border-radius:18px;background:#fff;color:#294e6b;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap}.global-navigation a:hover{border-color:#8fb2d0;background:#eef6fc;color:#07599d}.global-navigation a span{font-size:15px}.global-navigation .global-home{background:#185d91;color:#fff;border-color:#185d91}.global-navigation .global-home:hover{background:#114b77;color:#fff}.actions-unified-source{display:none!important}.legacy-langs{display:none!important}@media(max-width:800px){.global-navigation a{height:29px;padding:0 8px;font-size:11px}}@media(max-width:520px){.global-tools{max-width:calc(100% - 20px);flex-wrap:wrap;justify-content:flex-end;border-radius:14px}.inquiry-button{display:none}.global-navigation{padding-left:4px}.global-navigation a{padding:0 7px}}
+
+/* 1920x1080 portable-display lock
+   Browser full-screen adds vertical viewport space. Keep the normal-window
+   composition at 900px and leave the extra F11 area unused. */
+@media (min-width:1100px) and (min-height:901px){
+ body{overflow-y:auto!important}
+ body.landing .wrap,
+ .detail-page,
+ .d-detail .detail-page,
+ .vdu-wide-detail .detail-page,
+ .screen-shell,
+ .sdu-shell,
+ .win-page,
+ .vent-page,
+ .warm-detail{
+  height:900px!important;
+  min-height:0!important;
+  max-height:900px!important;
+ }
+ .measure-main{height:810px!important;min-height:0!important}
+ .warm-detail-layout{height:802px!important}
+}

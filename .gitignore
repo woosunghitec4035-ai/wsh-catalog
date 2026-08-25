@@ -7,3 +7,7 @@ tmp/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# 작업 백업·에이전트 잔재 (웹 배포 불필요)
+.agents/
+*.before-*.html
