@@ -126,7 +126,7 @@
  .sdu-shell{width:min(1740px,calc(100% - 30px));height:min(940px,100vh);padding:12px 0;display:flex;flex-direction:column}
  .sdu-top{height:76px;flex:0 0 76px;grid-template-columns:245px 1fr auto}
  .sdu-layout{min-height:0;flex:1;grid-template-columns:245px minmax(0,1fr);gap:22px}
- .sdu-side{min-height:0;height:100%;padding:18px 15px}
+ .sdu-side{min-height:0;height:100%;padding:18px 15px;display:flex;flex-direction:column}
  .sdu-main{min-height:0;height:100%;padding:0;display:flex;flex-direction:column;gap:0}
  .sdu-title{height:43px;flex:0 0 43px}
  .sdu-title h1{font-size:28px}
@@ -205,10 +205,14 @@
 .sdu-check-item,.sdu-check-item.is-blue,.sdu-check-item.is-warn{border-color:#d6e2e9!important;background:#f8fafb!important}
 .sdu-check-item>b,.sdu-check-item.is-blue>b,.sdu-check-item.is-warn>b{background:#2d79a6!important;color:#fff!important}
 .sdu-side>a[href="#overview"],.sdu-side>a[href="#guides"]{display:none!important}
-.sdu-side .sdu-about{margin-top:18px!important;grid-template-columns:96px 1fr!important;padding:14px!important}
+.sdu-side .sdu-about{margin-top:auto!important;grid-template-columns:96px 1fr!important;padding:14px!important}
 .sdu-side .sdu-about img{width:96px!important;height:86px!important}
 .sdu-l-parts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.sdu-l-parts-grid article{padding:14px;display:flex;min-height:360px;flex-direction:column;align-items:center;justify-content:center;border:1px solid #d6e2e9;border-radius:12px;background:#f8fafb;text-align:center}.sdu-l-parts-grid img{width:100%;height:260px;object-fit:contain}.sdu-l-parts-grid strong{margin-top:10px;color:#245d7c;font-size:15px}.sdu-l-parts-grid small{margin-top:4px;color:#718590;font-size:11px}@media(max-width:760px){.sdu-l-parts-grid{grid-template-columns:1fr}.sdu-l-parts-grid article{min-height:280px}.sdu-l-parts-grid img{height:200px}}
 .sdu-image-pending{width:100%;height:260px;display:grid;place-content:center;gap:8px;border:1px dashed #b8cbd6;border-radius:10px;background:#edf3f6;color:#70838e}.sdu-image-pending b{font-size:12px;letter-spacing:.14em}.sdu-image-pending span{font-size:12px;line-height:1.55}
 .sdu-l-parts-grid.count-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sdu-l-parts-grid.count-4 article{min-height:330px}.sdu-l-parts-grid.count-4 img{height:225px}@media(max-width:900px){.sdu-l-parts-grid.count-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .sdu-l-feature-points{margin:8px 0 14px;padding:0;display:grid;gap:8px;list-style:none}.sdu-l-feature-points li{position:relative;padding:9px 10px 9px 30px;border:1px solid #d8e5eb;border-radius:8px;background:#fff;color:#456477;font-size:12px;line-height:1.5}.sdu-l-feature-points li:before{content:'✓';position:absolute;left:10px;top:9px;color:#2078a7;font-weight:900}.sdu-l-source-note{margin-top:12px!important;padding-top:11px;border-top:1px solid #d5e2e9;color:#738690!important;font-size:10px!important}
 .sdu-review-badge{display:inline-flex;align-items:center;margin-left:6px;padding:2px 7px;border:1px solid #e7ad48;border-radius:999px;background:#fff8e8;color:#a76700;font-size:10px;line-height:1.35;vertical-align:1px}.sdu-l-source-note b{color:#a76700}
+
+/* 제품 요약 카드는 다른 제품군과 동일하게 왼쪽 메뉴 하단에 고정합니다. */
+.sdu-side{display:flex;flex-direction:column}
+.sdu-side .sdu-about{margin-top:auto!important}

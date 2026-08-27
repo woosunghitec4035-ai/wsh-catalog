@@ -8,7 +8,7 @@
    ['활용 방법','측정 결과를 다음 관수 시점과 양액 농도·공급량 설정에 참고할 수 있습니다.'],
    ['주요 측정 항목','배액 EC, 배액 pH, 배액량을 하나의 시스템에서 확인합니다.'],
    ['시스템 구성','센서노드와 배액 수집·측정부를 일체형 프레임에 구성했습니다.']
-  ])+'<div class="measure-media-grid"><img src="assets/img/drainage-node-new.png" alt="배액 센서노드 정면"><img src="assets/img/drainage-node-alt-new.png" alt="배액 센서노드 측면"></div><h3>주요 측정 범위</h3>'+specs([['모델','EPSR-613'],['EC','0~14 dS/m'],['pH','0~14 pH'],['배액량','0~2 L/min']])},
+  ])+'<div class="measure-media-grid"><img src="assets/img/drainage-node-new.png" alt="배액 센서노드 정면"><img src="assets/img/drainage-node-side-display.png" alt="배액 센서노드 측면"></div><h3>주요 측정 범위</h3>'+specs([['모델','EPSR-613'],['EC','0~14 dS/m'],['pH','0~14 pH'],['배액량','0~2 L/min']])},
   substrate:{eyebrow:'INTEGRATED SUBSTRATE · GAS-515',title:'배지 통합 측정시스템',intro:'배액 정보와 배지의 함수율·온도를 통합 측정합니다.',benefit:'배액과 배지 상태를 함께 확인하여 근권부의 수분 변화를 파악하고 관수 시점과 양액 공급량을 정밀하게 결정할 수 있습니다.',html:details([
    ['통합 측정','배액 EC·pH·배액량과 배지 함수율·온도를 한 시스템에서 종합적으로 확인합니다.'],
    ['함수율 측정','표본 배지의 무게 변화를 이용하여 배지의 수분 상태를 측정합니다.'],

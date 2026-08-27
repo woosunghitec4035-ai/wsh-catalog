@@ -14,6 +14,18 @@
       safeRpm: '1.6rpm', maxRpm: '1.5rpm', safeTorque: '15Kg·m', maxTorque: '20Kg·m',
       limit: '33회전', weight: '5.2kg'
     },
+    '15016': {
+      name: 'WSM-15016', image: 'assets/img/warm-wsm-15033-hq.png',
+      usage: '다겹누빔 보온피복재용 · 정밀 리미트 설정', safeCurrent: '3.3A', maxCurrent: '4.2A',
+      safeRpm: '1.6rpm', maxRpm: '1.5rpm', safeTorque: '15Kg·m', maxTorque: '20Kg·m',
+      limit: '16회전', weight: '5.2kg'
+    },
+    '15066': {
+      name: 'WSM-15066', image: 'assets/img/warm-wsm-15033-hq.png',
+      usage: '다겹누빔 보온피복재용 · 넓은 리미트 범위', safeCurrent: '3.3A', maxCurrent: '4.2A',
+      safeRpm: '1.6rpm', maxRpm: '1.5rpm', safeTorque: '15Kg·m', maxTorque: '20Kg·m',
+      limit: '66회전', weight: '5.2kg'
+    },
     '16033': {
       name: 'WSM-16033', image: 'assets/img/warm-wsm-16033-hq.png',
       usage: '다겹누빔 보온피복재용', safeCurrent: '5.0A', maxCurrent: '6.0A',
@@ -26,11 +38,17 @@
       safeRpm: '1.5rpm', maxRpm: '1.4rpm', safeTorque: '18Kg·m', maxTorque: '24Kg·m',
       limit: '33회전', weight: '6.1kg'
     },
+    '18016': {
+      name: 'WSM-18016', image: 'assets/img/warm-wsm-18033-hq.png',
+      usage: '고중량 다겹누빔 보온피복재용 · 정밀 리미트 설정', safeCurrent: '4.3A', maxCurrent: '5.3A',
+      safeRpm: '1.5rpm', maxRpm: '1.4rpm', safeTorque: '18Kg·m', maxTorque: '24Kg·m',
+      limit: '16회전', weight: '6.1kg'
+    },
     '18066': {
       name: 'WSM-18066', image: 'assets/img/warm-wsm-18033-hq.png',
       usage: '고중량 보온피복재·넓은 리미트 범위', safeCurrent: '4.3A', maxCurrent: '5.3A',
       safeRpm: '1.5rpm', maxRpm: '1.4rpm', safeTorque: '18Kg·m', maxTorque: '24Kg·m',
-      limit: '66회전', weight: '6.1kg', replacement: true
+      limit: '66회전', weight: '6.1kg'
     }
   };
 
@@ -60,6 +78,8 @@
   if (crumb) crumb.innerHTML = '보온재 개폐 시스템　›　롤업스타　›　<strong>' + model.name + '</strong>';
   var back = $('.detail-actions a');
   if (back) back.href = 'warm-opener.html#models';
+  var globalBack = $('.global-navigation .global-back');
+  if (globalBack) globalBack.href = 'warm-opener.html#models';
 
   var sideTitle = $('.detail-side > h2');
   if (sideTitle) sideTitle.textContent = '보온재용 롤업스타 모델';

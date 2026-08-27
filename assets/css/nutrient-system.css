@@ -16,7 +16,7 @@ body{min-height:100vh;background:radial-gradient(circle at 52% 12%,#fff 0,#f6fbf
 @media(max-width:700px){.direct-product-image img{width:56%;height:68%;max-width:280px}}
 .info-rail{min-width:0;padding:14px 12px;border:1px solid #d5e0ea;border-radius:18px;background:rgba(255,255,255,.93);box-shadow:0 8px 22px rgba(37,66,91,.08);display:flex;flex-direction:column;justify-content:center;gap:13px}
 .info-rail-title{text-align:center;color:#6c7f91;font-size:11px;font-weight:900;letter-spacing:1.3px}
-.info-orb{width:100%;min-height:105px;padding:12px 10px;border:1px solid #cddcea;border-radius:16px;background:#f8fbfe;display:grid;grid-template-columns:42px 1fr 12px;align-items:center;gap:7px;text-align:left;color:#214d75;cursor:pointer;transition:.18s ease}
+.info-orb{width:100%;min-height:105px;padding:12px 10px;border:1px solid #cddcea;border-radius:16px;background:#f8fbfe;display:grid;grid-template-columns:42px 1fr 12px;align-items:center;gap:7px;text-align:left;color:#214d75;text-decoration:none;cursor:pointer;transition:.18s ease}
 .info-orb:hover,.info-orb:focus-visible{transform:translateY(-2px);border-color:#75a9d3;box-shadow:0 8px 18px rgba(44,96,137,.12)}
 .info-orb .orb-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#267db5;color:#fff;font-size:20px;font-weight:900}
 .info-orb b{display:block;font-size:14px;line-height:1.25;letter-spacing:-.3px}.info-orb small{display:block;margin-top:5px;color:#718496;font-size:10px;line-height:1.35}.info-orb i{font-style:normal;font-size:20px;color:#7b9dbb}
@@ -40,4 +40,66 @@ body{min-height:100vh;background:radial-gradient(circle at 52% 12%,#fff 0,#f6fbf
  .nutri-page{height:auto;min-height:100vh}
  .nutri-layout{flex:none;min-height:610px}
  .supply-card{background:#fff}
+}
+
+/* 양액공급기 선택 화면: 사용 가능한 화면 폭을 넓게 쓰고 하단 요소가 겹치지 않게 정리합니다. */
+.nutri-page{width:min(1560px,calc(100% - 24px))}
+.nutri-layout{grid-template-columns:minmax(0,1fr) 230px;gap:14px}
+.info-rail{padding-left:14px;padding-right:14px}
+.info-orb{grid-template-columns:42px minmax(0,1fr) 12px;gap:9px;padding-left:12px;padding-right:12px}
+.info-orb b{font-size:14px;white-space:nowrap;word-break:keep-all}
+.info-orb small{font-size:10.5px}
+.supply-button,
+.intro-button{font-family:inherit;font-size:16px;font-weight:800;line-height:1;text-align:center}
+.selection-note{position:relative;z-index:2;margin-top:16px;margin-bottom:18px;min-height:46px;background:#f6faff}
+@media(min-width:1001px){
+ body{height:100vh;min-height:0;overflow:hidden}
+ .nutri-page{height:100vh;min-height:0;padding-top:16px;padding-bottom:10px}
+ .nutri-top{height:60px}
+ .nutri-heading{margin-top:0;margin-bottom:10px;padding-bottom:9px}
+ .nutri-layout{flex:1 1 auto;min-height:0}
+ .supply-card,.info-rail{min-height:0}
+ .supply-card{padding-top:14px;padding-bottom:14px}
+ .supply-copy{min-height:68px}
+ .info-rail{gap:8px;padding-top:10px;padding-bottom:10px}
+ .info-orb{min-height:74px;padding-top:8px;padding-bottom:8px}
+ .selection-note{flex:0 0 auto;min-height:42px;margin-top:9px;margin-bottom:0;padding-top:8px;padding-bottom:8px}
+}
+@media(max-width:1000px){
+ .nutri-page{width:min(100% - 20px,900px)}
+ .nutri-layout{grid-template-columns:1fr}
+ .info-rail{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .info-orb b{white-space:normal}
+}
+@media(max-width:560px){
+ .nutri-page{width:calc(100% - 14px)}
+ .info-rail{grid-template-columns:1fr}
+ .info-orb b{white-space:nowrap}
+ .selection-note{margin-bottom:12px}
+}
+
+/* 브라우저 확대 또는 낮은 화면에서도 카드 버튼과 선정 안내가 동시에 보이게 합니다. */
+@media(min-width:1001px) and (max-height:850px){
+ .nutri-page{padding-top:12px;padding-bottom:8px}
+ .nutri-top{height:54px}
+ .nutri-brand strong{font-size:28px}
+ .nutri-brand small{top:37px}
+ .nutri-heading{margin-bottom:7px;padding-bottom:7px}
+ .nutri-heading h1{font-size:29px}
+ .nutri-heading p{font-size:15px}
+ .supply-card{padding:11px 14px}
+ .supply-copy{min-height:56px}
+ .supply-copy h2{font-size:20px}
+ .type-no{font-size:24px}
+ .supply-body,.direct-body{grid-template-rows:minmax(95px,1fr) auto;gap:5px;min-height:0}
+ .supply-info p{min-height:0;margin:3px 0;font-size:12.5px;line-height:1.4}
+ .model-chips{margin-top:5px}
+ .model-chips span,.single-model{padding-top:4px;padding-bottom:4px}
+ .supply-button,.intro-button{height:40px;margin-top:6px}
+ .supply-button span,.intro-button span{top:4px}
+ .info-rail{gap:6px;padding-top:8px;padding-bottom:8px}
+ .info-orb{min-height:66px;padding-top:6px;padding-bottom:6px}
+ .info-orb .orb-icon{width:38px;height:38px;font-size:18px}
+ .info-orb{grid-template-columns:38px minmax(0,1fr) 10px}
+ .selection-note{min-height:38px;margin-top:7px;padding-top:6px;padding-bottom:6px}
 }

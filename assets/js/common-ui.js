@@ -183,7 +183,7 @@
  }
  if(document.querySelector('.warm-model-grid')){
   var warmCardsScript=document.createElement('script');
-  warmCardsScript.src='assets/js/warm-opener-cards.js';
+  warmCardsScript.src='assets/js/warm-opener-cards.js?v=20260827-sidebar-image';
   document.body.appendChild(warmCardsScript);
  }
  var controllerBenefits={
@@ -252,4 +252,16 @@
  viewerImage.addEventListener('pointermove',function(event){if(!viewerDragging)return;viewerX=event.clientX-viewerStartX;viewerY=event.clientY-viewerStartY;viewerRender();});
  viewerImage.addEventListener('pointerup',function(){viewerDragging=false;});viewerImage.addEventListener('pointercancel',function(){viewerDragging=false;});
  document.addEventListener('keydown',function(event){if(!imageViewer.classList.contains('open'))return;if(event.key==='Escape')viewerClose();if(event.key==='+'||event.key==='='){viewerScale=Math.min(3,viewerScale+.25);viewerRender();}if(event.key==='-'){viewerScale=Math.max(.5,viewerScale-.25);viewerRender();}});
+})();
+
+(function(){
+ function ensureReportTour(){
+  if(!new URLSearchParams(location.search).has('reportTour'))return;
+  if(document.querySelector('script[src*="report-tour.js"]'))return;
+  var script=document.createElement('script');
+  script.src='assets/js/report-tour.js?v=20260826-all-products';
+  document.body.appendChild(script);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ensureReportTour);
+ else ensureReportTour();
 })();

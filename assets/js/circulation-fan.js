@@ -23,6 +23,7 @@ var dialog=document.getElementById('fanDetail');
 function openDetail(x,type){document.getElementById('detailEye').textContent=(type==='fan'?'FAN MODEL':'FAN CONTROLLER')+' · '+x.label;document.getElementById('detailTitle').textContent=x.name;document.getElementById('detailLead').textContent=x.lead;document.getElementById('detailSpecs').innerHTML=x.spec.map(function(s){return '<div><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('');document.getElementById('detailBenefits').innerHTML=x.benefit.map(function(b){return '<li>'+b+'</li>'}).join('');dialog.showModal()}
 document.addEventListener('click',function(e){var switchButton=e.target.closest('.fan-switch button');if(switchButton){document.querySelectorAll('.fan-switch button').forEach(function(x){x.classList.toggle('on',x===switchButton)});document.querySelectorAll('.fan-product-panel').forEach(function(panel){panel.classList.toggle('on',panel.id===switchButton.dataset.panel)});return}});
 dialog.querySelector('.fan-close').addEventListener('click',function(){dialog.close()});dialog.addEventListener('click',function(e){if(e.target===dialog)dialog.close()});
+ if(new URLSearchParams(location.search).has('reportTour')){var tourScript=document.createElement('script');tourScript.src='assets/js/report-tour.js';document.body.appendChild(tourScript);}
 })();
 
 // 팬마스터는 3개 모델이므로 넓은 화면에서 가로 전체 폭을 균등하게 사용합니다.

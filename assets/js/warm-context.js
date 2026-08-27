@@ -94,15 +94,15 @@
     badge.textContent = text;
     heading.insertAdjacentElement('afterend', badge);
   }
-  addWarmSize(includedCards[0], '개폐축 외경 Ø32용');
-  addWarmSize(includedCards[1], '가이드 암 외경 Ø32용');
-  addWarmSize(includedCards[3], '가이드 암 핀 · Ø25.4 파이프용');
-  addWarmSize(includedCards[4], '선회축 고정구 · Ø32용');
+  addWarmSize(includedCards[0], '기본 제공 규격 · 개폐축 외경 Ø32');
+  addWarmSize(includedCards[1], '기본 제공 규격 · 가이드 암 외경 Ø32');
+  addWarmSize(includedCards[3], '기본 제공 규격 · 가이드 암 핀 P25');
+  addWarmSize(includedCards[4], '기본 제공 규격 · 선회축 고정구 B32');
 
   if (includedCards.length && !document.querySelector('.warm-parts-compatibility')) {
     var compatibility = document.createElement('p');
     compatibility.className = 'warm-parts-compatibility';
-    compatibility.innerHTML = '<b>피복재용 부품 규격</b> 비닐용 부품과 외형이 비슷해도 규격이 다르므로 주문 시 피복재용 롤업스타 모델명을 함께 확인하십시오.';
+    compatibility.innerHTML = '<b>피복재용 부품 규격</b> 카드에 표시된 규격은 기본 제공 규격입니다. 현장 파이프 외경에 맞춰 다른 규격도 주문할 수 있으므로 각 부품의 상세 규격을 확인하고, 주문 시 피복재용 롤업스타 모델명과 사용할 파이프 외경을 함께 알려주십시오.';
     document.getElementById('includedPanel').appendChild(compatibility);
   }
 

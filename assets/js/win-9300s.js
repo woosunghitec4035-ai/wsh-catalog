@@ -160,6 +160,20 @@
     panels.parts = `<h2>WIN-9000S 주요 구성품</h2><div class="parts-popup"><figure><img src="assets/img/win-9000s-mixing-tank.png" alt="170L 8각형 혼합탱크"><figcaption>8각형 혼합탱크<br><small>170L · 정수위 유지 ★</small></figcaption></figure><figure><img src="assets/img/win-9000s-supply-pump.png" alt="WIN-9000S 공급펌프"><figcaption>공급펌프<br><small>입형 다단 · 5마력</small></figcaption></figure><figure><img src="assets/img/win-9000s-circulation-pump.png" alt="벤추리 전용 순환펌프"><figcaption>벤추리 전용 순환펌프</figcaption></figure><figure><img src="assets/img/win-9000s-injection-lines.png" alt="벤추리 정량밸브 순간유량계"><figcaption>벤추리·정량밸브·순간유량계 ★</figcaption></figure><figure><img src="assets/img/win-9000s-flow-sensor.png" alt="디지털 유량센서"><figcaption>디지털 유량센서 ★</figcaption></figure></div>`;
     panels.software = panels.software.replace('assets/img/win-9300s-software.png','assets/img/win-9000s-software.png');
   }
+  const managerModelName = selectedModel || 'WIN-9300S';
+  const managerCompatibility = isWin5000
+    ? 'WIN-5000S의 직접주입형 운전 구성과 설치된 프로그램 버전을 함께 확인한 뒤 적용합니다.'
+    : managerModelName + '의 제어 프로그램 버전과 농장 통신환경을 확인한 뒤 적용합니다.';
+  const managerPanel = `<div class="manager-panel-head"><div><span>REMOTE MONITORING · CONTROL</span><h2>${managerModelName} + 인젝션 매니저 원격관리</h2><p>기존 양액공급기는 그대로 사용하고 인터넷 연결을 추가하여, 농장 밖에서도 주요 상태와 운전자료를 확인하고 필요한 설정·제어를 할 수 있습니다.</p></div><strong>별도 구매 제품</strong></div>
+    <div class="manager-flow manager-flow-modern"><span>양액공급기<small>${managerModelName}</small></span><i>›</i><span>현장 서버 PC<small>관리 프로그램 설치</small></span><i>›</i><span>보안 연결<small>인터넷 통신</small></span><i>›</i><span>웹·앱<small>PC·태블릿·휴대폰</small></span></div>
+    <div class="manager-benefits"><section><b>실시간 현황 확인</b><p>주요 측정값과 공급상태, 작동 중인 구역을 원격 화면에서 확인합니다.</p></section><section><b>운전자료·그래프 조회</b><p>시간에 따른 측정값과 공급 이력을 비교하여 농장 상태를 검토합니다.</p></section><section><b>설정·제어 관리</b><p>권한이 있는 사용자가 운전조건을 확인하고 필요한 설정과 제어를 수행합니다.</p></section></div>
+    <div class="manager-demo-title"><div><b>인젝션 매니저 주요 화면</b><span>실제 사용 화면의 대표 구성을 확인할 수 있습니다.</span></div></div>
+    <div class="manager-demo-grid"><figure><img src="assets/img/injection-manager-main.png" alt="인젝션 매니저 실시간 현황 화면"><figcaption><b>실시간 현황</b><span>측정값·공급상태·구역 확인</span></figcaption></figure><figure><img src="assets/img/injection-manager-data.png" alt="인젝션 매니저 데이터 조회 화면"><figcaption><b>데이터 조회</b><span>운전이력과 시간별 그래프 확인</span></figcaption></figure><figure><img src="assets/img/injection-manager-settings.png" alt="인젝션 매니저 설정 관리 화면"><figcaption><b>설정 관리</b><span>운전조건과 구역별 설정 확인</span></figcaption></figure></div>
+    <div class="manager-actions"><a href="injection-manager.html">인젝션 매니저 상세 안내 <i>›</i></a><a class="primary" href="https://demo.woosunghitec.kr/" target="_blank" rel="noopener">인젝션 매니저 데모 체험 <i>↗</i></a></div>
+    <p class="popup-note manager-compat-note"><b>${managerModelName} 적용 안내:</b> ${managerCompatibility} 인젝션 매니저는 기본 구성에 포함되지 않으며, 인터넷·현장 서버 PC·원격접속 환경과 설치 방법은 도입 전에 확인해야 합니다.</p>`;
+  panels.manager = managerPanel;
+  panels.network = managerPanel;
+
   if (isWin8000) {
     document.title = 'WIN-8000S 인젝션 마스터';
     const breadcrumbModel = document.querySelector('.win-top nav b');
@@ -326,7 +340,7 @@
     const sensorCard = document.createElement('button');
     sensorCard.type = 'button';
     sensorCard.dataset.open = 'sensors';
-    sensorCard.innerHTML = '<i>08</i><span><b>EC·pH 센서 관리</b><small>Sensorex 공식 점검·교체 기준</small></span><em>›</em>';
+    sensorCard.innerHTML = '<i>07</i><span><b>EC·pH 센서 관리</b><small>Sensorex 공식 점검·교체 기준</small></span><em>›</em>';
     detailCards.appendChild(sensorCard);
   }
   const sideLast = document.querySelector('.win-side .all-models-link');
@@ -334,18 +348,24 @@
     const sensorMenu = document.createElement('button');
     sensorMenu.type = 'button';
     sensorMenu.dataset.open = 'sensors';
-    sensorMenu.innerHTML = '<i>08</i><span>EC·pH 센서 관리</span>';
+    sensorMenu.innerHTML = '<i>07</i><span>EC·pH 센서 관리</span>';
     sideLast.before(sensorMenu);
     const sitesMenu = document.createElement('button');
     sitesMenu.type = 'button';
     sitesMenu.dataset.open = 'sites';
-    sitesMenu.innerHTML = '<i>09</i><span>설치·사용 현장</span>';
+    sitesMenu.innerHTML = '<i>08</i><span>설치·사용 현장</span>';
     sideLast.before(sitesMenu);
     const relatedMenu = document.createElement('button');
     relatedMenu.type = 'button';
     relatedMenu.dataset.open = 'relatedParts';
-    relatedMenu.innerHTML = '<i>10</i><span>관련 부품</span>';
+    relatedMenu.innerHTML = '<i>09</i><span>관련 부품</span>';
     sideLast.before(relatedMenu);
+  }
+  const winAboutImage = document.querySelector('#winAboutImage');
+  const selectedProductImage = document.querySelector('.product-view>img');
+  if (winAboutImage && selectedProductImage) {
+    winAboutImage.src = selectedProductImage.getAttribute('src');
+    winAboutImage.alt = (document.querySelector('.model-current b')?.textContent || '인젝션 마스터') + ' 제품 이미지';
   }
 
   document.addEventListener('click', function (event) {

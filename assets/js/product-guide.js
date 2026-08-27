@@ -4,7 +4,7 @@
 
  var dialog = document.createElement('dialog');
  dialog.className = 'product-guide-dialog';
- dialog.innerHTML = '<header class="product-guide-head"><div><small>PRODUCT GUIDE</small><h2>제품 선택 도우미</h2></div><button type="button" class="product-guide-close" aria-label="닫기">×</button></header><div class="product-guide-progress"><span></span><span></span><span></span><span></span><span></span></div><div class="product-guide-body"></div>';
+ dialog.innerHTML = '<header class="product-guide-head"><div><small>PRODUCT GUIDE</small><h2>제품 선택 도우미</h2></div><button type="button" class="product-guide-close" aria-label="닫기">×</button></header><div class="product-guide-progress"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="product-guide-body"></div>';
  document.body.appendChild(dialog);
 
  var area = dialog.querySelector('.product-guide-body');
@@ -87,6 +87,58 @@
     ['unsure', '아직 모르겠어요', '재배 방식에 맞춰 먼저 추천']
    ]
   },
+  supplyDemand: {
+   title: '필요한 순간 공급량을 계산해 주세요',
+   copy: '전체 재배면적보다 동시에 물을 공급하는 점적기 수가 중요합니다.',
+   options: []
+  },
+  pipeCondition: {
+   title: '공급 배관의 거리와 높이 조건은 어떤가요?',
+   copy: '거리가 길거나 높이 차이가 크면 같은 공급량이라도 더 큰 여유가 필요합니다.',
+   options: [
+    ['easy', '짧고 높이 차이가 작음', '공급기와 재배구역이 가깝고 평탄한 편'],
+    ['normal', '보통', '일반적인 시설 내 배관 조건'],
+    ['hard', '길거나 높이 차이가 큼', '장거리 배관 또는 고저차가 있는 현장'],
+    ['unknown', '확인이 필요함', '현장 배관도와 압력 검토 필요']
+   ]
+  },
+  zoneLoad: {
+   title: '동시에 관수할 구역은 몇 개인가요?',
+   copy: '전체 구역 수가 아니라 같은 시간에 함께 공급하는 구역 수를 선택하세요.',
+   options: [
+    ['one', '1개 구역', '구역을 순차적으로 하나씩 공급'],
+    ['two', '2개 구역', '두 구역을 동시에 공급'],
+    ['many', '3개 구역 이상', '동시 공급 유량과 배관 압력 검토가 중요'],
+    ['unknown', '운전계획 미정', '구역 구성과 공급 순서를 함께 설계']
+   ]
+  },
+  supplyPower: {
+   title: '설치 장소에서 사용할 수 있는 전원은 무엇인가요?',
+   copy: '단상 220V만 가능한 현장과 삼상 380V 사용 가능 현장의 선택 모델이 다릅니다.',
+   options: [
+    ['single', '단상 220V만 가능', 'WIN-7000S 또는 WIN-5000S 중심 검토'],
+    ['three', '삼상 380V 사용 가능', '중·고용량 모델까지 검토 가능'],
+    ['unknown', '아직 모름', '분전반과 인입전원 확인 필요']
+   ]
+  },
+  mixingType: {
+   title: '원수와 양액을 어떤 방식으로 혼합할까요?',
+   copy: '혼합탱크형과 직접주입형은 설치 구조와 운전 방식이 다릅니다.',
+   options: [
+    ['tank', '혼합탱크형', '탱크에서 혼합한 뒤 재배구역으로 공급'],
+    ['direct', '직접주입형', '혼합탱크 없이 배관에서 연속 혼합'],
+    ['unknown', '현장에 맞춰 추천', '설치공간과 운전조건을 함께 비교']
+   ]
+  },
+  remoteNeed: {
+   title: '농장 밖에서도 상태를 확인해야 하나요?',
+   copy: '인젝션 매니저는 별도 구매 제품이며 적용 모델과 프로그램 버전을 확인해야 합니다.',
+   options: [
+    ['yes', '원격 확인·제어 필요', 'PC·태블릿·휴대폰에서 상태 확인'],
+    ['later', '향후 도입 검토', '현재는 기본 운전, 추후 원격관리 확장'],
+    ['no', '현장 운전만 필요', '농장 PC와 제어기 중심으로 사용']
+   ]
+  },
   environmentScope: {
    title: '통합 관리 범위는 어디까지인가요?',
    copy: '관리하려는 설비 범위에 따라 개별 컨트롤러와 통합 시스템을 구분합니다.',
@@ -114,6 +166,12 @@
   if (key === 'operation') return value === 'auto' ? 'autoBasis' : null;
   if (key === 'autoBasis') return value === 'fixedMixed' ? null : 'channels';
   if (key === 'cultivation') return 'waterNeed';
+  if (key === 'waterNeed') return answers.cultivation === 'substrate' ? 'supplyDemand' : null;
+  if (key === 'supplyDemand') return 'pipeCondition';
+  if (key === 'pipeCondition') return 'zoneLoad';
+  if (key === 'zoneLoad') return 'supplyPower';
+  if (key === 'supplyPower') return 'mixingType';
+  if (key === 'mixingType') return 'remoteNeed';
   return null;
  }
 
@@ -127,6 +185,12 @@
   if (addHistory !== false) history.push(key);
   renderProgress();
   var question = questions[key];
+  if (key === 'supplyDemand') {
+   area.innerHTML = '<section class="product-guide-question supply-calculator"><h3>' + question.title + '</h3><p>' + question.copy + '</p><div class="supply-input-panels"><section><b>필요 유량을 알고 있어요</b><label><span>필요 공급량</span><input type="number" min="1" step="0.1" id="knownFlow" placeholder="예: 145"><em>L/분</em></label><button type="button" class="supply-calc-next" data-flow-source="known">이 유량으로 계속</button></section><section><b>점적기 기준으로 계산할게요</b><label><span>동시에 작동하는 점적기 수</span><input type="number" min="1" step="1" id="dripperCount" placeholder="예: 2000"><em>개</em></label><label><span>점적기 1개당 토출량</span><input type="number" min="0.1" step="0.1" id="dripperFlow" placeholder="예: 2"><em>L/시간</em></label><button type="button" class="supply-calc-next" data-flow-source="calculate">자동 계산하고 계속</button></section></div><div class="supply-formula"><b>계산식</b><span>동시 작동 점적기 수 × 점적기당 시간당 토출량 ÷ 60</span><strong id="supplyCalcResult">입력값을 기준으로 필요한 L/분을 계산합니다.</strong></div><button type="button" class="supply-unknown">아직 계산할 수 없어요</button>' + (history.length > 1 ? '<button type="button" class="guide-back">‹ 이전 질문</button>' : '') + '</section>';
+   area.querySelectorAll('.supply-calc-next').forEach(function(button){ button.addEventListener('click', function(){ var flow; if(button.dataset.flowSource==='known') flow=parseFloat(area.querySelector('#knownFlow').value); else { var count=parseFloat(area.querySelector('#dripperCount').value); var each=parseFloat(area.querySelector('#dripperFlow').value); if(count>0&&each>0) flow=count*each/60; } if(!(flow>0)){ area.querySelector('#supplyCalcResult').textContent='올바른 숫자를 입력해 주세요.'; area.querySelector('#supplyCalcResult').classList.add('error'); return; } answers.supplyDemand=Math.round(flow*10)/10; showQuestion('pipeCondition'); }); });
+   area.querySelector('.supply-unknown').addEventListener('click',function(){ answers.supplyDemand='unknown'; showQuestion('pipeCondition'); });
+   var backCalc=area.querySelector('.guide-back'); if(backCalc) backCalc.addEventListener('click',goBack); return;
+  }
   area.innerHTML = '<section class="product-guide-question"><h3>' + question.title + '</h3><p>' + question.copy + '</p><div class="product-guide-options">' + question.options.map(function (option) {
    return '<button type="button" class="product-guide-option" data-value="' + option[0] + '"><b>' + option[1] + '</b><span>' + option[2] + '</span></button>';
   }).join('') + '</div>' + (history.length > 1 ? '<button type="button" class="guide-back">‹ 이전 질문</button>' : '') + '</section>';
@@ -151,6 +215,56 @@
 
  function result(title, copy, links, note) {
   return {title: title, copy: copy, links: links, note: note || ''};
+ }
+
+ function nutrientResult() {
+  var demand = answers.supplyDemand;
+  var pipe = answers.pipeCondition;
+  var zones = answers.zoneLoad;
+  var power = answers.supplyPower;
+  var mixing = answers.mixingType;
+  var remote = answers.remoteNeed;
+  var primary = 'WIN-7000S';
+  var alternative = 'WIN-8000S';
+  var capacity = '최대 130L/분';
+  var reason = '단상 220V에서 사용할 수 있는 탱크혼합형 모델로, 비교적 낮은 공급량의 시설에 적합합니다.';
+  var warning = '';
+
+  var numericDemand = typeof demand === 'number' ? demand : null;
+  if (mixing === 'direct') {
+   primary = 'WIN-5000S'; alternative = 'WIN-7000S'; capacity = '직접주입형 · 최대 130L/분';
+   reason = '혼합탱크 없이 스마트 믹싱챔버와 배관에서 원수와 양액을 연속 혼합하는 조건에 맞습니다.';
+  } else if (power === 'single') {
+   primary = 'WIN-7000S'; alternative = mixing === 'unknown' ? 'WIN-5000S' : 'WIN-8000S';
+   if (numericDemand && numericDemand > 130) warning = '계산된 공급량은 단상 220V 일반 모델의 최대 공급량을 넘습니다. 삼상 전원 확보 또는 관수구역 순차 운전을 검토해야 합니다.';
+  } else if (numericDemand && numericDemand <= 130) {
+   primary = 'WIN-7000S'; alternative = numericDemand > 115 ? 'WIN-8000S' : 'WIN-5000S'; capacity = '최대 130L/분';
+  } else if (numericDemand && numericDemand <= 160) {
+   primary = 'WIN-8000S'; alternative = 'WIN-9000S'; capacity = '최대 160L/분'; reason = '요구 공급량에 맞는 중형 탱크혼합 모델이며, 대안 모델은 공급 여유를 더 확보할 수 있습니다.';
+  } else if (numericDemand && numericDemand <= 200) {
+   primary = 'WIN-9000S'; alternative = 'WIN-9300S'; capacity = '최대 200L/분'; reason = '중·대형 시설의 공급량에 대응하는 표준 탱크혼합 모델입니다.';
+  } else if (numericDemand && numericDemand <= 300) {
+   primary = 'WIN-9300S'; alternative = 'WIN-9000S'; capacity = '최대 300L/분'; reason = '대규모 시설과 높은 공급량을 고려한 고용량 탱크혼합 모델입니다.';
+  } else if (numericDemand && numericDemand > 300) {
+   primary = '대형 주문제작 모델'; alternative = 'WIN-9300S'; capacity = '300L/분 초과 · 현장 설계 필요'; reason = '일반 WIN 모델의 최대 공급 범위를 넘어 공급압력·배관·전원·동시 관수량을 기준으로 주문제작 검토가 필요합니다.'; warning = 'S10·S15 등 주문제작 모델의 최종 제원은 현장 조건 검토 후 결정해야 합니다.';
+  } else if (demand === 'unknown') {
+   primary = power === 'single' ? 'WIN-7000S' : 'WIN-9000S'; alternative = power === 'single' ? 'WIN-5000S' : 'WIN-9300S'; capacity = '현장 계산 후 최종 결정'; reason = '필요 공급량이 정해지지 않아 전원과 혼합 방식을 기준으로 1차 후보를 제시했습니다.';
+  }
+
+  var rated = {'WIN-5000S':130,'WIN-7000S':130,'WIN-8000S':160,'WIN-9000S':200,'WIN-9300S':300}[primary];
+  if (numericDemand && rated && numericDemand >= rated * .9) warning += (warning ? ' ' : '') + '계산 유량이 추천 모델 최대용량의 90% 이상입니다. 배관 손실을 반영해 상위 모델도 함께 검토하세요.';
+  if ((pipe === 'hard' || zones === 'many') && primary !== 'WIN-9300S' && primary !== '대형 주문제작 모델') warning += (warning ? ' ' : '') + '장거리·고저차 배관 또는 3개 이상 동시 관수는 한 단계 큰 모델과 배관 압력 계산을 함께 검토하세요.';
+  var remoteText = remote === 'yes' ? '인젝션 매니저 원격관리를 함께 검토하세요. 별도 구매 제품이며 인터넷·현장 서버 PC·프로그램 버전 확인이 필요합니다.' : remote === 'later' ? '추후 인젝션 매니저 연결을 고려해 프로그램 버전과 현장 인터넷 구성을 미리 확인하는 것이 좋습니다.' : '현장 운전 중심 구성으로 검토했습니다.';
+  return {
+   title: primary,
+   copy: reason,
+   links: primary === '대형 주문제작 모델' ? [['주문제작 모델 비교 보기 ›', 'nutrient-system-layout6.html'], ['양액공급기 전체 비교 ›', 'nutrient-system-layout6.html']] : [['1순위 모델 상세 보기 ›', 'win-9300s.html' + (primary === 'WIN-9300S' ? '' : '?model=' + primary)], ['양액공급기 전체 비교 ›', 'nutrient-system-layout6.html']],
+   note: warning,
+   alternative: alternative,
+   capacity: capacity,
+   reasons: ['계산 공급량: ' + (numericDemand ? numericDemand.toLocaleString() + 'L/분' : '계산 필요'), '배관 조건: ' + ({easy:'짧고 평탄',normal:'보통',hard:'장거리·고저차',unknown:'현장 확인 필요'}[pipe] || '확인 필요'), '동시 관수: ' + ({one:'1개 구역',two:'2개 구역',many:'3개 구역 이상',unknown:'운전계획 확인 필요'}[zones] || '확인 필요')],
+   remote: remoteText
+  };
  }
 
  function automaticResult(warm) {
@@ -184,7 +298,7 @@
    var cultivation = answers.cultivation;
    var need = answers.waterNeed;
    if (cultivation === 'soil') return result('이리시스', '토양 재배지를 여러 구역으로 나누어 물 또는 액비를 유량·시간 기준으로 공급하는 데 적합합니다.', [['이리시스 I·II 비교하기 ›', 'irrisys-system.html']], need === 'connection' ? '이리시스 I과 II 모두 팜시스 연결을 지원하며 실제 연동 범위는 주문 구성에 따라 확인해야 합니다.' : '');
-   if (cultivation === 'substrate') return result('배양액 자동공급기', '배지·수경재배에서 EC·pH를 기준으로 배양액 농도와 공급량을 정밀하게 관리하는 데 적합합니다.', [['배양액공급기 비교하기 ›', 'nutrient-system.html']]);
+   if (cultivation === 'substrate') return nutrientResult();
    return result('재배 방식별 물·양액 제품 비교', '토양의 구역별 관수·액비 공급은 이리시스, 배지·수경재배의 정밀 양액 관리는 배양액 자동공급기를 중심으로 비교하세요.', [['토양용 이리시스 보기 ›', 'irrisys-system.html'], ['배지·수경용 양액공급기 보기 ›', 'nutrient-system.html']]);
   }
   if (purpose === 'environment') {
@@ -199,7 +313,8 @@
   progress.forEach(function (item) { item.classList.add('on'); });
   var selected = recommendation();
   var links = selected.links.map(function (link) { return '<a href="' + link[1] + '">' + link[0] + '</a>'; }).join('');
-  area.innerHTML = '<section class="product-guide-result"><div class="guide-result-copy"><small>선택 조건에 따른 1차 추천</small><h3>' + selected.title + '</h3><p>' + selected.copy + '</p>' + (selected.note ? '<em class="guide-result-note">' + selected.note + '</em>' : '') + '</div><div class="guide-result-links">' + links + '<button type="button" class="guide-back">‹ 이전 질문</button><button type="button" class="guide-restart">처음부터 다시 선택</button></div></section>';
+  var detail = selected.alternative ? '<div class="guide-model-summary"><span><small>1순위 추천</small><b>' + selected.title + '</b><em>' + selected.capacity + '</em></span><span><small>대안 모델</small><b>' + selected.alternative + '</b><em>용량·전원·설치조건 비교</em></span></div><ul class="guide-condition-list">' + selected.reasons.map(function(item){ return '<li>' + item + '</li>'; }).join('') + '</ul><p class="guide-remote-note">' + selected.remote + '</p>' : '';
+  area.innerHTML = '<section class="product-guide-result"><div class="guide-result-copy"><small>선택 조건에 따른 1차 추천</small><h3>' + selected.title + '</h3><p>' + selected.copy + '</p>' + detail + (selected.note ? '<em class="guide-result-note">' + selected.note + '</em>' : '') + '</div><div class="guide-result-links">' + links + '<button type="button" class="guide-back">‹ 이전 질문</button><button type="button" class="guide-restart">처음부터 다시 선택</button></div></section>';
   area.querySelector('.guide-restart').addEventListener('click', restart);
   area.querySelector('.guide-back').addEventListener('click', goBack);
  }

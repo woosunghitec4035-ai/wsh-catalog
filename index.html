@@ -12,7 +12,7 @@
 <style>
 .exhibition-welcome{position:fixed;inset:0;z-index:8000;display:flex;align-items:center;justify-content:center;padding:clamp(20px,4vw,64px);overflow:auto;background:linear-gradient(135deg,#f7fbf8 0%,#eef7f0 48%,#e4f0e8 100%);color:#173b2b;cursor:pointer;transition:opacity .28s ease,visibility .28s ease}.exhibition-welcome.is-hidden{opacity:0;visibility:hidden;pointer-events:none}.exhibition-welcome::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 10%,rgba(110,160,63,.17),transparent 27%),radial-gradient(circle at 88% 86%,rgba(31,103,74,.14),transparent 30%);pointer-events:none}.exhibition-welcome-inner{position:relative;width:min(1180px,100%);display:grid;grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);align-items:center;gap:clamp(40px,6vw,88px)}.exhibition-welcome-copy{padding:20px 0}.exhibition-welcome-logo{display:block;width:min(280px,60%);height:auto;margin-bottom:clamp(34px,5vh,64px)}.exhibition-welcome-kicker{margin:0 0 14px;color:#4f7c2c;font-size:clamp(18px,1.8vw,25px);font-weight:800;letter-spacing:-.02em}.exhibition-welcome-title{margin:0;color:#163d2c;font-size:clamp(44px,5.1vw,76px);line-height:1.12;letter-spacing:-.055em}.exhibition-welcome-title strong{display:block;color:#5e8f32}.exhibition-welcome-desc{margin:26px 0 0;color:#52685e;font-size:clamp(17px,1.6vw,23px);line-height:1.65;letter-spacing:-.025em}.exhibition-welcome-start{display:inline-flex;align-items:center;gap:14px;margin-top:38px;padding:18px 30px;border:0;border-radius:999px;background:#286849;color:#fff;font:inherit;font-size:clamp(18px,1.7vw,24px);font-weight:800;box-shadow:0 14px 34px rgba(31,92,63,.24);cursor:pointer}.exhibition-welcome-start span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.19);font-size:18px}.exhibition-welcome-gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;transform:rotate(1.5deg)}.exhibition-welcome-product{position:relative;min-height:230px;display:flex;align-items:center;justify-content:center;padding:20px;overflow:hidden;border-radius:26px;background:rgba(255,255,255,.9);box-shadow:0 22px 55px rgba(26,75,53,.14)}.exhibition-welcome-product:nth-child(2),.exhibition-welcome-product:nth-child(3){transform:translateY(24px)}.exhibition-welcome-product img{display:block;max-width:100%;max-height:210px;object-fit:contain}.exhibition-welcome-product b{position:absolute;left:18px;bottom:16px;padding:7px 11px;border-radius:8px;background:rgba(22,61,44,.88);color:#fff;font-size:12px;letter-spacing:-.02em}.exhibition-welcome-touch{position:absolute;right:22px;bottom:20px;color:#6a8176;font-size:13px;font-weight:700}.exhibition-welcome-touch::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:#73a33e;animation:welcomePulse 1.7s infinite}@keyframes welcomePulse{0%,100%{transform:scale(1);opacity:.45}50%{transform:scale(1.55);opacity:1}}@media(prefers-reduced-motion:reduce){.exhibition-welcome-touch::before{animation:none}}@media(max-width:820px){.exhibition-welcome{align-items:flex-start}.exhibition-welcome-inner{grid-template-columns:1fr;gap:26px}.exhibition-welcome-copy{text-align:center}.exhibition-welcome-logo{margin-left:auto;margin-right:auto;margin-bottom:26px}.exhibition-welcome-desc{margin-top:16px}.exhibition-welcome-start{margin-top:24px}.exhibition-welcome-gallery{width:min(580px,100%);margin:0 auto}.exhibition-welcome-product{min-height:180px}.exhibition-welcome-product img{max-height:160px}.exhibition-welcome-touch{position:static;grid-column:1/-1;text-align:center}}@media(max-width:520px){.exhibition-welcome-gallery{gap:10px}.exhibition-welcome-product{min-height:135px;padding:12px;border-radius:18px}.exhibition-welcome-product img{max-height:120px}.exhibition-welcome-product b{left:10px;bottom:9px;font-size:10px}.exhibition-welcome-title{font-size:39px}}
 </style>
-<style>.exhibition-welcome-logo{width:auto;height:auto;color:#1e5238;font-size:clamp(22px,2.2vw,31px);font-weight:900;letter-spacing:-.05em}.exhibition-welcome-logo span{color:#78a93d}.exhibition-welcome-title>span,.exhibition-welcome-title strong span{display:block;white-space:nowrap}.exhibition-welcome-gallery{transform:none;gap:18px}.exhibition-welcome-product,.exhibition-welcome-product:nth-child(2),.exhibition-welcome-product:nth-child(3){transform:none;min-height:220px}.exhibition-welcome-product img{max-width:88%;max-height:180px}.exhibition-welcome-touch{right:0;bottom:-36px;width:100%;text-align:center}@media(max-width:1050px){.exhibition-welcome-title{font-size:clamp(34px,4.6vw,52px)}.exhibition-welcome-inner{grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);gap:36px}}@media(max-width:820px){.exhibition-welcome-title{font-size:clamp(31px,6.1vw,46px)}.exhibition-welcome-title>span,.exhibition-welcome-title strong span{white-space:normal}.exhibition-welcome-copy{padding-top:6px}}@media(max-width:520px){.exhibition-welcome-title{font-size:clamp(27px,8.2vw,36px);letter-spacing:-.06em}}</style>
+<style>.exhibition-welcome-logo{width:auto;height:auto;color:#1e5238;font-size:clamp(22px,2.2vw,31px);font-weight:900;letter-spacing:-.05em}.exhibition-welcome-logo span{color:#78a93d}.exhibition-welcome-title>span,.exhibition-welcome-title strong span{display:block;white-space:nowrap}.exhibition-welcome-gallery{transform:none;gap:18px}.exhibition-welcome-product,.exhibition-welcome-product:nth-child(2),.exhibition-welcome-product:nth-child(3){transform:none;min-height:220px}.exhibition-welcome-product img{max-width:88%;max-height:180px}.exhibition-welcome-touch{right:0;bottom:-36px;width:100%;text-align:center}.exhibition-welcome-env{width:max-content;max-width:100%;margin:16px 0 0;padding:9px 13px;border:1px solid #c9d9ce;border-radius:10px;background:rgba(255,255,255,.72);color:#52685e;font-size:12px;font-weight:750;line-height:1.45}.exhibition-welcome-env b{color:#286849}@media(max-width:1050px){.exhibition-welcome-title{font-size:clamp(34px,4.6vw,52px)}.exhibition-welcome-inner{grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);gap:36px}}@media(max-width:820px){.exhibition-welcome-title{font-size:clamp(31px,6.1vw,46px)}.exhibition-welcome-title>span,.exhibition-welcome-title strong span{white-space:normal}.exhibition-welcome-copy{padding-top:6px}.exhibition-welcome-env{margin-left:auto;margin-right:auto}}@media(max-width:520px){.exhibition-welcome-title{font-size:clamp(27px,8.2vw,36px);letter-spacing:-.06em}}</style>
 <section id="exhibitionWelcome" class="exhibition-welcome" aria-label="전시회 제품 안내 시작 화면">
  <style>.exhibition-welcome-title{font-size:clamp(38px,3.35vw,46px);line-height:1.16}.exhibition-welcome-inner{grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);gap:clamp(40px,4vw,58px)}@media(max-width:1050px){.exhibition-welcome-title{font-size:clamp(33px,4.2vw,43px)}}@media(max-width:820px){.exhibition-welcome-inner{grid-template-columns:1fr}.exhibition-welcome-title{font-size:clamp(30px,5.8vw,42px)}.exhibition-welcome-title>span,.exhibition-welcome-title strong span{white-space:nowrap}}@media(max-width:520px){.exhibition-welcome-title{font-size:clamp(21px,7.2vw,30px)}}</style>
  <div class="exhibition-welcome-inner">
@@ -22,6 +22,7 @@
    <h1 class="exhibition-welcome-title"><span>화면을 터치해 보세요</span><strong><span>우성하이텍의 모든 제품을</span><span>한눈에 볼 수 있습니다</span></strong></h1>
    <p class="exhibition-welcome-desc">스마트팜 · 환경제어 · 관수·양액 · 센서 · 모터·구동 제품</p>
    <button id="exhibitionWelcomeStart" class="exhibition-welcome-start" type="button"><span>›</span> 제품 안내 시작하기</button>
+   <p class="exhibition-welcome-env"><b>권장 보기 환경</b>　PC · 1920×1080(FHD) · 브라우저 전체 화면<br>25인치급 FHD 전시 화면 기준으로 최적화되었습니다.</p>
   </div>
   <div class="exhibition-welcome-gallery" aria-hidden="true">
    <div class="exhibition-welcome-product"><img src="output/tv-autoplay/media/wsm-4035-hq.png" alt=""><b>모터·구동</b></div>
@@ -65,8 +66,8 @@
   <div class="moright"><table id="moTb"></table><div class="note" id="moNote" style="display:none"></div><div id="moCta"></div></div>
  <div class="mofeat" id="moFeat"></div>
  </div></div></div>
-<script src="assets/js/product-guide.js?v=20260824-restore"></script>
-<script src="assets/js/proposal-data.js"></script>
+<script src="assets/js/product-guide.js?v=20260826-flowcalc"></script>
+<script src="assets/js/proposal-data.js?v=20260827-warm-limit-models"></script>
 <script src="assets/js/proposal-builder.js?v=20260824-restore"></script>
 <script src="assets/js/data.js?v=20260824-restore"></script>
 <script>
@@ -76,7 +77,7 @@ var LANDING=[
  {name:'보온재개폐 시스템',img:'assets/img/landing-02.jpg',cat:1,href:'warm-system.html'},
  {name:'커튼제어 시스템',img:'assets/img/landing-03.jpg',cat:3,href:'screen-system.html'},
  {name:'실내공기 순환팬',img:'assets/img/landing-04.jpg',cat:4,href:'circulation-fan.html'},
- {name:'배양액 자동공급기 (양액재배)',img:'assets/img/landing-05.jpg',cat:5,href:'nutrient-system.html'},
+ {name:'배양액 자동공급기 (양액재배)',img:'assets/img/landing-05.jpg',cat:5,href:'nutrient-system-layout6.html'},
  {name:'배양액 자동공급기 (토양재배)',img:'assets/img/landing-06.jpg',cat:6,href:'irrisys-system.html'},
  {name:'스마트팜 환경제어시스템',img:'assets/img/landing-07.jpg',cat:7,href:'farmsys-system.html'},
  {name:'ICT 복합환경 제어시스템',img:'assets/img/landing-08.jpg',cat:8},
@@ -170,7 +171,7 @@ var m=(location.hash||'').match(/^#c(\d+)$/);
 if(m&&CATS[+m[1]])renderCat(+m[1]);else renderCats();
 </script><script src="assets/js/company-intro.js?v=20260824-9"></script><script src="assets/js/gate.js?v=20260824-restore"></script><script src="assets/js/common-ui.js"></script><script src="assets/js/i18n-dict.js"></script><script src="assets/js/site-i18n.js"></script>
 <aside id="developmentHistoryPanel" class="development-history-panel" aria-label="작업일지">
- <header><b>제품 안내 작업일지</b><time datetime="2026-08-19">최근 업데이트 2026.08.19</time></header>
+ <header><b>제품 안내 작업일지</b><time datetime="2026-08-26">최근 업데이트 2026.08.26</time></header>
  <div class="development-history-timeline">
   <div><time datetime="2026-07-27">2026.07.27</time><b>제품 안내 작업 시작 · 작업 규칙 정리</b></div>
   <div><time datetime="2026-07-29">2026.07.29</time><b>롤업마스터 선택 화면 · RMP 상세 · WSM 구성품 화면 작업</b></div>
@@ -185,6 +186,10 @@ if(m&&CATS[+m[1]])renderCat(+m[1]);else renderCats();
   <div><time datetime="2026-08-11">2026.08.11</time><b>순환팬·스크린 시스템 및 롤업마스터 자동제어 제품군 화면 고도화</b></div>
   <div><time datetime="2026-08-12">2026.08.12</time><b>재배환경 측정 화면 재구성 및 맞춤 제품 설명·사업제안 자료·이미지 활용 기능 고도화</b></div>
   <div><time datetime="2026-08-19">2026.08.19</time><b>VDU 최신 치수·제품 구조·커플링 설치도 및 온실 적용 사례 이미지 교체</b></div>
+  <div><time datetime="2026-08-20">2026.08.20</time><b>인젝션매니저 소개·데모 연결 및 양액공급기 제품 선택 화면 고도화</b></div>
+  <div><time datetime="2026-08-22">2026.08.22</time><b>롤업마스터·이리시스·재배환경 측정 화면과 맞춤 제품 설명 기능 보완</b></div>
+  <div><time datetime="2026-08-25">2026.08.25</time><b>직원 검토 의견 반영 및 1920×1080·25인치 FHD 화면 최적화</b></div>
+  <div><time datetime="2026-08-26">2026.08.26</time><b>전시회용 전체 제품 연속재생 영상과 카테고리별 인트로 화면 제작</b></div>
  </div>
  <p><b>다음 작업</b></p>
  <ul><li>웰시스 제품 추가</li><li>개발 중인 HiFarm 반영</li><li>담당자 의견 수렴 및 제품별 고도화</li><li>제품 선택 도우미 고도화</li></ul>
@@ -207,6 +212,7 @@ if(m&&CATS[+m[1]])renderCat(+m[1]);else renderCats();
  if(!welcome||!start)return;
  var productView=new URLSearchParams(location.search).get('view')==='products';
  if(productView)welcome.classList.add('is-hidden');
+ else if(typeof window.renderCats==='function')window.renderCats();
  var idleTimer=null;
  function hideWelcome(){welcome.classList.add('is-hidden');scheduleReturn();}
  function showWelcome(){
@@ -219,7 +225,15 @@ if(m&&CATS[+m[1]])renderCat(+m[1]);else renderCats();
  }
  window.openExhibitionWelcome=showWelcome;
  function scheduleReturn(){clearTimeout(idleTimer);if(productView)return;idleTimer=setTimeout(showWelcome,45000);}
- welcome.addEventListener('click',hideWelcome);
- start.addEventListener('click',function(e){e.stopPropagation();hideWelcome();});
+ function beginCatalog(){
+  /* 주소나 브라우저 기록에 남은 카테고리 상태와 관계없이 항상 전체 카테고리에서 시작한다. */
+  if(typeof window.renderCats==='function')window.renderCats();
+  hideWelcome();
+ }
+ welcome.addEventListener('click',beginCatalog);
+ start.addEventListener('click',function(e){
+  e.stopPropagation();
+  beginCatalog();
+ });
  ['pointerdown','keydown','scroll'].forEach(function(name){document.addEventListener(name,function(){if(welcome.classList.contains('is-hidden'))scheduleReturn();},{passive:true});});
-})();</script><script src="assets/js/report-builder.js"></script></body></html>
+})();</script><script src="assets/js/report-builder.js?v=20260827-warm-limit-models"></script></body></html>

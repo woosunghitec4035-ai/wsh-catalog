@@ -258,7 +258,7 @@ window.WSH_I18N_DICT = {
  '토크': ['Torque', 'トルク'],
  '감속기': ['Reduction gear', '減速機'],
  '감속 방식': ['Reduction method', '減速方式'],
- '헤링본 + 유성기어': ['Herringbone + planetary gear', 'ヘリンボーン＋遊星ギア'],
+ '헤리컬 + 유성기어': ['Helical + planetary gear', 'ヘリカル＋遊星ギア'],
  '리미트 설정범위': ['Limit setting range', 'リミット設定範囲'],
  '본체 무게': ['Unit weight', '本体重量'],
  'ⓘ　모터의 토크, 회전수 등 사양은 권장 사용 범위를 초과하여 사용 시 고장의 원인이 될 수 있습니다.': ['ⓘ　Operating beyond the recommended torque, speed and other ratings may cause failure.', 'ⓘ　モーターのトルク、回転数などの仕様を推奨使用範囲を超えて使用すると、故障の原因となることがあります。'],

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no">
+<head>
+<meta charset="UTF-8"><meta name="google" content="notranslate"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>인젝션 매니저 — 양액공급기 원격관리</title>
+<meta name="description" content="양액공급기의 상태를 웹과 앱에서 실시간으로 확인하고 제어하는 인젝션 매니저를 소개합니다.">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/common-ui.css?v=20260824-zoomfix">
+<link rel="stylesheet" href="assets/css/injection-manager.css?v=20260825-2">
+<link rel="stylesheet" href="assets/css/fixed-navigation.css">
+</head>
+<body>
+<main class="manager-page">
+ <header class="manager-top">
+  <a class="manager-brand" href="nutrient-system.html" aria-label="양액공급기 안내로 돌아가기"><span>M</span><div><strong>인젝션 매니저</strong><small>INJECTION MANAGER</small></div></a>
+  <nav class="manager-nav"><a href="nutrient-system.html"><span aria-hidden="true">‹</span> 양액공급기</a><a href="index.html"><span aria-hidden="true">⌂</span> 전체 제품</a></nav>
+ </header>
+
+ <section class="manager-hero">
+  <div class="hero-copy">
+   <span class="eyebrow">REMOTE MONITORING · CONTROL</span>
+   <h1>양액공급기, 이제<br><em>언제 어디서나 웹·앱으로.</em></h1>
+   <p>현장에서만 확인하던 양액기의 운전 상태와 재배 데이터를 사무실·집·이동 중에도 실시간으로 보고 제어합니다.</p>
+   <div class="hero-points"><span>실시간 모니터링</span><span>원격 운전·설정</span><span>데이터·영농기록</span></div>
+   <div class="hero-actions"><a class="primary" href="https://demo.woosunghitec.kr/" target="_blank" rel="noopener">인젝션 매니저 데모 체험 <b>↗</b></a></div>
+  </div>
+ </section>
+
+ <section class="value-strip" aria-label="인젝션 매니저 주요 가치">
+  <article><b>01</b><div><strong>현장을 한눈에</strong><span>EC·pH·유량·공급 상태를 실시간 확인</span></div></article>
+  <article><b>02</b><div><strong>어디서나 제어</strong><span>운전 방식과 구역별 설정을 원격 적용</span></div></article>
+  <article><b>03</b><div><strong>기록을 자산으로</strong><span>센서·공급·경보·영농 데이터를 축적</span></div></article>
+ </section>
+
+ <section class="section system-section" id="system">
+  <div class="section-heading"><span class="eyebrow">SYSTEM OVERVIEW</span><h2>현장 장비와 웹·앱을 하나로 연결합니다</h2><p>양액기는 현장에서 공급을 계속하고, 서버 PC가 데이터를 안전하게 모아 웹·앱으로 전달합니다.</p></div>
+  <div class="system-flow">
+   <article class="system-card internet"><span class="system-icon">🌐</span><small>통신사 제공</small><strong>인터넷 회선 · 모뎀</strong><p>외부 원격 접속을 위한 인터넷 환경</p></article>
+   <i class="flow-arrow">→<small>랜선</small></i>
+   <article class="system-card router"><span class="system-icon">⇄</span><small>자사 또는 직접 구매</small><strong>공유기</strong><p>PC와 양액기를 같은 네트워크로 연결</p></article>
+   <i class="flow-arrow split">→<small>랜선 ×2</small></i>
+   <div class="system-endpoints">
+    <article class="system-card server"><span class="system-icon">▣</span><small>Windows 10 이상</small><strong>서버 PC + 전용 SW</strong><p>데이터 수집·로컬 저장·웹 전송</p></article>
+    <article class="system-card device"><span class="system-icon">⚙</span><small>우성하이텍 전용</small><strong>양액기 · 펌웨어</strong><p>공급·센서·펌프를 현장에서 제어</p></article>
+   </div>
+  </div>
+  <div class="data-flow"><span>운영 데이터 흐름</span><b>양액기</b><i>→</i><b>현장 서버 PC</b><i>→</i><b>보안 인터넷 연결</b><i>→</i><b>웹 · 앱</b></div>
+ </section>
+
+ <section class="section feature-section">
+  <div class="section-heading"><span class="eyebrow">ONE PLATFORM</span><h2>모니터링부터 기록까지 한 화면에서</h2><p>현장 운영에 필요한 기능을 다섯 개의 관리 화면으로 구성했습니다.</p></div>
+  <div class="feature-grid">
+   <article><span>01</span><b>메인 모니터링</b><p>EC·pH 편차, 공급 구역, 잔여 양, 공급 횟수와 장비 상태를 실시간으로 확인합니다.</p><em>EC · pH · 유량 · 공급률</em></article>
+   <article><span>02</span><b>환경</b><p>날씨, 일사량, 습도, 성장광, 관수 이력과 서버·센서 통신 상태를 확인합니다.</p><em>기상 · 성장광 · 관수 · 통신</em></article>
+   <article><span>03</span><b>데이터</b><p>기간별 센서·공급·경보 데이터를 그래프로 비교하고 필요한 자료를 엑셀로 저장합니다.</p><em>그래프 · 전일 비교 · 엑셀</em></article>
+   <article><span>04</span><b>운전 설정</b><p>복합·일사량·시간·수동 제어와 구역별 EC·pH·공급량을 설정합니다.</p><em>복합제어 · 구역설정 · 1회공급</em></article>
+   <article><span>05</span><b>영농일지</b><p>작업 내용과 사진, 당시 환경값, 재고 및 매출·지출 내역을 함께 기록합니다.</p><em>작업 · 환경 스냅샷 · 경영기록</em></article>
+  </div>
+ </section>
+
+ <section class="section screen-section">
+  <div class="section-heading"><span class="eyebrow">ACTUAL DEMO SCREENS</span><h2>인젝션 매니저 실제 화면</h2><p>체험판에서 직접 확인할 수 있는 주요 관리 화면입니다.</p></div>
+  <div class="screen-gallery">
+   <figure class="screen-main"><div><img src="assets/img/injection-manager-main.png" alt="인젝션 매니저 메인 모니터링 체험 화면"></div><figcaption><span>01</span><b>메인 모니터링</b><small>EC·pH와 공급 상태를 실시간으로 한눈에 확인</small></figcaption></figure>
+   <figure><div><img src="assets/img/injection-manager-environment.png" alt="인젝션 매니저 환경 관리 체험 화면"></div><figcaption><span>02</span><b>환경</b><small>기상·성장광·관수·통신 상태 확인</small></figcaption></figure>
+   <figure><div><img src="assets/img/injection-manager-data.png" alt="인젝션 매니저 데이터 분석 체험 화면"></div><figcaption><span>03</span><b>데이터</b><small>기간별 센서 그래프와 공급·경보 기록 분석</small></figcaption></figure>
+   <figure><div><img src="assets/img/injection-manager-settings.png" alt="인젝션 매니저 운전 설정 체험 화면"></div><figcaption><span>04</span><b>운전 설정</b><small>제어 방식과 구역별 EC·pH·공급량 설정</small></figcaption></figure>
+   <figure><div><img src="assets/img/injection-manager-diary.png" alt="인젝션 매니저 영농일지 체험 화면"></div><figcaption><span>05</span><b>영농일지</b><small>작업·환경·재고·매출 기록을 한곳에서 관리</small></figcaption></figure>
+  </div>
+  <p class="screen-note">※ 위 이미지는 실제 장비가 아닌 체험판 목업 데이터로 구성된 예시 화면입니다.</p>
+ </section>
+
+ <section class="section operation-section">
+  <div class="local-card"><span class="local-icon">✓</span><div><small>LOCAL FIRST</small><h2>인터넷이 끊겨도 현장 운전과 저장은 계속됩니다</h2><p>양액기와 서버 PC는 현장 네트워크에서 직접 통신합니다. 외부 접속이 일시적으로 중단되어도 현장 제어와 로컬 데이터 저장은 유지됩니다.</p></div></div>
+  <aside class="requirements"><h3>설치 전 준비사항</h3><ul><li>통신사 인터넷 회선 및 모뎀</li><li>유·무선 공유기</li><li>Windows 10 이상 현장 PC</li><li>연결용 랜선 3개</li><li>인젝션 매니저 전용 서버 SW</li><li>연동 가능한 양액기 및 펌웨어</li></ul><p>적용 가능 여부는 양액기 모델과 프로그램 버전에 따라 달라질 수 있습니다.</p></aside>
+ </section>
+
+ <section class="manager-cta"><div><span class="eyebrow">LIVE DEMO</span><h2>인젝션 매니저 데모 체험</h2><p>별도 장비 없이 체험판 데이터로 메인·환경·데이터·설정·일지 화면과 주요 동작을 직접 확인할 수 있습니다.</p><small>demo.woosunghitec.kr</small></div><a href="https://demo.woosunghitec.kr/" target="_blank" rel="noopener">데모 체험 화면으로 이동 <b>↗</b></a></section>
+ <footer><span>INJECTION MANAGER · ㈜우성하이텍</span><a href="nutrient-system.html">양액공급기 제품 안내로 돌아가기</a></footer>
+</main>
+<script src="assets/js/common-ui.js"></script><script src="assets/js/i18n-dict.js"></script><script src="assets/js/site-i18n.js"></script>
+</body>
+</html>
